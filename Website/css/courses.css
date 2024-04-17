@@ -1,0 +1,116 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+
+.CourseCode{
+    font-size: 25px;
+    font-weight: bold;
+    color: #000;
+    margin-bottom: 0.5em;
+}
+
+.subjectName{
+    font-size: 20px;
+    color: #000;
+    margin-bottom: 0.5em;
+}
+
+.DoctorName{
+    font-size: 12px;
+    color: #000;
+    margin-bottom: 0.5em;
+    font-weight: 500;
+}
+
+.card{
+    border: none;
+    cursor: pointer;
+}
+
+
+.SeconderyHeader {
+    background-color: #D2EFFB;
+    height: 160px;
+    margin: 0;
+    padding: 0;
+    border-top: 1px solid #9d9d9d;
+}
+
+.HeaderCollor{
+    padding: 0;
+    margin: 0;
+}
+.courses-section-title{
+    margin: 0 0 20px 0;
+}
+.form-control-search{
+    border-radius: 20px;
+}
+.searchButton{
+    border-radius: 20px;
+    padding-left: -39px;
+}
+
+
+
+.thirdHeader{
+    background-color: #b3d3e0;
+    height: 40px;
+    margin-bottom: 13px;
+}
+
+.pageicon img{
+    width: 120px;
+    height: 120px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    align-items: center;
+    display: block; 
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 30px;
+}
+
+.pageicon{
+    text-align: center;
+
+
+}
+
+.Row2{
+    background-color: #ff345f;
+}
+
+.pageName h1{
+    color: #000;
+    font-weight: 700;
+    margin-top: 20px;
+    /* margin-bottom: 20px; */
+}
+.pageName h6{
+    color: #4857e2;
+    /* margin-bottom: 20px; */
+}
+
+.pageName2{
+    display: none;
+}
+
+@media (max-width: 732px) {
+    .pageName{
+        display: none;
+        height: 200px;
+    }
+
+    .SeconderyHeader {
+        
+        height: 280px;
+    }
+    .pageName2{
+        display: block;
+        padding-left: 40px;
+    }
+
+}
