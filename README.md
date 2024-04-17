@@ -12,3 +12,14 @@ educational file management system is a digital platform designed to organize, s
     <hr> 
 
 </div>
+
+
+
+<div align="center">
+<a href="https://mohamed-badawy-sayed.github.io/Laqta/html/index.html">
+    <img height="100" src="images/laqta-logo.png"><a>
+    <br>
+    <H4 style="color:#07dd63;">اول منصة افلام من قلب الصعيد🫡👳🏻‍♂️</H4>
+    <hr> 
+
+</div>
