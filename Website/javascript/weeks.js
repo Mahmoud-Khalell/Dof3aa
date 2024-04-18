@@ -1,66 +1,8 @@
-var weeks = [
-    {
-        imgSrc: '../assets/images/banner (4).png',
-        weekName: 'Week 1',
-        doctorName: 'Dr. Bassem abed el-atti',
-        lastUpdate: '2 days ago',
-    },
-    {
-        imgSrc: '../assets/images/banner (4).png',
-        weekName: 'Week 2',
-        doctorName: 'Dr. Bassem abed el-atti',
-        lastUpdate: '1 day ago',
-    },
-    {
-        imgSrc: '../assets/images/banner (4).png',
-        weekName: 'Week 3',
-        doctorName: 'Dr. Bassem abed el-atti',
-        lastUpdate: '1 hour ago',
-    },
-    {
-        imgSrc: '../assets/images/banner (4).png',
-        weekName: 'Week 4',
-        doctorName: 'Dr. Bassem abed el-atti',
-        lastUpdate: 'Just now',
-    },
-    {
-        imgSrc: '../assets/images/banner (4).png',
-        weekName: 'Week 5',
-        doctorName: 'Dr. Bassem abed el-atti',
-        lastUpdate: 'Just now',
-    },
-    {
-        imgSrc: '../assets/images/banner (4).png',
-        weekName: 'Week 6',
-        doctorName: 'Dr. Bassem abed el-atti',
-        lastUpdate: 'Just now',
-    },
-    {
-        imgSrc: '../assets/images/banner (4).png',
-        weekName: 'Week 7',
-        doctorName: 'Dr. Bassem abed el-atti',
-        lastUpdate: 'Just now',
-    },
-    {
-        imgSrc: '../assets/images/banner (4).png',
-        weekName: 'Week 8',
-        doctorName: 'Dr. Bassem abed el-atti',
-        lastUpdate: 'Just now',
-    },
-    {
-        imgSrc: '../assets/images/banner (4).png',
-        weekName: 'Week 9',
-        doctorName: 'Dr. Bassem abed el-atti',
-        lastUpdate: 'Just now',
-    },
-    {
-        imgSrc: '../assets/images/banner (4).png',
-        weekName: 'Week 10',
-        doctorName: 'Dr. Bassem abed el-atti',
-        lastUpdate: 'Just now',
-    }, 
-       
-]
+
+
+var urlParams = new URLSearchParams(window.location.search);
+var id = urlParams.get('id');
+
 var taskApitest = [
     {
         taskName: 'Lab Sheet #1',
@@ -212,6 +154,27 @@ taskApitest.forEach(task => {
         createTaskCard(task.taskName, task.description, task.deadline,task.matrialLink);
     }
 )
+
+
+// function to search in subjects array by courseId and return the index of the object
+id++;
+function search(subjects, id) {
+    console.log("id - "+id);
+    console.log("len - "+subjects.length);
+    for (var i = 0; i < subjects.length; i++) {
+        console.log(">--->>" + subjects[i].courseId);
+        console.log("id - "+id);
+        if (subjects[i].courseId === id) {
+            console.log(">>>"+subjects[i].courseId);
+            return i;
+        }
+    }
+    console.log(-1);
+    return -1;
+}
+
+
+var weeks = subjects[search(subjects, id-1)].weeks;
 
 
 weeks.forEach(week => {

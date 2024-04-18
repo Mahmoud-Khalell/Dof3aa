@@ -73,14 +73,8 @@ function createCardLecture(courseId ,imgSrc, subjectCode,subjectName, moreInfo, 
     card.style.backgroundColor = randomColor;
 }
 
-
-
-
-createCardLecture(subjects[0].courseId,subjects[0].imgSrc, subjects[0].subjectCode,subjects[0].subjectName, subjects[0].moreInfo, subjects[0].username, subjects[0].lastUpdated);
-createCardLecture(subjects[1].courseId,subjects[1].imgSrc, subjects[1].subjectCode,subjects[0].subjectName, subjects[1].moreInfo, subjects[1].username, subjects[1].lastUpdated);
-
-
-
-
+subjects.forEach(subject => {
+    createCardLecture(subject.courseId, subject.imgSrc, subject.subjectCode, subject.subjectName, subject.moreInfo, subject.username, subject.lastUpdated);
+});
 
 
