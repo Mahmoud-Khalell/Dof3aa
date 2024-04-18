@@ -2,7 +2,7 @@
 
 <div align="center">
 <h1>Dof3aa</h1>
-<a href="./Website/assets/images/logo.png">
+<a href="[./Website/assets/images/logo.png](https://0xbadawy.github.io/Dof3aa/Website/html/login.html)">
     <img height="100" src="./Website/assets/images/logo.png"><a>
     <br>
     <H4 style="color:#07dd63;">student platform to organize all materials
