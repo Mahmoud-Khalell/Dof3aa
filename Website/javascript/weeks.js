@@ -1,3 +1,97 @@
+var weeks = [
+    {
+        imgSrc: '../assets/images/banner (4).png',
+        weekName: 'Week 1',
+        doctorName: 'Dr. Bassem abed el-atti',
+        lastUpdate: '2 days ago',
+    },
+    {
+        imgSrc: '../assets/images/banner (4).png',
+        weekName: 'Week 2',
+        doctorName: 'Dr. Bassem abed el-atti',
+        lastUpdate: '1 day ago',
+    },
+    {
+        imgSrc: '../assets/images/banner (4).png',
+        weekName: 'Week 3',
+        doctorName: 'Dr. Bassem abed el-atti',
+        lastUpdate: '1 hour ago',
+    },
+    {
+        imgSrc: '../assets/images/banner (4).png',
+        weekName: 'Week 4',
+        doctorName: 'Dr. Bassem abed el-atti',
+        lastUpdate: 'Just now',
+    },
+    {
+        imgSrc: '../assets/images/banner (4).png',
+        weekName: 'Week 5',
+        doctorName: 'Dr. Bassem abed el-atti',
+        lastUpdate: 'Just now',
+    },
+    {
+        imgSrc: '../assets/images/banner (4).png',
+        weekName: 'Week 6',
+        doctorName: 'Dr. Bassem abed el-atti',
+        lastUpdate: 'Just now',
+    },
+    {
+        imgSrc: '../assets/images/banner (4).png',
+        weekName: 'Week 7',
+        doctorName: 'Dr. Bassem abed el-atti',
+        lastUpdate: 'Just now',
+    },
+    {
+        imgSrc: '../assets/images/banner (4).png',
+        weekName: 'Week 8',
+        doctorName: 'Dr. Bassem abed el-atti',
+        lastUpdate: 'Just now',
+    },
+    {
+        imgSrc: '../assets/images/banner (4).png',
+        weekName: 'Week 9',
+        doctorName: 'Dr. Bassem abed el-atti',
+        lastUpdate: 'Just now',
+    },
+    {
+        imgSrc: '../assets/images/banner (4).png',
+        weekName: 'Week 10',
+        doctorName: 'Dr. Bassem abed el-atti',
+        lastUpdate: 'Just now',
+    }, 
+       
+]
+var taskApitest = [
+    {
+        taskName: 'Lab Sheet #1',
+        description: '1. Write a C# program that prints the data of an array in reverse order.',
+        deadline: new Date('2024-11-10T12:00:00'),
+        matrialLink:'https://drive.google.com/file/d/1hQeIBh4E9DRi6T_-uRiUvT34uka19md-/view?usp=sharing',
+    },
+    {
+        taskName: 'Lab Sheet #2',
+        description: '2. Write a program that takes (mxn) 2 metrices from user and print.',
+        deadline: new Date('2024-11-10T12:00:00'),
+        matrialLink:'https://drive.google.com/file/d/1hQeIBh4E9DRi6T_-uRiUvT34uka19md-/view?usp=sharing',
+
+    },
+    {
+        taskName: 'Lab Sheet #3',
+        description: '3. Write a program that takes a string from usint the number of vowels in it.',
+        deadline: new Date('2024-11-10T12:00:00'),
+        matrialLink:'https://drive.google.com/file/d/1hQeIBh4E9DRi6T_-uRiUvT34uka19md-/view?usp=sharing',
+
+    },
+    {
+        taskName: 'Lab Sheet #4',
+        description: '4. Write a program that takes a number from user and print the sum of digits.',
+        deadline: new Date('2022-11-10T12:00:00'),
+        matrialLink:'https://drive.google.com/file/d/1hQeIBh4E9DRi6T_-uRiUvT34uka19md-/view?usp=sharing',
+
+    },
+    
+
+]
 
 function createCard(imgSrc, weekName, doctorName, lastUpdate) {
     const cardDiv = document.createElement('div');
@@ -45,18 +139,7 @@ function createCard(imgSrc, weekName, doctorName, lastUpdate) {
     parentDiv.appendChild(cardDiv);
 }
 
-createCard('images/week1.jpg', 'Week 1', 'Dr. John Doe', '2 days ago');
-
-
-// Path: javascript/weeks.js
-
-
-
-        // create a function that takes Task name  and description and Dead line to create the card dynamically and apped it to the div id "weeks-parant-div"            
-
-
-
-function createTaskCard(taskName, description, deadline) {
+function createTaskCard(taskName, description, datetimedeadline,matrialLink ) {
     const cardDiv = document.createElement('div');
     cardDiv.classList.add('col-sm-6', 'mb-3', 'mb-sm-0');
 
@@ -69,6 +152,7 @@ function createTaskCard(taskName, description, deadline) {
     const title = document.createElement('h5');
     title.classList.add('card-title');
     title.textContent = taskName;
+    
 
     const taskDescription = document.createElement('p');
     taskDescription.classList.add('card-text');
@@ -78,13 +162,16 @@ function createTaskCard(taskName, description, deadline) {
     buttonSection.classList.add('button-section');
 
     const downloadLink = document.createElement('a');
-    downloadLink.href = '#';
+    downloadLink.href = matrialLink;
+    // downloadLink.target = '_blank';
     downloadLink.classList.add('btn', 'btn-primary');
     downloadLink.textContent = 'download files';
 
     const deadlineText = document.createElement('h6');
     deadlineText.style.display = 'inline';
-    deadlineText.textContent = deadline;
+
+    var date = datetimedeadline.toISOString().slice(0, 10);
+    deadlineText.textContent =  'Dead line :' + date + ' : 12:00 PM';
 
     buttonSection.appendChild(downloadLink);
     buttonSection.appendChild(deadlineText);
@@ -97,12 +184,38 @@ function createTaskCard(taskName, description, deadline) {
 
     cardDiv.appendChild(card);
 
+    // add color to the card
+    
+    card.style.borderRadius = '10px';
+    card.style.padding = '10px';
+    card.style.boxShadow = '0 0 10px rgba(0, 0, 0, 0.1)';
+    card.style.transition = '0.3s';
+
+    var nowdate = new Date();
+    if (datetimedeadline < nowdate) {        
+        card.style.backgroundColor = '#ffb6b6';
+        title.textContent = taskName + '   (Expired)';
+        buttonSection.style.color = 'red';
+        buttonSection.style.fontWeight = 'bold';
+    } 
+    
+
     const parentDiv = document.getElementById('task-card-info');
     parentDiv.appendChild(cardDiv);
 }
 
-createTaskCard('Lab Sheet #2', '1. Write a C# program that prints the data of an array in reverse order.', 'Dead line : 12/12/2021 : 12:00 PM');
-createTaskCard('Lab Sheet #3', '2. Write a program that takes (mxn) 2 metrices from user and print.', 'Dead line : 12/12/2021 : 12:00 PM');
-createTaskCard('Lab Sheet #4', '3. Write a program that takes a string from user and print the number of vowels in it.', 'Dead line : 12/12/2021 : 12:00 PM');
-createTaskCard('Lab Sheet #5', '4. Write a program that takes a number from user and print the sum of digits.', 'Dead line : 12/12/2021 : 12:00 PM');
-createTaskCard('Lab Sheet #6', '5. Write a program that takes a number from user and print the reverse of it.', 'Dead line : 12/12/2021 : 12:00 PM');
+
+
+var datetimedeadline = new Date('2024-11-10T12:00:00');
+
+taskApitest.forEach(task => {
+        createTaskCard(task.taskName, task.description, task.deadline,task.matrialLink);
+    }
+)
+
+
+weeks.forEach(week => {
+        createCard(week.imgSrc, week.weekName, week.doctorName, week.lastUpdate);
+    }
+)
+
