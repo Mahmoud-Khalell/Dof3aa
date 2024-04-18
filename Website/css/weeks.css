@@ -119,3 +119,22 @@
     }
 
 }
+
+
+.button-section {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+.button-section h6{
+    margin-top: 10px;    
+}
+.button-section a {
+    width: 48%;
+}
+
+.Carddiv{
+    margin-top: 20px;
+}
+

@@ -115,7 +115,7 @@
                         <button class="nav-link active" id="pills-home-tab"
                             data-bs-toggle="pill" data-bs-target="#pills-home"
                             type="button" role="tab" aria-controls="pills-home"
-                            aria-selected="true">Home</button>
+                            aria-selected="true">Materials </button>
                     </li>
                     <li class="nav-item" role="presentation">
                         <button class="nav-link" id="pills-profile-tab"
@@ -123,7 +123,7 @@
                             data-bs-target="#pills-profile"
                             type="button" role="tab"
                             aria-controls="pills-profile"
-                            aria-selected="false">Profile</button>
+                            aria-selected="false">Tasks</button>
                     </li>
                     <li class="nav-item" role="presentation">
                         <button class="nav-link" id="pills-contact-tab"
@@ -131,15 +131,7 @@
                             data-bs-target="#pills-contact"
                             type="button" role="tab"
                             aria-controls="pills-contact"
-                            aria-selected="false">Contact</button>
-                    </li>
-                    <li class="nav-item" role="presentation">
-                        <button class="nav-link" id="pills-disabled-tab"
-                            data-bs-toggle="pill"
-                            data-bs-target="#pills-disabled"
-                            type="button" role="tab"
-                            aria-controls="pills-disabled"
-                            aria-selected="false" disabled>Disabled</button>
+                            aria-selected="false">Alerts</button>
                     </li>
                 </ul>
 
@@ -147,16 +139,14 @@
                     <div class="tab-pane fade show active" id="pills-home"
                         role="tabpanel" aria-labelledby="pills-home-tab"
                         tabindex="0">
-                        <!-- the content inside weeks tab --------------------------------------------->
 
+                        <!-- the content inside weeks tab --------------------------------------------->
                         <div class="row">
                             <div class="col-4">
-                                <h3 class="courses-section-title">Browse your
-                                    courses</h3>
+                                <h3 class="courses-section-title">Course
+                                    weeks</h3>
                             </div>
-
                             <div class="col-4"></div>
-
                             <div class="col-4">
                                 <form class="d-flex" role="search">
                                     <input
@@ -164,47 +154,52 @@
                                         type="search"
                                         placeholder="Search"
                                         aria-label="Search">
-
                                     <button class="btn btn-primary searchButton"
                                         style="margin:0px 20px ;"
                                         type="submit">Search</button>
-
                                 </form>
                                 <br>
                             </div>
                         </div>
-
                         <div class="row">
-
                             <div class="col">
-
                                 <div
                                     class="row row-cols-1 row-cols-md-1 g-4 main-courses-div"
                                     id="main-section-div">
-
                                     <div class="row row-cols-5 row-cols-md- g-4"
                                         id="weeks-parant-div">
-
                                         <!-- the content will be generated in js file -->
-
                                     </div>
                                 </div>
                             </div>
                         </div>
-
                     </div>
                     <div class="tab-pane fade" id="pills-profile"
                         role="tabpanel"
                         aria-labelledby="pills-profile-tab"
-                        tabindex="0">...</div>
+                        tabindex="0">
+                        <!-- the content inside tasks tab --------------------------------------------->
+                           
+                        <div class="row" id="task-card-info">
+                           
+                           
+                            
+                        </div>
+                        <!-- end the content inside tasks tab --------------------------------------------->
+                    </div>
                     <div class="tab-pane fade" id="pills-contact"
                         role="tabpanel"
                         aria-labelledby="pills-contact-tab"
-                        tabindex="0">...</div>
-                    <div class="tab-pane fade" id="pills-disabled"
-                        role="tabpanel"
-                        aria-labelledby="pills-disabled-tab"
-                        tabindex="0">...</div>
+                        tabindex="0">
+                        <!-- the content inside alerts tab -------------------------------------------->
+                        <div class="ratio ratio-16x9">
+                            <iframe
+                                src="https://www.youtube.com/embed/4fcsY1WjI4w?autoplay=1&mute=0">
+                                title="YouTube video" allowfullscreen></iframe>
+                        </div>
+
+                    </div>
+
                 </div>
 
             </div>
