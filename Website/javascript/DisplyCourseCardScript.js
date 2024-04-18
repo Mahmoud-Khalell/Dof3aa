@@ -139,7 +139,8 @@ var subjects = [
         subjectName: 'Data Structures and Algorithms',
         moreInfo: '',
         username: 'Dr. mohamed Ramadan',
-        lastUpdated: 'Last updated 3 mins ago'
+        lastUpdated: 'Last updated 3 mins ago',
+        type:'',
     },
     {
         imgSrc: '../assets/images/banner (2).png',
@@ -188,10 +189,15 @@ var subjects = [
     }
 ];
 
+
+
 createCardLecture(subjects[0].imgSrc, subjects[0].subjectCode,subjects[0].subjectName, subjects[0].moreInfo, subjects[0].username, subjects[0].lastUpdated);
 createCardLecture(subjects[1].imgSrc, subjects[1].subjectCode,subjects[0].subjectName, subjects[1].moreInfo, subjects[1].username, subjects[1].lastUpdated);
 createCardLecture(subjects[2].imgSrc, subjects[2].subjectCode,subjects[0].subjectName, subjects[2].moreInfo, subjects[2].username, subjects[2].lastUpdated);
 createCardLecture(subjects[3].imgSrc, subjects[3].subjectCode,subjects[0].subjectName, subjects[3].moreInfo, subjects[3].username, subjects[3].lastUpdated);
 createCardLecture(subjects[4].imgSrc, subjects[4].subjectCode,subjects[0].subjectName, subjects[4].moreInfo, subjects[4].username, subjects[4].lastUpdated);
 createCardLecture(subjects[5].imgSrc, subjects[5].subjectCode,subjects[0].subjectName, subjects[5].moreInfo, subjects[5].username, subjects[5].lastUpdated);
+createCardSection(subjects[5].imgSrc, subjects[5].subjectCode,subjects[0].subjectName, subjects[5].moreInfo, subjects[5].username, subjects[5].lastUpdated);
+createCardSection(subjects[5].imgSrc, subjects[5].subjectCode,subjects[0].subjectName, subjects[5].moreInfo, subjects[5].username, subjects[5].lastUpdated);
+createCardSection(subjects[5].imgSrc, subjects[5].subjectCode,subjects[0].subjectName, subjects[5].moreInfo, subjects[5].username, subjects[5].lastUpdated);
 createCardSection(subjects[5].imgSrc, subjects[5].subjectCode,subjects[0].subjectName, subjects[5].moreInfo, subjects[5].username, subjects[5].lastUpdated);
