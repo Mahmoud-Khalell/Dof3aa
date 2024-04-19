@@ -15,7 +15,8 @@ function createCardLecture(courseId ,imgSrc, subjectCode,subjectName, moreInfo, 
     card.addEventListener('click', () => {
 
         
-        window.location.href =  `weeks.html?id=${courseId}`;
+        window.location.href = `weeks.html?id=${courseId}`;
+        
         
 
     });

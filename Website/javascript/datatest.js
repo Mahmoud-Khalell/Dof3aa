@@ -5,6 +5,7 @@ var subjects = [
         courseId: 3012,
         imgSrc: '../assets/images/banner (1).png',
         subjectCode: 'CS203',
+        courseDepartment: 'Computer Science',
         subjectName: 'Data Structures and Algorithms',
         moreInfo: '',
         username: 'Dr. Bassem abed el-atti',
@@ -12,75 +13,102 @@ var subjects = [
         type: '',
         weeks: [
             {
+                weekid: 1,
                 imgSrc: '../assets/images/banner (4).png',
                 weekName: 'Week 1',
                 doctorName: 'Dr. Bassem abed el-atti',
                 lastUpdate: '2 days ago',
                 martials: [
                     {
-                        name: 'Lecture 1',
-                        link: 'https://drive.google.com/file/d/1hQeIBh4E9DRi6T_-uRiUvT34uka19md-/view?usp=sharing',
+                        cardTitle: 'intorduction',
+                        description: 'This is the first lecture of the course',
+                        type: 'slide',
+                        link: 'https://docs.google.com/presentation/d/10eFf_oeeImHGBrEZldpU9ZHzorrvu2Hc/edit?usp=drive_link&ouid=101088009110307536264&rtpof=true&sd=true',
+                        imgSrc: 'https://www.youtube.com/watch?v=9bZkp7q19f0'
                     },
                     {
-                        name: 'Lecture 2',
-                        link: 'https://drive.google.com/file/d/1hQeIBh4E9DRi6T_-uRiUvT34uka19md-/view?usp=sharing',
+                        cardTitle: 'video',
+                        description: 'This is the video by Dr. ibrahim shawky',
+                        type: 'video',
+                        link: 'https://www.youtube.com/watch?v=9bZkp7q19f0',
+
+                        imgSrc: 'https://www.youtube.com/watch?v=9bZkp7q19f0'
                     },
                     {
-                        name: 'Lecture 3',
+                        cardTitle: 'Code',
+                        description: 'This is the third lecture of the course',
+                        type: 'code',
+                        link: 'https://ideone.com/CT2oup',
+                        imgSrc: 'https://www.youtube.com/watch?v=9bZkp7q19f0'
+                    },
+                    {
+                        cardTitle: 'slide pdf',
+                        description: 'This is the fourth lecture of the course',
+                        type: 'pdf',
                         link: 'https://drive.google.com/file/d/1hQeIBh4E9DRi6T_-uRiUvT34uka19md-/view?usp=sharing',
+                        imgSrc: 'https://www.youtube.com/watch?v=9bZkp7q19f0'
                     },
                 ],
                 
             },
             {
+                weekid: 2,
                 imgSrc: '../assets/images/banner (4).png',
                 weekName: 'Week 2',
                 doctorName: 'Dr. Bassem abed el-atti',
                 lastUpdate: '1 day ago',
             },
             {
+                weekid: 3,
                 imgSrc: '../assets/images/banner (4).png',
                 weekName: 'Week 3',
                 doctorName: 'Dr. Bassem abed el-atti',
                 lastUpdate: '1 hour ago',
             },
             {
+                weekid: 4,
                 imgSrc: '../assets/images/banner (4).png',
                 weekName: 'Week 4',
                 doctorName: 'Dr. Bassem abed el-atti',
                 lastUpdate: 'Just now',
             },
             {
+                weekid: 5,
                 imgSrc: '../assets/images/banner (4).png',
                 weekName: 'Week 5',
                 doctorName: 'Dr. Bassem abed el-atti',
                 lastUpdate: 'Just now',
             },
             {
+                weekid: 6,
                 imgSrc: '../assets/images/banner (4).png',
                 weekName: 'Week 6',
                 doctorName: 'Dr. Bassem abed el-atti',
                 lastUpdate: 'Just now',
             },
             {
+                weekid: 7,
                 imgSrc: '../assets/images/banner (4).png',
                 weekName: 'Week 7',
                 doctorName: 'Dr. Bassem abed el-atti',
                 lastUpdate: 'Just now',
             },
             {
+                weekid: 8,
                 imgSrc: '../assets/images/banner (4).png',
                 weekName: 'Week 8',
                 doctorName: 'Dr. Bassem abed el-atti',
                 lastUpdate: 'Just now',
             },
             {
+                weekid: 9,
                 imgSrc: '../assets/images/banner (4).png',
                 weekName: 'Week 9',
                 doctorName: 'Dr. Bassem abed el-atti',
                 lastUpdate: 'Just now',
             },
             {
+                weekid: 10,
                 imgSrc: '../assets/images/banner (4).png',
                 weekName: 'Week 10',
                 doctorName: 'Dr. Bassem abed el-atti',
@@ -131,6 +159,7 @@ var subjects = [
         courseId: 3013,
         imgSrc: '../assets/images/banner (2).png',
         subjectCode: 'CS204',
+        courseDepartment: 'Computer Science',
         subjectName: 'Computer Organization and Architecture',
         moreInfo: '',
         username: 'Dr. Osama abo el nasr',
@@ -138,30 +167,36 @@ var subjects = [
         type: '',
         weeks: [
             {
+
+                weekid: 1,
                 imgSrc: '../assets/images/banner (4).png',
                 weekName: 'Week 1',
                 doctorName: 'Dr. Osama abo el nasr',
                 lastUpdate: '2 days ago',
             },
             {
+                weekid: 2,
                 imgSrc: '../assets/images/banner (4).png',
                 weekName: 'Week 2',
                 doctorName: 'Dr. Osama abo el nasr',
                 lastUpdate: '1 day ago',
             },
             {
+                weekid: 3,
                 imgSrc: '../assets/images/banner (4).png',
                 weekName: 'Week 3',
                 doctorName: 'Dr. Osama abo el nasr',
                 lastUpdate: '1 hour ago',
             },
             {
+                weekid: 4,
                 imgSrc: '../assets/images/banner (4).png',
                 weekName: 'Week 4',
                 doctorName: 'Dr. Osama abo el nasr',
                 lastUpdate: 'Just now',
             },
             {
+                weekid: 5,
                 imgSrc: '../assets/images/banner (4).png',
                 weekName: 'Week 5',
                 doctorName: 'Dr. Osama abo el nasr',
@@ -214,25 +249,30 @@ var subjects = [
         courseId: 3014,
         imgSrc: '../assets/images/banner (3).png',
         subjectCode: 'CS205',
+        courseDepartment: 'Computer Science',
         subjectName: 'Software Engineering',
         moreInfo: '',
         username: 'Dr. Ahmed abo el nasr',
         lastUpdated: 'Last updated 3 mins ago',
+
         type: '',
         weeks: [
             {
+                weekid: 1,
                 imgSrc: '../assets/images/banner (4).png',
                 weekName: 'Week 1',
                 doctorName: 'Dr. Ahmed abo el nasr',
                 lastUpdate: '2 days ago',
             },
             {
+                weekid: 2,
                 imgSrc: '../assets/images/banner (4).png',
                 weekName: 'Week 2',
                 doctorName: 'Dr. Ahmed abo el nasr',
                 lastUpdate: '1 day ago',
             },
             {
+                weekid: 3,
                 imgSrc: '../assets/images/banner (4).png',
                 weekName: 'Week 3',
                 doctorName: 'Dr. Ahmed abo el nasr',
@@ -281,6 +321,10 @@ var subjects = [
     },
 
 ];
+
+
+// access weekid 1 in the first subject
+// console.log();
 
 
 // module.exports = subjects;

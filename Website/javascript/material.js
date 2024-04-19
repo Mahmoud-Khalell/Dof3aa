@@ -1,4 +1,10 @@
 
+
+var urlParams = new URLSearchParams(window.location.search);
+var id = urlParams.get('id');
+
+
+
 function createCard(cardTitle, description ,type, imgSrc, link) {
     const parentDiv = document.getElementById('main-material-div');
 
@@ -64,7 +70,6 @@ function createCard(cardTitle, description ,type, imgSrc, link) {
 
 
     cardDiv.addEventListener('click', () => {
-        // open link in same tab
         window.open(link, '_blank');
 
     });
@@ -108,6 +113,30 @@ var materials = [
     
 ];
 
-materials.forEach(material => {
+
+// console.log("martial s  " + martials);
+console.log(subjects[0].weeks[0].martials);
+let MM = subjects[0].weeks[0].martials;
+
+MM.forEach(material => {
     createCard(material.cardTitle, material.description, material.type, material.imgSrc, material.link);
+    console.log(material);
+    console.log("=============");
 });
+
+
+
+
+
+var pageH1Text = document.getElementById('page-h1-text-fullPage');
+pageH1Text.textContent = subjects[0].weeks[0].weekName;
+
+
+var pageH1Text = document.getElementById('page-h5-text-fullPage');
+pageH1Text.textContent = subjects[0].moreInfo;
+
+
+var pageH1Text = document.getElementById('page-h6-text-fullPage');
+pageH1Text.textContent = subjects[search(subjects, id - 1)].username;
+
+

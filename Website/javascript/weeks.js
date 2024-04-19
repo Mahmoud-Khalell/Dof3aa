@@ -2,7 +2,7 @@
 
 var urlParams = new URLSearchParams(window.location.search);
 var id = urlParams.get('id');
-
+// alert(id);
 var taskApitest = [
     {
         taskName: 'Lab Sheet #1',
@@ -28,14 +28,14 @@ var taskApitest = [
         taskName: 'Lab Sheet #4',
         description: '4. Write a program that takes a number from user and print the sum of digits.',
         deadline: new Date('2022-11-10T12:00:00'),
-        matrialLink:'https://drive.google.com/file/d/1hQeIBh4E9DRi6T_-uRiUvT34uka19md-/view?usp=sharing',
-
+        matrialLink: 'https://drive.google.com/file/d/1hQeIBh4E9DRi6T_-uRiUvT34uka19md-/view?usp=sharing',
+        
     },
     
 
 ]
 
-function createCard(imgSrc, weekName, doctorName, lastUpdate) {
+function createCard(imgSrc, weekName, doctorName, lastUpdate,weekid) {
     const cardDiv = document.createElement('div');
     cardDiv.classList.add('col');
 
@@ -79,6 +79,18 @@ function createCard(imgSrc, weekName, doctorName, lastUpdate) {
 
     const parentDiv = document.getElementById('weeks-parant-div');
     parentDiv.appendChild(cardDiv);
+
+    // add on click event to the card open the week page with the weekid the current page url is "html/weeks.html?id=3012"
+
+    card.addEventListener('click', () => {
+        window.location.href = `material.html?id=${weekid}`;
+    });
+    
+
+    
+
+
+    
 }
 
 function createTaskCard(taskName, description, datetimedeadline,matrialLink ) {
@@ -156,11 +168,16 @@ taskApitest.forEach(task => {
 )
 
 
+
+
+
+
 // function to search in subjects array by courseId and return the index of the object
 id++;
-function search(subjects, id) {
-    console.log("id - "+id);
-    console.log("len - "+subjects.length);
+console.log("id: "+id);
+function search(subjects, id) {   
+console.log("id 2: "+id);
+
     for (var i = 0; i < subjects.length; i++) {
         console.log(">--->>" + subjects[i].courseId);
         console.log("id - "+id);
@@ -174,11 +191,31 @@ function search(subjects, id) {
 }
 
 
-var weeks = subjects[search(subjects, id-1)].weeks;
+var Weeks = subjects[search(subjects, id - 1)].weeks;
+console.log("Weeks: "+search(subjects, id - 1));
 
 
-weeks.forEach(week => {
-        createCard(week.imgSrc, week.weekName, week.doctorName, week.lastUpdate);
+Weeks.forEach(week => {
+        createCard(week.imgSrc, week.weekName, week.doctorName, week.lastUpdate,week.weekid);
     }
 )
+
+
+
+
+// change the text in page in id=page-h1-text
+var pageH1Text = document.getElementById('page-h1-text-fullPage');
+pageH1Text.textContent = subjects[search(subjects, id - 1)].subjectName;
+
+
+var pageH1Text = document.getElementById('page-h5-text-fullPage');
+pageH1Text.textContent = subjects[search(subjects, id - 1)].courseDepartment + ' ( ' + subjects[search(subjects, id - 1)].subjectCode + ' )';
+
+
+
+var pageH1Text = document.getElementById('page-h6-text-fullPage');
+pageH1Text.textContent = subjects[search(subjects, id - 1)].username;
+
+
+
 
