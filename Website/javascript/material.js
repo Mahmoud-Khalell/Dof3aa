@@ -1,5 +1,5 @@
 
-function createCard(cardTitle, description ,type, imgSrc) {
+function createCard(cardTitle, description ,type, imgSrc, link) {
     const parentDiv = document.getElementById('main-material-div');
 
     const colDiv = document.createElement('div');
@@ -31,30 +31,44 @@ function createCard(cardTitle, description ,type, imgSrc) {
 
   
     if(type === 'video'){
-        cardImageDiv.style.backgroundImage = "url(../../assets/images/images.jpeg)";
+        cardImageDiv.style.backgroundImage = "url(../../assets/images/courseImg/youtube.png)";
+
         cardImageDiv.style.backgroundSize = "cover";
         cardImageDiv.style.backgroundPosition = "center";
     }
     else if (type === 'pdf') {
-        cardImageDiv.style.backgroundImage = "url(../../assets/images/pdf.png)";
+        cardImageDiv.style.backgroundImage = "url(../../assets/images/courseImg/pdf.png)";
         cardImageDiv.style.backgroundSize = "cover";
         cardImageDiv.style.backgroundPosition = "center";
     }
     else if (type === 'slide') {
-        cardImageDiv.style.backgroundImage = "url(../../assets/images/slide.jpg)";
+        cardImageDiv.style.backgroundImage = "url(../../assets/images/courseImg/slide.png)";
         cardImageDiv.style.backgroundSize = "cover";
         cardImageDiv.style.backgroundPosition = "center";
     }
     else if (type === 'audio') {
-        cardImageDiv.style.backgroundImage = "url(../../assets/images/audio.jpg)";
+        cardImageDiv.style.backgroundImage = "url(../../assets/images/courseImg/rec.png)";
         cardImageDiv.style.backgroundSize = "cover";
         cardImageDiv.style.backgroundPosition = "center";
     }
     else if (type === 'code') {
-        cardImageDiv.style.backgroundImage = "url(../../assets/images/code.jpeg)";
+        cardImageDiv.style.backgroundImage = "url(../../assets/images/courseImg/code.png)";
         cardImageDiv.style.backgroundSize = "cover";
         cardImageDiv.style.backgroundPosition = "center";
     }
+    else {
+        cardImageDiv.style.backgroundImage =undefined;
+        cardImageDiv.style.backgroundSize = "cover";
+        cardImageDiv.style.backgroundPosition = "center";
+    }
+
+
+    cardDiv.addEventListener('click', () => {
+        // open link in same tab
+        window.open(link, '_blank');
+
+    });
+    
     
     colDiv.appendChild(cardDiv);
 
@@ -63,37 +77,37 @@ function createCard(cardTitle, description ,type, imgSrc) {
 
 var materials = [
     {
-        cardTitle: 'Lecture 1',
+        cardTitle: 'intorduction',
         description: 'This is the first lecture of the course',
         type: 'slide',
+        link: 'https://docs.google.com/presentation/d/10eFf_oeeImHGBrEZldpU9ZHzorrvu2Hc/edit?usp=drive_link&ouid=101088009110307536264&rtpof=true&sd=true',
         imgSrc: 'https://www.youtube.com/watch?v=9bZkp7q19f0'
     },
     {
-        cardTitle: 'Lecture 2',
-        description: 'This is the second lecture of the course',
+        cardTitle: 'video',
+        description: 'This is the video by Dr. ibrahim shawky',
         type: 'video',
+        link: 'https://www.youtube.com/watch?v=9bZkp7q19f0',
+
         imgSrc: 'https://www.youtube.com/watch?v=9bZkp7q19f0'
     },
     {
-        cardTitle: 'Lecture 3',
+        cardTitle: 'Code',
         description: 'This is the third lecture of the course',
         type: 'code',
+        link: 'https://ideone.com/CT2oup',
         imgSrc: 'https://www.youtube.com/watch?v=9bZkp7q19f0'
     },
     {
-        cardTitle: 'Lecture 4',
+        cardTitle: 'slide pdf',
         description: 'This is the fourth lecture of the course',
         type: 'pdf',
+        link: 'https://drive.google.com/file/d/1hQeIBh4E9DRi6T_-uRiUvT34uka19md-/view?usp=sharing',
         imgSrc: 'https://www.youtube.com/watch?v=9bZkp7q19f0'
     },
-    {
-        cardTitle: 'Lecture 5',
-        description: 'This is the fifth lecture of the course',
-        type: 'slide',
-        imgSrc: 'https://www.youtube.com/watch?v=9bZkp7q19f0'
-    }
+    
 ];
 
 materials.forEach(material => {
-    createCard(material.cardTitle, material.description, material.type, material.imgSrc);
+    createCard(material.cardTitle, material.description, material.type, material.imgSrc, material.link);
 });

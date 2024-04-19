@@ -4,7 +4,7 @@
     position: relative;
     transition: all 0.4s cubic-bezier(0.645, 0.045, 0.355, 1);
     border-radius: 16px;
-    box-shadow: 0 0 20px 8px #d0d0d0;
+    box-shadow: 0 0 10px 3px #d0d0d0;
     overflow: hidden;
 }
 
@@ -48,12 +48,12 @@
 
 /* Hover states */
 .card:hover .card-description {
-    transform: translateY(100%);
+    transform: translateY(65%);
 }
 
 
 .card:hover .card-image {
-    background-image: url(../../assets/images/images.jpeg);
+    background-image: url( "../../assets/images/course\ img/pdf.png");
     background-size: cover;
     background-position: center;
 }
