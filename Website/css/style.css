@@ -159,3 +159,27 @@ ul {
     font-size: 15px;
     color: #5d5d5d;
 }
+
+.landing-page .content .info .button {
+    border: 0;
+    border-radius: 10px;
+    padding: 6px 15px;
+    text-decoration: none;
+    margin-top: 30px;
+    cursor: pointer;
+    color: #FFF;
+    background-color: #6c63ff;
+    font-size: 17px;
+    font-weight: 700;
+   
+}
+
+.landing-page .content .image img {
+    max-width: 100%;
+}
+
+
+ h1{
+    font-size: 44px;
+    color: #000
+}
