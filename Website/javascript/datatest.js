@@ -27,6 +27,48 @@ var subjects = [
                         imgSrc: 'https://www.youtube.com/watch?v=9bZkp7q19f0'
                     },
                     {
+                        cardTitle: 'intorduction',
+                        description: 'This is the first lecture of the course',
+                        type: 'slide',
+                        link: 'https://docs.google.com/presentation/d/10eFf_oeeImHGBrEZldpU9ZHzorrvu2Hc/edit?usp=drive_link&ouid=101088009110307536264&rtpof=true&sd=true',
+                        imgSrc: 'https://www.youtube.com/watch?v=9bZkp7q19f0'
+                    },
+                    {
+                        cardTitle: 'intorduction',
+                        description: 'This is the first lecture of the course',
+                        type: 'slide',
+                        link: 'https://docs.google.com/presentation/d/10eFf_oeeImHGBrEZldpU9ZHzorrvu2Hc/edit?usp=drive_link&ouid=101088009110307536264&rtpof=true&sd=true',
+                        imgSrc: 'https://www.youtube.com/watch?v=9bZkp7q19f0'
+                    },
+                    {
+                        cardTitle: 'intorduction',
+                        description: 'This is the first lecture of the course',
+                        type: 'code',
+                        link: 'https://docs.google.com/presentation/d/10eFf_oeeImHGBrEZldpU9ZHzorrvu2Hc/edit?usp=drive_link&ouid=101088009110307536264&rtpof=true&sd=true',
+                        imgSrc: 'https://www.youtube.com/watch?v=9bZkp7q19f0'
+                    },
+                    {
+                        cardTitle: 'intorduction',
+                        description: 'This is the first lecture of the course',
+                        type: 'slide',
+                        link: 'https://docs.google.com/presentation/d/10eFf_oeeImHGBrEZldpU9ZHzorrvu2Hc/edit?usp=drive_link&ouid=101088009110307536264&rtpof=true&sd=true',
+                        imgSrc: 'https://www.youtube.com/watch?v=9bZkp7q19f0'
+                    },
+                    {
+                        cardTitle: 'intorduction',
+                        description: 'This is the first lecture of the course',
+                        type: 'slide',
+                        link: 'https://docs.google.com/presentation/d/10eFf_oeeImHGBrEZldpU9ZHzorrvu2Hc/edit?usp=drive_link&ouid=101088009110307536264&rtpof=true&sd=true',
+                        imgSrc: 'https://www.youtube.com/watch?v=9bZkp7q19f0'
+                    },
+                    {
+                        cardTitle: 'intorduction',
+                        description: 'This is the first lecture of the course',
+                        type: 'slide',
+                        link: 'https://docs.google.com/presentation/d/10eFf_oeeImHGBrEZldpU9ZHzorrvu2Hc/edit?usp=drive_link&ouid=101088009110307536264&rtpof=true&sd=true',
+                        imgSrc: 'https://www.youtube.com/watch?v=9bZkp7q19f0'
+                    },
+                    {
                         cardTitle: 'video',
                         description: 'This is the video by Dr. ibrahim shawky',
                         type: 'video',
