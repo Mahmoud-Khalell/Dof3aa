@@ -383,6 +383,7 @@ var UserData = [
         RegistrationDate: new Date('2020-11-10T12:00:00'),
         lastlogin: new Date('2020-11-10T12:00:00'),
         studentID: 3012,  
+        verefied: true,
         subjects: [
             {
                 courseId: 3012,
