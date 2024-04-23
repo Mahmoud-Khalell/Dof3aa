@@ -365,8 +365,83 @@ var subjects = [
 ];
 
 
+
+
+
+
+var UserData = [
+    {
+        username: 'Ahmed',
+        password: '123',
+        email: 'tras@f.com',
+        imgSrc: '../assets/images/ahmed.png',
+        university: 'Ain shams',
+        faculty: 'Computer Science',
+        department: 'Computer Science',
+        startyaer: 2020,
+        endyear: 2024,
+        RegistrationDate: new Date('2020-11-10T12:00:00'),
+        lastlogin: new Date('2020-11-10T12:00:00'),
+        studentID: 3012,  
+        subjects: [
+            {
+                courseId: 3012,
+                imgSrc: '../assets/images/banner (1).png',
+            },
+            {
+                courseId: 3013,
+                imgSrc: '../assets/images/banner (2).png',
+            },
+            {
+                courseId: 3014,
+                imgSrc: '../assets/images/banner (3).png',
+            },
+        ],
+
+
+
+    }
+];
+
+
+    
 // access weekid 1 in the first subject
 // console.log();
 
 
 // module.exports = subjects;
+
+
+
+var group = [
+    {
+        courseId: 3012,
+        imgIcon: '../assets/images/banner (1).png',
+        imgBanner: '../assets/images/banner (1).png',
+        subjectCode: 'CS203',
+        courseDepartment: 'Computer Science',
+        subjectName: 'Data Structures and Algorithms',
+        moreInfo: '',
+        username: 'Dr. Bassem abed el-atti',
+        lastUpdated: 'Last updated 3 mins ago',
+        type: '',
+        createdDate: new Date('2020-11-10T12:00:00'),
+        createdBy: 'Ahmed', // userID
+        members: [
+            {
+                username: 'Ahmed',
+                imgSrc: '../assets/images/ahmed.png',
+            },
+            {
+                username: 'Mohamed',
+                imgSrc: '../assets/images/mohamed.png',
+            },
+            {
+                username: 'Ali',
+                imgSrc: '../assets/images/ali.png',
+            },
+        ],
+         
+
+    },
+];

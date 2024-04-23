@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" >
+<html lang="en">
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -135,6 +135,16 @@
                             aria-controls="pills-contact"
                             aria-selected="false">Alerts</button>
                     </li>
+
+                    <li class="nav-item" role="presentation">
+                        <button class="nav-link" id="info-tab"
+                            data-bs-toggle="pill"
+                            data-bs-target="#info"
+                            type="button" role="tab"
+                            aria-controls="info"
+                            aria-selected="false">info</button>
+                    </li>
+
                 </ul>
 
                 <div class="tab-content" id="pills-tabContent">
@@ -200,7 +210,14 @@
                                 src="https://www.yout ube.com/embed/4fcsY1WjI4w?autoplay=1&mute=0">
                                 title="YouTube video" allowfullscreen></iframe>
                         </div>
+                    </div>
 
+                    <div class="tab-pane fade" id="info"
+                        role="tabpanel"
+                        aria-labelledby="info-tab"
+                        tabindex="0">
+                        <!-- the content inside alerts tab -------------------------------------------->
+                        info
                     </div>
 
                 </div>
