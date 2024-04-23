@@ -20,7 +20,7 @@ var taskApitest = [
     {
         taskName: 'Lab Sheet #3',
         description: '3. Write a program that takes a string from usint the number of vowels in it.',
-        deadline: new Date('2024-11-10T12:00:00'),
+        deadline: new Date('2026-11-10T12:00:00'),
         matrialLink:'https://drive.google.com/file/d/1hQeIBh4E9DRi6T_-uRiUvT34uka19md-/view?usp=sharing',
 
     },
@@ -151,6 +151,8 @@ function createTaskCard(taskName, description, datetimedeadline,matrialLink ) {
         title.textContent = taskName + '   (Expired)';
         buttonSection.style.color = 'red';
         buttonSection.style.fontWeight = 'bold';
+        downloadLink.style.display = 'none';
+        
     } 
     
 
