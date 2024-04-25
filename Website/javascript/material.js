@@ -3,6 +3,9 @@
 var urlParams = new URLSearchParams(window.location.search);
 var id = urlParams.get('id');
 
+//test varables 
+var userRole = 'admin'
+
 
 
 function createCard(cardTitle, description ,type, imgSrc, link) {
@@ -84,6 +87,57 @@ function createCard(cardTitle, description ,type, imgSrc, link) {
 
 
 
+function createAddMatirialCard() {
+    const parentDiv = document.getElementById('main-material-div');
+
+    const colDiv = document.createElement('div');
+    colDiv.classList.add('col');
+    const cardDiv = document.createElement('div');
+    
+    // senter the cardDiv content to center
+   
+    
+
+    
+    
+    cardDiv.style.borderWidth = "4px";
+    cardDiv.style.borderColor = "#93939382";
+    cardDiv.style.borderStyle = "dashed";
+    
+    cardDiv.classList.add('card');
+
+
+    const Icon = document.createElement('i');
+    Icon.classList.add('fa-solid');
+    Icon.classList.add('fa-plus');
+    Icon.style.width = "90px";
+    Icon.style.height = "90px";
+    Icon.style.marginTop = "1px";
+    
+
+    cardDiv.style.display = "flex";
+    cardDiv.style.justifyContent = "center";
+    cardDiv.style.alignItems = "center";
+    cardDiv.style.color = "#93939382";
+
+    const titleParagraph = document.createElement('h1');
+    titleParagraph.classList.add('text-title');
+    titleParagraph.textContent = "Add New Material";
+    cardDiv.appendChild(titleParagraph);
+
+  
+    cardDiv.appendChild(Icon);
+    colDiv.appendChild(cardDiv);
+    parentDiv.appendChild(colDiv);
+    
+}
+
+
+
+
+
+
+
 
 
 var materials = [
@@ -132,6 +186,16 @@ MM.forEach(material => {
 
 
 
+if(userRole === 'admin'){
+    createAddMatirialCard();
+}
+
+
+
+
+
+
+
 
 
 var pageH1Text = document.getElementById('page-h1-text-fullPage');
@@ -144,4 +208,6 @@ pageH1Text.textContent = subjects[0].moreInfo;
 
 var pageH1Text = document.getElementById('page-h6-text-fullPage');
 pageH1Text.textContent = subjects[search(subjects, id - 1)].username;
+
+
 

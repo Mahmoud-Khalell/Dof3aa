@@ -139,7 +139,7 @@ function createAddWeeksCard() {
     card.style.borderWidth = "4px";
     card.style.borderColor = "#93939382";
     card.style.borderStyle = "dashed";
-    card.style.height="170px"
+    card.style.height = "170px";
 
     card.appendChild(cardBody);
     title.appendChild(Icon);
