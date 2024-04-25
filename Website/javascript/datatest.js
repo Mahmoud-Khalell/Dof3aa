@@ -371,19 +371,15 @@ var subjects = [
 
 var UserData = [
     {
+        FirstName: "ff",
+        lastName:"ff",
         username: 'Ahmed',
         password: '123',
         email: 'tras@f.com',
-        imgSrc: '../assets/images/ahmed.png',
-        university: 'Ain shams',
+        imgSrc: '../assets/images/ahmed.png',        
+        university: 'Luxor',  
         faculty: 'Computer Science',
-        department: 'Computer Science',
-        startyaer: 2020,
-        endyear: 2024,
         RegistrationDate: new Date('2020-11-10T12:00:00'),
-        lastlogin: new Date('2020-11-10T12:00:00'),
-        studentID: 3012,  
-        verefied: true,
         subjects: [
             {
                 courseId: 3012,
@@ -398,14 +394,11 @@ var UserData = [
                 imgSrc: '../assets/images/banner (3).png',
             },
         ],
-
-
-
     }
 ];
 
 
-    
+
 // access weekid 1 in the first subject
 // console.log();
 
@@ -441,8 +434,109 @@ var group = [
                 username: 'Ali',
                 imgSrc: '../assets/images/ali.png',
             },
-        ],
-         
+        ],   
 
     },
 ];
+
+
+
+
+
+
+
+
+//** ERD ** */
+
+var UserData = [
+    {
+        FirstName: "ff",
+        lastName: "ff",
+        username: 'Ahmed',
+        password: '123',
+        email: 'tras@f.com',
+        imgSrc: '../assets/images/ahmed.png',
+        university: 'Luxor',
+        faculty: 'Computer Science',
+        RegistrationDate: new Date('2020-11-10T12:00:00'),
+    }
+];
+
+
+var course  = [
+    {
+        courseId: 3012,
+        courseName: 'Data Structures and Algorithms',
+        imgSrc: '../assets/images/banner (1).png',
+        logo: '../assets/images/banner (1).png',
+        description: '',
+        lastUpdated: 'Last updated 3 mins ago',
+        type: '',
+    }
+];
+
+
+
+
+var Topic= [
+    {
+        TopicName: 'intorduction',
+        description: 'This is the first lecture of the course',
+        link: 'https://docs.google.com/presentation/d/10eFf_oeeImHGBrEZldpU9ZHzorrvu2Hc/edit?usp=drive_link&ouid=101088009110307536264&rtpof=true&sd=true',
+        imgSrc: 'https://www.youtube.com/watch?v=9bZkp7q19f0',
+        type: 'slide',
+        lastUpdated: 'Last updated 3 mins ago',
+
+        
+    },
+];
+
+
+
+var Topic= [
+    {
+        TopicID: 1,
+        TopicName: 'intorduction',
+        description: 'This is the first lecture of the course',
+        imgSrc: 'https://www.youtube.com/watch?v=9bZkp7q19f0',
+        type: 'slide',
+        lastUpdated: 'Last updated 3 mins ago',        
+    },
+];
+
+
+var matiral= [
+    {
+        matiralID: 1,
+        matiralName: 'intorduction',
+        description: 'This is the first lecture of the course',
+        link:'fdfdfd.com',
+        type: "",//'slide', 'video', 'code', 'pdf', 'link', 'image', 'audio' , 'doc' , 'text'
+        
+    },
+];
+
+
+
+
+var Task= [
+    {
+        TaskID: 1,
+        TaskName: 'Lab Sheet #1',
+        description: '1. Write a C# program that prints the data of an array in reverse order.',        
+        creationDate: new Date('2020-11-10T12:00:00'),
+        deadline: new Date('2024-11-10T12:00:00'),
+        matrialLink: 'https://drive.google.com/file/d/1hQeIBh4E9DRi6T_-uRiUvT34uka19md-/view?usp=sharing',
+                
+    },
+];
+
+var Alert= [
+    {
+        AlertID: 1,
+        AlertName: 'Midterm Exam',
+        description: 'Midterm Exam will be held on 20th of November 2024',
+        creationDate: new Date('2020-11-10T12:00:00'),
+    },
+];
+

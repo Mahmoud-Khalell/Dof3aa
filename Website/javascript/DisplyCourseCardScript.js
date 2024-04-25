@@ -46,8 +46,15 @@ function createCardLecture(courseId ,imgSrc, subjectCode,subjectName, moreInfo, 
     usernameElement.classList.add('card-title','DoctorName');
     usernameElement.textContent = username;
     
+    const icon = document.createElement('i');
+    // <i class="fa-solid fa-ellipsis-vertical"></i>
+    icon.classList.add('fa-solid', 'fa-ellipsis-vertical');
+
+
     const cardFooter = document.createElement('div');
     cardFooter.classList.add('card-footer');
+    
+    
     
     const lastUpdatedElement = document.createElement('small');
     lastUpdatedElement.classList.add('text-body-secondary');
@@ -58,7 +65,6 @@ function createCardLecture(courseId ,imgSrc, subjectCode,subjectName, moreInfo, 
     cardBody.appendChild(info);
     cardBody.appendChild(usernameElement);
     
-    cardFooter.appendChild(lastUpdatedElement);
     
     card.appendChild(img);
     card.appendChild(cardBody);
@@ -68,14 +74,15 @@ function createCardLecture(courseId ,imgSrc, subjectCode,subjectName, moreInfo, 
     
     const mainCoursesDiv = document.querySelector('#main-course-div');
     mainCoursesDiv.appendChild(cardDiv);
-
-
+    
+    cardFooter.appendChild(lastUpdatedElement);
+   
     const randomColor = colors[Math.floor(Math.random() * colors.length)];
     card.style.backgroundColor = randomColor;
 }
 
 subjects.forEach(subject => {
-    createCardLecture(subject.courseId, subject.imgSrc, subject.subjectCode, subject.subjectName, subject.moreInfo, subject.username, subject.lastUpdated);
+     createCardLecture(subject.courseId, subject.imgSrc, subject.subjectCode, subject.subjectName, subject.moreInfo, subject.username, subject.lastUpdated);
 });
 
 

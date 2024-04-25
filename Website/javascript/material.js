@@ -140,3 +140,7 @@ var pageH1Text = document.getElementById('page-h6-text-fullPage');
 pageH1Text.textContent = subjects[search(subjects, id - 1)].username;
 
 
+// Initialization for ES Users
+import { Dropdown, Collapse, initMDB } from "mdb-ui-kit";
+
+initMDB({ Dropdown, Collapse });
