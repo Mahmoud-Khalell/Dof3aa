@@ -2,6 +2,13 @@
 
 var urlParams = new URLSearchParams(window.location.search);
 var id = urlParams.get('id');
+
+
+//test varables 
+var userRole = 'admin'
+
+
+
 // alert(id);
 var taskApitest = [
     {
@@ -35,7 +42,7 @@ var taskApitest = [
 
 ]
 
-function createCard(imgSrc, weekName, doctorName, lastUpdate,weekid) {
+function createWeeksCard(imgSrc, weekName, doctorName, lastUpdate,weekid) {
     const cardDiv = document.createElement('div');
     cardDiv.classList.add('col');
 
@@ -92,6 +99,64 @@ function createCard(imgSrc, weekName, doctorName, lastUpdate,weekid) {
 
     
 }
+
+function createAddWeeksCard() {
+    const cardDiv = document.createElement('div');
+    cardDiv.classList.add('col');
+
+    const card = document.createElement('div');
+    card.classList.add('card', 'h-60');
+
+    
+    const cardBody = document.createElement('div');
+    cardBody.classList.add('card-body');
+
+    const title = document.createElement('h5');
+    title.classList.add('card-title');
+    title.style.textAlign = 'center';
+    title.style.color = "#93939382"
+    title.style.marginTop = "12px";
+    title.textContent = "Add New Week";
+
+
+    const doctor = document.createElement('p');
+    doctor.classList.add('card-title');
+    doctor.textContent = "doctorName";
+
+
+    const Icon = document.createElement('i');
+    Icon.classList.add('fa-solid');
+    Icon.classList.add('fa-plus');
+    Icon.style.width = "90px";
+    Icon.style.height = "90px";
+    Icon.style.marginTop = "1px";
+
+
+    const cardFooter = document.createElement('div');
+    cardFooter.classList.add('card-footer');
+
+    cardBody.appendChild(title);
+    card.style.borderWidth = "4px";
+    card.style.borderColor = "#93939382";
+    card.style.borderStyle = "dashed";
+    card.style.height="170px"
+
+    card.appendChild(cardBody);
+    title.appendChild(Icon);
+    cardDiv.appendChild(card);
+
+    const parentDiv = document.getElementById('weeks-parant-div');
+    parentDiv.appendChild(cardDiv);
+
+
+
+    card.addEventListener('click', () => {
+        window.location.href = `material.html?id=`;
+    });
+    
+}
+
+
 
 function createTaskCard(taskName, description, datetimedeadline,matrialLink ) {
     const cardDiv = document.createElement('div');
@@ -170,6 +235,17 @@ taskApitest.forEach(task => {
 )
 
 
+function addWeekButton() {
+    const addButtonIcon = document.createElement('button');
+    addButtonIcon.classList.add('btn', 'btn-primary', 'searchButton');
+    addButtonIcon.id = 'add-week-button-icon';
+    addButtonIcon.style.margin = '0px 20px';
+    addButtonIcon.type = 'submit';
+    addButtonIcon.innerHTML = '<i class="fa-solid fa-plus"></i>Add week';
+
+    const addButtonContainer = document.getElementById('class-add-week-btn');
+    addButtonContainer.appendChild(addButtonIcon);
+}
 
 
 
@@ -198,11 +274,15 @@ console.log("Weeks: "+search(subjects, id - 1));
 
 
 Weeks.forEach(week => {
-        createCard(week.imgSrc, week.weekName, week.doctorName, week.lastUpdate,week.weekid);
+        createWeeksCard(week.imgSrc, week.weekName, week.doctorName, week.lastUpdate,week.weekid);
     }
 )
 
 
+if (userRole == 'admin') {
+    addWeekButton();
+    createAddWeeksCard();
+}
 
 
 // change the text in page in id=page-h1-text

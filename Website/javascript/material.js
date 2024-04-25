@@ -80,6 +80,12 @@ function createCard(cardTitle, description ,type, imgSrc, link) {
     parentDiv.appendChild(colDiv);
 }
 
+
+
+
+
+
+
 var materials = [
     {
         cardTitle: 'intorduction',

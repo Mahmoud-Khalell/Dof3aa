@@ -142,20 +142,8 @@ var subjects = [
                 doctorName: 'Dr. Bassem abed el-atti',
                 lastUpdate: 'Just now',
             },
-            {
-                weekid: 9,
-                imgSrc: '../assets/images/banner (4).png',
-                weekName: 'Week 9',
-                doctorName: 'Dr. Bassem abed el-atti',
-                lastUpdate: 'Just now',
-            },
-            {
-                weekid: 10,
-                imgSrc: '../assets/images/banner (4).png',
-                weekName: 'Week 10',
-                doctorName: 'Dr. Bassem abed el-atti',
-                lastUpdate: 'Just now',
-            }, 
+           
+            
         ],
         tasks: [
             {

@@ -127,9 +127,14 @@
 }
 
 
-/* 
+/* NavBar design */
 
+nav .container-fluid .collapse .navbar-nav .nav-item .nav-link {
+    color: #262626;;
+    font-weight: 400;
+    font-size: 15px;
+}
 
-
-*/
-
+nav .container-fluid .collapse a span {
+    color: #626262;
+}
