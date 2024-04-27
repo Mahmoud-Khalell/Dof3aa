@@ -1,5 +1,5 @@
 
-function createCard(imgSrc, cardTitle, cardDescription) {
+function createCard(imgSrc, cardTitle, cardDescription,courseId) {
     const cardDiv = document.createElement('div');
     cardDiv.classList.add('col');
 
@@ -32,12 +32,18 @@ function createCard(imgSrc, cardTitle, cardDescription) {
 
     const profilePage = document.getElementById('ProfilePageSupscribedCourses');
     profilePage.appendChild(cardDiv);
+
+
+    cardDiv.addEventListener('click', () => {        
+        window.location.href = `weeks.html?id=${courseId}`;   
+    });
+
 }
 
 
-createCard('../assets/images/banner (1).png', 'Computer Graphic', 'Dr. Abed el hamed');
-createCard('../assets/images/banner (2).png', 'DataBase', 'Dr. Mohamed Fouad');
-createCard('../assets/images/banner (4).png', 'Machine Learning', 'Dr. Ahmed Ali');
-createCard('../assets/images/banner (1).png', 'Data structure', 'Dr. Abed el hamed');
-createCard('../assets/images/banner (3).png', 'DataBase', 'Dr. Mohamed Fouad');
+createCard('../assets/images/banner (1).png', 'Computer Graphic', 'Dr. Abed el hamed',3012);
+createCard('../assets/images/banner (2).png', 'DataBase', 'Dr. Mohamed Fouad',3012);
+createCard('../assets/images/banner (4).png', 'Machine Learning', 'Dr. Ahmed Ali',3012);
+createCard('../assets/images/banner (1).png', 'Data structure', 'Dr. Abed el hamed',3012);
+createCard('../assets/images/banner (3).png', 'DataBase', 'Dr. Mohamed Fouad',3012);
 

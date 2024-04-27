@@ -105,11 +105,12 @@ body {
     text-decoration: none
 }
 
-.user-info-wrapper .user-info .user-avatar .edit-avatar::before {
+ .user-info-wrapper .user-info .user-avatar .edit-avatar::before {
     font-family: feather;
-    font-size: 17px;
-    content: '\e058'
-}
+    font-size: 20px;
+    font-weight: 700;
+    content: '♡'
+} 
 
 .user-info-wrapper .user-info .user-avatar:hover .edit-avatar {
     opacity: 1
