@@ -35,9 +35,9 @@ function createCard(imgSrc, cardTitle, cardDescription) {
 }
 
 
-createCard('../assets/images/banner (1).png', 'Card Title', 'Card Description');
-createCard('../assets/images/banner (1).png', 'Card Title', 'Card Description');
-createCard('../assets/images/banner (1).png', 'Card Title', 'Card Description');
-createCard('../assets/images/banner (1).png', 'Card Title', 'Card Description');
-createCard('../assets/images/banner (1).png', 'Card Title', 'Card Description');
-createCard('../assets/images/banner (1).png', 'Card Title', 'Card Description');
+createCard('../assets/images/banner (1).png', 'Computer Graphic', 'Dr. Abed el hamed');
+createCard('../assets/images/banner (2).png', 'DataBase', 'Dr. Mohamed Fouad');
+createCard('../assets/images/banner (4).png', 'Machine Learning', 'Dr. Ahmed Ali');
+createCard('../assets/images/banner (1).png', 'Data structure', 'Dr. Abed el hamed');
+createCard('../assets/images/banner (3).png', 'DataBase', 'Dr. Mohamed Fouad');
+
