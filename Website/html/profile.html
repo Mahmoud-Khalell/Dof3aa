@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="../css/bootstrap/all.min.css">
+        <link rel="stylesheet" href="../css/bootstrap/bootstrap.min.css">
+        <link rel="stylesheet" href="../css/bootstrap/bootstrap.min.css.map">
+        <link rel="stylesheet" href="../css/bootstrap/Fonts.css">
+        <link rel="stylesheet" href="../css/profile.css">
+        <link rel="stylesheet" href="../css/components/header.css">
+        <link
+            href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+            rel="stylesheet">
+
+        <title>DoF3aa Profile</title>
+        <link rel="shortcut icon" href="../assets/images/logo.png"
+            type="image/x-icon">
+    </head>
+    <body>
+
+        <!------------------------------------- NavBar -------------------------------------->
+
+        <nav class="navbar navbar-expand-lg navbar-light bg-body-tertiary"
+            style="height: 45px;">
+            <div class="container-fluid container">
+                <button
+                    data-mdb-collapse-init
+                    class="navbar-toggler"
+                    type="button"
+                    data-mdb-target="#navbarSupportedContent"
+                    aria-controls="navbarSupportedContent"
+                    aria-expanded="false"
+                    aria-label="Toggle navigation"
+                    data-mdb-dropdown-init
+                    aria-expanded="false"
+                    class="btn dropdown-toggle dropdown-toggle-split"
+                    class="dropdown-toggle d-flex align-items-center hidden-arrow"
+                    href="#" id="navbarDropdownMenuAvatar" role="button"
+                    data-bs-toggle="dropdown" aria-expanded="false">
+                    <i class="fas fa-bars"></i>
+                </button>
+
+                <div class="collapse navbar-collapse"
+                    id="navbarSupportedContent">
+                    <a class="navbar-brand fw-bold" href="#">
+                        <i class>
+                            <img src="../assets/images/logo.png" alt="logo"
+                                style="width: 30px; margin-bottom: 4px;">
+                        </i>
+                        <span>DoF3aa</span>
+                    </a>
+
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                        <li class="nav-item">
+                            <a class="nav-link" href="./courses.html">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link"
+                                href="./TasksPage.html">Tasks</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link"
+                                href="./notifications.html">Notifications </a>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="d-flex align-items-center">
+                    <a class="link-secondary me-3 btn-primary position-relative"
+                        href="./notifications.html">
+                        <button type="button"
+                            class="btn btn-primary position-relative bg-transparent border-0 text-primary">
+                            <i class="fa-solid fa-bell "></i>
+                            <span style="margin:9px -6px ; font-size: 10px;"
+                                class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">5
+                            </span>
+                        </button>
+
+                    </a>
+
+                    <div class="dropdown">
+                        <ul
+                            class="dropdown-menu dropdown-menu-end"
+                            aria-labelledby="navbarDropdownMenuLink">
+                            <li>
+                                <a class="dropdown-item"
+                                    href="./courses.html">Home</a>
+                            </li>
+                            <li>
+                                <a class="dropdown-item"
+                                    href="./TasksPage.html">Tasks
+                                    news</a>
+                            </li>
+                            <li>
+                                <a class="dropdown-item"
+                                    href="./notifications.html">Notifications</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="dropdown">
+                        <a
+                            data-mdb-dropdown-init
+                            aria-expanded="false"
+                            class="btn dropdown-toggle dropdown-toggle-split"
+                            class="dropdown-toggle d-flex align-items-center hidden-arrow"
+                            href="#" id="navbarDropdownMenuAvatar" role="button"
+                            data-bs-toggle="dropdown" aria-expanded="false">
+                            <img
+                                src="../assets/images/Profile.png"
+                                class="rounded-circle"
+                                height="25"
+                                alt="Black and White Portrait of a Man"
+                                loading="lazy" />
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item"
+                                    href="profile.html">Your
+                                    profile</a></li>
+                            <li><a class="dropdown-item" href="#">Your
+                                    group</a></li>
+                            <li><hr class="dropdown-divider"></li>
+                            <li><a class="dropdown-item" href="#">
+                                    Sign out
+                                    <i
+                                        class="fa-solid fa-right-from-bracket"></i>
+                                </a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </nav>
+
+        <!------------------------------------- Profile -------------------------------------->
+
+        <div class="container padding-bottom-3x mb-2 ProfilePage">
+            <div class="row">
+                <div class="col-lg-4">
+                    <aside class="user-info-wrapper">
+                        <div class="user-cover"
+                            style="background-image: url(https://bootdey.com/img/Content/bg1.jpg);">
+                            <div class="info-label" data-toggle="tooltip" title
+                                data-original-title="You currently have 290 Reward Points to spend"><i
+                                    class="icon-medal"></i>7 groups</div>
+                        </div>
+                        <div class="user-info">
+                            <div class="user-avatar">
+                                <a class="edit-avatar" href="#"></a><img
+                                    src="../assets/images/Profile.png"
+                                    alt="User"></div>
+                            <div class="user-data">
+                                <h4>Mohamed Badawy </h4>
+                                <span>Joined october
+                                    15,
+                                    2002</span>
+                            </div>
+                        </div>
+                    </aside>
+                    <nav class="list-group">
+                        <a class="list-group-item with-badge" href="#"><i
+                                class="fa-solid fa-house-chimney"></i>
+                            Home<span
+                                class="badge badge-primary badge-pill"></span></a>
+                        <a class="list-group-item" href="#"><i
+                                class="fa-solid fa-list-check"></i>
+                            Tasks</a>
+                        <a class="list-group-item" href="#"><i
+                                class="fa-solid fa-bell"></i>Notifications</a>
+                        <a class="list-group-item with-badge" href="#"><i
+                                class="fa-solid fa-users-rectangle"></i> Join
+                            Group<span
+                                class="badge badge-primary badge-pill"></span></a>
+                    </nav>
+                </div>
+                <div class="col-lg-8">
+                    <div class="padding-top-2x mt-2 hidden-lg-up"></div>
+                    <!-- Wishlist Table-->
+                    <div
+                        class="table-responsive wishlist-table margin-bottom-none">
+
+                        <h4>Your Courses</h4>
+
+                        <div class="row row-cols-1 row-cols-md-2 g-2 "
+                            id="ProfilePageSupscribedCourses"
+                            style="width: 99%;">
+                            <div class="col">
+                                <div class="card">
+                                    <img src="../assets/images/banner (1).png"
+                                        class="card-img-top"
+                                        alt="...">
+                                    <div class="card-body">
+                                        <h5 class="card-title">Card title</h5>
+                                        <p class="card-text">Description</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                    <hr class="mb-4">
+
+                </div>
+            </div>
+        </div>
+
+        <!------------------------------------- scripts -------------------------------------->
+
+        <!------------------------------------- bootstrap scripts -------------------------------------->
+        <script src="../javascript/bootstrap/all.min.js"></script>
+        <script src="../javascript/bootstrap/bootstrap.bundle.js"></script>
+        <script src="../javascript/bootstrap/bootstrap.bundle.js.map"></script>
+        <script src="../javascript/bootstrap/bootstrap.bundle.min.js"></script>
+        <script src="../javascript/bootstrap/bootstrap.bundle.min.js"></script>
+        <script
+            src="../javascript/bootstrap/bootstrap.bundle.min.js.map"></script>
+        <!------------------------------------- my scripts -------------------------------------->
+        <script src="../javascript/Profile.js"></script>
+
+    </body>
+</html>
