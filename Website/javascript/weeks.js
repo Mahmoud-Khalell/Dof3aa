@@ -150,9 +150,9 @@ function createAddWeeksCard() {
 
 
 
-    card.addEventListener('click', () => {
-        window.location.href = `material.html?id=`;
-    });
+    
+    cardDiv.setAttribute('data-bs-toggle', 'modal');
+    cardDiv.setAttribute('data-bs-target', '#staticBackdrop');
     
 }
 
@@ -223,6 +223,10 @@ function createTaskCard(taskName, description, datetimedeadline,matrialLink ) {
 
     const parentDiv = document.getElementById('task-card-info');
     parentDiv.appendChild(cardDiv);
+
+
+
+    
 }
 
 

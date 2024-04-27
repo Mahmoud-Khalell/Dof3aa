@@ -129,9 +129,19 @@ function createAddMatirialCard() {
     cardDiv.appendChild(Icon);
     colDiv.appendChild(cardDiv);
     parentDiv.appendChild(colDiv);
+
+    
+    
+    cardDiv.setAttribute('data-bs-toggle', 'modal');
+    cardDiv.setAttribute('data-bs-target', '#staticBackdrop');
+
+
     
 }
 
+
+    
+  
 
 
 
