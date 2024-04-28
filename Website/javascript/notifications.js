@@ -146,3 +146,7 @@ for (let i = 0; i < notifications.length; i++) {
         appendNotification("Previous-Alerts-ID",notifications[i].mainTitle, notifications[i].description, notifications[i].date, notifications[i].imgSrc);
     }
 }
+
+
+
+   
