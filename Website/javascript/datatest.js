@@ -20,49 +20,49 @@ var subjects = [
                 lastUpdate: '2 days ago',
                 martials: [
                     {
-                        cardTitle: 'intorduction',
+                        cardTitle: 'Lecture 1',
                         description: 'This is the first lecture of the course',
                         type: 'slide',
                         link: 'https://docs.google.com/presentation/d/10eFf_oeeImHGBrEZldpU9ZHzorrvu2Hc/edit?usp=drive_link&ouid=101088009110307536264&rtpof=true&sd=true',
                         imgSrc: 'https://www.youtube.com/watch?v=9bZkp7q19f0'
                     },
                     {
-                        cardTitle: 'intorduction',
-                        description: 'This is the first lecture of the course',
+                        cardTitle: 'Lecture 2',
+                        description: 'This is the second lecture of the course',
                         type: 'slide',
                         link: 'https://docs.google.com/presentation/d/10eFf_oeeImHGBrEZldpU9ZHzorrvu2Hc/edit?usp=drive_link&ouid=101088009110307536264&rtpof=true&sd=true',
                         imgSrc: 'https://www.youtube.com/watch?v=9bZkp7q19f0'
                     },
                     {
-                        cardTitle: 'intorduction',
-                        description: 'This is the first lecture of the course',
+                        cardTitle: 'Lecture 3',
+                        description: 'this lecture is about data structures',
                         type: 'slide',
                         link: 'https://docs.google.com/presentation/d/10eFf_oeeImHGBrEZldpU9ZHzorrvu2Hc/edit?usp=drive_link&ouid=101088009110307536264&rtpof=true&sd=true',
                         imgSrc: 'https://www.youtube.com/watch?v=9bZkp7q19f0'
                     },
                     {
-                        cardTitle: 'intorduction',
+                        cardTitle: 'code lec 3',
                         description: 'This is the first lecture of the course',
                         type: 'code',
                         link: 'https://docs.google.com/presentation/d/10eFf_oeeImHGBrEZldpU9ZHzorrvu2Hc/edit?usp=drive_link&ouid=101088009110307536264&rtpof=true&sd=true',
                         imgSrc: 'https://www.youtube.com/watch?v=9bZkp7q19f0'
                     },
                     {
-                        cardTitle: 'intorduction',
+                        cardTitle: 'lecture 4',
                         description: 'This is the first lecture of the course',
                         type: 'slide',
                         link: 'https://docs.google.com/presentation/d/10eFf_oeeImHGBrEZldpU9ZHzorrvu2Hc/edit?usp=drive_link&ouid=101088009110307536264&rtpof=true&sd=true',
                         imgSrc: 'https://www.youtube.com/watch?v=9bZkp7q19f0'
                     },
                     {
-                        cardTitle: 'intorduction',
+                        cardTitle: 'lecture 5',
                         description: 'This is the first lecture of the course',
                         type: 'slide',
                         link: 'https://docs.google.com/presentation/d/10eFf_oeeImHGBrEZldpU9ZHzorrvu2Hc/edit?usp=drive_link&ouid=101088009110307536264&rtpof=true&sd=true',
                         imgSrc: 'https://www.youtube.com/watch?v=9bZkp7q19f0'
                     },
                     {
-                        cardTitle: 'intorduction',
+                        cardTitle: 'l',
                         description: 'This is the first lecture of the course',
                         type: 'slide',
                         link: 'https://docs.google.com/presentation/d/10eFf_oeeImHGBrEZldpU9ZHzorrvu2Hc/edit?usp=drive_link&ouid=101088009110307536264&rtpof=true&sd=true',

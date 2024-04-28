@@ -38,6 +38,13 @@ var taskApitest = [
         matrialLink: 'https://drive.google.com/file/d/1hQeIBh4E9DRi6T_-uRiUvT34uka19md-/view?usp=sharing',
         
     },
+    {
+        taskName: 'Lab Sheet #5',
+        description: '5. Write a program that takes a number from user and print the sum of digits.',
+        deadline: new Date('2022-11-10T12:00:00'),
+        matrialLink: 'https://drive.google.com/file/d/1hQeIBh4E9DRi6T_-uRiUvT34uka19md-/view?usp=sharing',
+        
+    }
     
 
 ]
@@ -149,7 +156,7 @@ function createAddWeeksCard() {
     parentDiv.appendChild(cardDiv);
 
 
-
+    
     
     cardDiv.setAttribute('data-bs-toggle', 'modal');
     cardDiv.setAttribute('data-bs-target', '#staticBackdrop');
@@ -220,6 +227,8 @@ function createTaskCard(taskName, description, datetimedeadline,matrialLink ) {
         
     } 
     
+
+
 
     const parentDiv = document.getElementById('task-card-info');
     parentDiv.appendChild(cardDiv);
