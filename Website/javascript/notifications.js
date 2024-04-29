@@ -1,5 +1,5 @@
 
-function appendNotification(parentId, mainTitle, description, date, imgSrc) {
+function appendNotification(parentId, mainTitle, description, date, imgSrc, URl) {
     const parentElement = document.getElementById(parentId);
 
     const notificationDiv = document.createElement("div");
@@ -70,9 +70,14 @@ function appendNotification(parentId, mainTitle, description, date, imgSrc) {
     notificationDiv.appendChild(contentDiv);
     notificationDiv.appendChild(actionsSpan);
 
-    parentElement.appendChild(notificationDiv);
-}
 
+    parentElement.appendChild(notificationDiv);
+
+
+    notificationDiv.addEventListener("click", function() {
+        window.location.href = URl;
+    });
+}
 
 
 
@@ -80,70 +85,86 @@ function appendNotification(parentId, mainTitle, description, date, imgSrc) {
 
 var notifications = [
     {
-        mainTitle: 'New Material',
+        mainTitle: 'New Gelany',
         description: 'New material has been added to the course',
         date: '2 h',
         imgSrc: '../assets/images/profile1.png',
-        readed : true
+        readed : false,
+        URl : "http://127.0.0.1:5500/html/material.html?id=1",
+
     },
     {
         mainTitle: 'New Material 3',
         description: 'New material has been added to the course',
         date: '2 h',
         imgSrc: '../assets/images/logo.png',
-        readed : false
+        readed : false,
+        URl : "http://127.0.0.1:5500/html/material.html?id=1",
+
     },
     {
         mainTitle: 'New Material',
         description: 'New material has been added to the course',
         date: '2 h',
         imgSrc: '../assets/images/profile1.png',
-        readed : true
+        readed : true,
+        URl : "http://127.0.0.1:5500/html/material.html?id=1",
+
     },
     {
         mainTitle: 'New Material',
         description: 'New material has been added to the course',
         date: '2 h',
         imgSrc: '../assets/images/profile1.png',
-        readed : false
+        readed : false,
+        URl : "http://127.0.0.1:5500/html/material.html?id=1",
+
     },
     {
         mainTitle: 'New Material',
         description: 'New material has been added to the course this is lorem ipsum text to test the text overflow in the notification card and this is the end of the text New material has been added to the course this is lorem ipsum text to test the text overflow in the notification card and this is the end of the text New material has been added to the course this is lorem ipsum text to test the text overflow in the notification card and this is the end of the text', 
         date: '2 h',
         imgSrc: '../assets/images/profile2.png',
-        readed : true
+        readed : true,
+        URl : "http://127.0.0.1:5500/html/material.html?id=1",
+
     },
     {
         mainTitle: 'New Material',
         description: 'New material has been added to the course',
         date: '2 h',
         imgSrc: '../assets/images/profile2.png',
-        readed : false
+        readed : false,
+        URl : "http://127.0.0.1:5500/html/material.html?id=1",
+
     },
     {
         mainTitle: 'New Material',
         description: 'New material has been added to the course',
         date: '2 h',
         imgSrc: '../assets/images/logo.png',
-        readed : true
+        readed : true,
+        URl : "http://127.0.0.1:5500/html/material.html?id=1",
+
     },
     {
         mainTitle: 'New Material',
         description: 'New material has been added to the course',
         date: '2 h',
         imgSrc: '../assets/images/profile1.png',
-        readed : false
+        readed : false,
+        URl : "http://127.0.0.1:5500/html/material.html?id=1",
     }
 ];
 
 
+
 for (let i = 0; i < notifications.length; i++) {
     if(notifications[i].readed == false){
-        appendNotification("Recent-Alerts-ID",notifications[i].mainTitle, notifications[i].description, notifications[i].date, notifications[i].imgSrc);
+        appendNotification("Recent-Alerts-ID",notifications[i].mainTitle, notifications[i].description, notifications[i].date, notifications[i].imgSrc, notifications[i].URl);
     } else
     {
-        appendNotification("Previous-Alerts-ID",notifications[i].mainTitle, notifications[i].description, notifications[i].date, notifications[i].imgSrc);
+        appendNotification("Previous-Alerts-ID",notifications[i].mainTitle, notifications[i].description, notifications[i].date, notifications[i].imgSrc, notifications[i].URl);
     }
 }
 
