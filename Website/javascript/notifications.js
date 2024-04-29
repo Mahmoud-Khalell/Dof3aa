@@ -80,11 +80,11 @@ function appendNotification(parentId, mainTitle, description, date, imgSrc) {
 
 var notifications = [
     {
-        mainTitle: 'New Material',
+        mainTitle: 'New Gelany',
         description: 'New material has been added to the course',
         date: '2 h',
         imgSrc: '../assets/images/profile1.png',
-        readed : true
+        readed : false
     },
     {
         mainTitle: 'New Material 3',
