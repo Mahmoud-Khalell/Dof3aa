@@ -34,78 +34,70 @@ function appendNotification( mainTitle, description, time, link) {
     parentElement.appendChild(aElement);
 }
 
-
 var notifications = [
     {
-        mainTitle: 'New Gelany',
-        description: 'New material has been added to the course',
-        date: '2 h',
+        mainTitle: 'New Assignment: Data Structures',
+        description: 'A new assignment on Data Structures has been uploaded. Please submit by next week.',
+        date: '1 h',
         imgSrc: '../assets/images/profile1.png',
-        readed : false,
-        URl : "http://127.0.0.1:5500/html/material.html?id=1",
-
+        readed: false,
+        URl: "http://127.0.0.1:5500/html/assignment.html?id=1",
     },
     {
-        mainTitle: 'New Material 3',
-        description: 'New material has been added to the course',
-        date: '2 h',
+        mainTitle: 'Upcoming Lecture: AI and Machine Learning',
+        description: 'Don’t miss the lecture on AI and Machine Learning this Thursday.',
+        date: '3 h',
         imgSrc: '../assets/images/logo.png',
-        readed : false,
-        URl : "http://127.0.0.1:5500/html/material.html?id=1",
-
+        readed: false,
+        URl: "http://127.0.0.1:5500/html/lecture.html?id=2",
     },
     {
-        mainTitle: 'New Material',
-        description: 'New material has been added to the course',
+        mainTitle: 'Grade Announcement: Algorithm Exam',
+        description: 'Grades for the Algorithm exam have been published. Check your score.',
         date: '2 h',
         imgSrc: '../assets/images/profile1.png',
-        readed : true,
-        URl : "http://127.0.0.1:5500/html/material.html?id=1",
-
+        readed: true,
+        URl: "http://127.0.0.1:5500/html/grades.html?id=3",
     },
     {
-        mainTitle: 'New Material',
-        description: 'New material has been added to the course',
-        date: '2 h',
+        mainTitle: 'New Course Material: Python Programming',
+        description: 'New learning material for Python programming has been added to the course.',
+        date: '30 min',
         imgSrc: '../assets/images/profile1.png',
-        readed : false,
-        URl : "http://127.0.0.1:5500/html/material.html?id=1",
-
+        readed: false,
+        URl: "http://127.0.0.1:5500/html/material.html?id=4",
     },
     {
-        mainTitle: 'New Material',
-        description: 'New material has been added to the course this is lorem ipsum text to test the text overflow in the notification card and this is the end of the text New material has been added to the course this is lorem ipsum text to test the text overflow in the notification card and this is the end of the text New material has been added to the course this is lorem ipsum text to test the text overflow in the notification card and this is the end of the text', 
-        date: '2 h',
+        mainTitle: 'Workshop Announcement: Cybersecurity Basics',
+        description: 'Join the workshop on Cybersecurity Basics this weekend. Register now!',
+        date: '1 h',
         imgSrc: '../assets/images/profile2.png',
-        readed : true,
-        URl : "http://127.0.0.1:5500/html/material.html?id=1",
-
+        readed: true,
+        URl: "http://127.0.0.1:5500/html/workshop.html?id=5",
     },
     {
-        mainTitle: 'New Material',
-        description: 'New material has been added to the course',
-        date: '2 h',
+        mainTitle: 'Career Event: Tech Companies Recruitment',
+        description: 'A career event featuring top tech companies. Perfect for CS students looking for internships.',
+        date: '5 h',
         imgSrc: '../assets/images/profile2.png',
-        readed : false,
-        URl : "http://127.0.0.1:5500/html/material.html?id=1",
-
+        readed: false,
+        URl: "http://127.0.0.1:5500/html/career_event.html?id=6",
     },
     {
-        mainTitle: 'New Material',
-        description: 'New material has been added to the course',
-        date: '2 h',
+        mainTitle: 'Coding Contest Announcement',
+        description: 'Participate in the upcoming coding contest and win exciting prizes!',
+        date: '4 h',
         imgSrc: '../assets/images/logo.png',
-        readed : true,
-        URl : "http://127.0.0.1:5500/html/material.html?id=1",
-
+        readed: true,
+        URl: "http://127.0.0.1:5500/html/contest.html?id=7",
     },
     {
-        mainTitle: 'New Material',
-        description: 'New material has been added to the course',
-        date: '2 h',
+        mainTitle: 'New Video Tutorial: JavaScript Basics',
+        description: 'Check out the new video tutorial on JavaScript basics to strengthen your skills.',
+        date: '45 min',
         imgSrc: '../assets/images/profile1.png',
-        readed : false,
-        URl : "http://127.0.0.1:5500/html/material.html?id=1",
+        readed: false,
+        URl: "http://127.0.0.1:5500/html/tutorial.html?id=8",
     }
 ];
 

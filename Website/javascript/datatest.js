@@ -1,6 +1,42 @@
 
 
 var subjects = [
+
+    {
+        courseId: 3012,
+        imgSrc: '../assets/images/banner (1).png',
+        subjectCode: 'IT203',
+        courseDepartment: 'Computer Science',
+        subjectName: 'Networks and Data Communications',
+        moreInfo: '',
+        username: 'Dr. Bassem abed el-atti',
+        lastUpdated: 'Last updated 3 mins ago',
+        type: '',
+    },
+    
+    {
+        courseId: 3012,
+        imgSrc: '../assets/images/banner (1).png',
+        subjectCode: 'IT403',
+        courseDepartment: 'Computer Science',
+        subjectName: 'Data Communications',
+        moreInfo: '',
+        username: 'Dr. Tamer abed el-atti',
+        lastUpdated: 'Last updated 43 mins ago',
+        type: '',
+    },
+    
+    {
+        courseId: 3012,
+        imgSrc: '../assets/images/banner (1).png',
+        subjectCode: 'IT201',
+        courseDepartment: 'Computer Science',
+        subjectName: 'Networks and Data Communications',
+        moreInfo: '',
+        username: 'Dr. Bassem abed el-atti',
+        lastUpdated: 'Last updated 1 hrs ago',
+        type: '',
+    },
     {
         courseId: 3012,
         imgSrc: '../assets/images/banner (1).png',
@@ -9,7 +45,7 @@ var subjects = [
         subjectName: 'Data Structures and Algorithms',
         moreInfo: '',
         username: 'Dr. Bassem abed el-atti',
-        lastUpdated: 'Last updated 3 mins ago',
+        lastUpdated: 'Last updated 23 day ago',
         type: '',
         weeks: [
             {

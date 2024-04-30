@@ -152,14 +152,37 @@ function createAddMatirialCard() {
 
 var materials = [
     {
-        cardTitle: 'intorduction',
+        cardTitle: 'Lecture 1',
         description: 'This is the first lecture of the course',
         type: 'slide',
         link: 'https://docs.google.com/presentation/d/10eFf_oeeImHGBrEZldpU9ZHzorrvu2Hc/edit?usp=drive_link&ouid=101088009110307536264&rtpof=true&sd=true',
         imgSrc: 'https://www.youtube.com/watch?v=9bZkp7q19f0'
     },
     {
-        cardTitle: 'video',
+        cardTitle: 'Lecture 2',
+        description: 'This is the first lecture of the course',
+        type: 'slide',
+        link: 'https://docs.google.com/presentation/d/10eFf_oeeImHGBrEZldpU9ZHzorrvu2Hc/edit?usp=drive_link&ouid=101088009110307536264&rtpof=true&sd=true',
+        imgSrc: 'https://www.youtube.com/watch?v=9bZkp7q19f0'
+    },
+    {
+        cardTitle: 'Encapsulation',
+        description: 'This is the video by Dr. ibrahim shawky',
+        type: 'video',
+        link: 'https://www.youtube.com/watch?v=9bZkp7q19f0',
+
+        imgSrc: 'https://www.youtube.com/watch?v=9bZkp7q19f0'
+    },
+    {
+        cardTitle: 'inheritance',
+        description: 'This is the video by Dr. ibrahim shawky',
+        type: 'video',
+        link: 'https://www.youtube.com/watch?v=9bZkp7q19f0',
+
+        imgSrc: 'https://www.youtube.com/watch?v=9bZkp7q19f0'
+    },
+    {
+        cardTitle: 'polymorphism',
         description: 'This is the video by Dr. ibrahim shawky',
         type: 'video',
         link: 'https://www.youtube.com/watch?v=9bZkp7q19f0',
@@ -185,10 +208,8 @@ var materials = [
 
 
 // console.log("martial s  " + martials);
-console.log(subjects[0].weeks[0].martials);
-let MM = subjects[0].weeks[0].martials;
 
-MM.forEach(material => {
+materials.forEach(material => {
     createCard(material.cardTitle, material.description, material.type, material.imgSrc, material.link);
     console.log(material);
     console.log("=============");
