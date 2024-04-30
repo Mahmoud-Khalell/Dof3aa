@@ -1,10 +1,21 @@
+const xhr = new XMLHttpRequest();
+xhr.open("GET", "../json/notifcation.json", true);
+xhr.setRequestHeader("Content-Type", "application/json");
+xhr.onreadystatechange = function () {
+    if (xhr.readyState === 4 && xhr.status === 200) {        
+        let notifications = JSON.parse(xhr.responseText);
+        PlaceCards(notifications);       
+    }   
+};
+xhr.send();
+
+
+
 
 function appendNotification(parentId, mainTitle, description, date, imgSrc) {
     const parentElement = document.getElementById(parentId);
-
     const notificationDiv = document.createElement("div");
     notificationDiv.classList.add("p-3", "d-flex", "align-items-center", "border-bottom", "osahan-post-header");
-
     const imageDiv = document.createElement("div");
     imageDiv.classList.add("dropdown-list-image", "mr-3");
     const image = document.createElement("img");
@@ -78,75 +89,17 @@ function appendNotification(parentId, mainTitle, description, date, imgSrc) {
 
 
 
-var notifications = [
-    {
-        mainTitle: 'New Material',
-        description: 'New material has been added to the course',
-        date: '2 h',
-        imgSrc: '../assets/images/profile1.png',
-        readed : true
-    },
-    {
-        mainTitle: 'New Material 3',
-        description: 'New material has been added to the course',
-        date: '2 h',
-        imgSrc: '../assets/images/logo.png',
-        readed : false
-    },
-    {
-        mainTitle: 'New Material',
-        description: 'New material has been added to the course',
-        date: '2 h',
-        imgSrc: '../assets/images/profile1.png',
-        readed : true
-    },
-    {
-        mainTitle: 'New Material',
-        description: 'New material has been added to the course',
-        date: '2 h',
-        imgSrc: '../assets/images/profile1.png',
-        readed : false
-    },
-    {
-        mainTitle: 'New Material',
-        description: 'New material has been added to the course this is lorem ipsum text to test the text overflow in the notification card and this is the end of the text New material has been added to the course this is lorem ipsum text to test the text overflow in the notification card and this is the end of the text New material has been added to the course this is lorem ipsum text to test the text overflow in the notification card and this is the end of the text', 
-        date: '2 h',
-        imgSrc: '../assets/images/profile2.png',
-        readed : true
-    },
-    {
-        mainTitle: 'New Material',
-        description: 'New material has been added to the course',
-        date: '2 h',
-        imgSrc: '../assets/images/profile2.png',
-        readed : false
-    },
-    {
-        mainTitle: 'New Material',
-        description: 'New material has been added to the course',
-        date: '2 h',
-        imgSrc: '../assets/images/logo.png',
-        readed : true
-    },
-    {
-        mainTitle: 'New Material',
-        description: 'New material has been added to the course',
-        date: '2 h',
-        imgSrc: '../assets/images/profile1.png',
-        readed : false
-    }
-];
 
 
-for (let i = 0; i < notifications.length; i++) {
-    if(notifications[i].readed == false){
-        appendNotification("Recent-Alerts-ID",notifications[i].mainTitle, notifications[i].description, notifications[i].date, notifications[i].imgSrc);
-    } else
-    {
-        appendNotification("Previous-Alerts-ID",notifications[i].mainTitle, notifications[i].description, notifications[i].date, notifications[i].imgSrc);
+
+
+function PlaceCards(notifications) {
+        for (let i = 0; i < notifications.length; i++) {
+        if(notifications[i].readed == false){
+            appendNotification("Recent-Alerts-ID",notifications[i].mainTitle, notifications[i].description, notifications[i].date, notifications[i].imgSrc);
+        } else
+        {
+            appendNotification("Previous-Alerts-ID",notifications[i].mainTitle, notifications[i].description, notifications[i].date, notifications[i].imgSrc);
+        }
     }
 }
-
-
-
-   
