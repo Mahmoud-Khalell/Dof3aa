@@ -1,3 +1,6 @@
+
+
+
 const xhr = new XMLHttpRequest();
 xhr.open("GET", "../json/notifcation.json", true);
 xhr.setRequestHeader("Content-Type", "application/json");
@@ -12,7 +15,7 @@ xhr.send();
 
 
 
-function appendNotification(parentId, mainTitle, description, date, imgSrc) {
+function appendNotification(parentId, mainTitle, description, date, imgSrc, URl) {
     const parentElement = document.getElementById(parentId);
     const notificationDiv = document.createElement("div");
     notificationDiv.classList.add("p-3", "d-flex", "align-items-center", "border-bottom", "osahan-post-header");
@@ -81,9 +84,14 @@ function appendNotification(parentId, mainTitle, description, date, imgSrc) {
     notificationDiv.appendChild(contentDiv);
     notificationDiv.appendChild(actionsSpan);
 
-    parentElement.appendChild(notificationDiv);
-}
 
+    parentElement.appendChild(notificationDiv);
+
+
+    notificationDiv.addEventListener("click", function() {
+        window.location.href = URl;
+    });
+}
 
 
 

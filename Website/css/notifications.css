@@ -19,3 +19,10 @@ body {
     background-color: #e5f7f0;
     border-color: #d8f7eb;
 }
+
+.notifcationMainDivStyle :hover {
+    cursor: pointer;
+
+    background-color: #f0f2f5;
+
+}
