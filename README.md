@@ -6,12 +6,14 @@
     <H4>student platform to organize all materials
 
 </H4>
-    <hr>
-![GitHub repo size](https://img.shields.io/github/repo-size/0xBadawy/Dof3aa)
-![GitHub Actions Workflow Status](https://img.shields.io/github/actions/workflow/status0xBadawy/Dof3aa/build.yml)
-![GitHub package.json version](https://img.shields.io/github/package-json/v/0xBadawy/Dof3aa)
+
+![GitHub code size in bytes](https://img.shields.io/github/languages/code-size/0xBadawy/Dof3aa)
+![build status](https://github.com/pajecawav/ghloc-web/actions/workflows/ci.yml/badge.svg)
+![Endpoint Badge](https://img.shields.io/endpoint?url=https%3A%2F%2Fghloc.vercel.app%2Fapi%2F0xBadawy%2FDof3aa%2Fbadge&logoColor=red&label=lines%20of%20code%20&labelColor=green)
 
 
+<hr>
+    
 </div>
 
 educational file management system is a digital platform designed to organize, store, and manage educational resources and materials efficiently. It provides teachers, students, and administrators with a centralized location to access and share various types of files
