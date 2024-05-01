@@ -7,6 +7,10 @@
 
 </H4>
     <hr>
+![GitHub repo size](https://img.shields.io/github/repo-size/0xBadawy/Dof3aa)
+![GitHub Actions Workflow Status](https://img.shields.io/github/actions/workflow/status0xBadawy/Dof3aa/build.yml)
+![GitHub package.json version](https://img.shields.io/github/package-json/v/0xBadawy/Dof3aa)
+
 
 </div>
 
