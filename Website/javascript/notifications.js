@@ -1,19 +1,50 @@
 
 
-
-const xhr = new XMLHttpRequest();
-xhr.open("GET", "../json/notifcation.json", true);
-xhr.setRequestHeader("Content-Type", "application/json");
-xhr.onreadystatechange = function () {
-    if (xhr.readyState === 4 && xhr.status === 200) {        
-        let notifications = JSON.parse(xhr.responseText);
+// //https://6631eed9c51e14d69562d65e.mockapi.io/api/test/notifcation-tab
+function GETrequest() {
+    const Request = new XMLHttpRequest();
+Request.open("GET", "../json/notifcation.json", true);
+Request.setRequestHeader("Content-Type", "application/json");
+Request.setRequestHeader("Accept", "application/json");
+Request.onreadystatechange = function () {
+    if (Request.readyState === 4 && Request.status === 200) {        
+        let notifications = JSON.parse(Request.responseText);
         PlaceCards(notifications);       
     }   
 };
-xhr.send();
+Request.send();
+
+}
 
 
+function postrequest() {
+    const Request = new XMLHttpRequest();
+    Request.open("POST", "", true);
+    Request.setRequestHeader("Content-Type", "application/json");
+    Request.setRequestHeader("Accept", "application/json");
+    let BodyParams = {
+        "mainTitle": "New Notification",
+        "description": "This is a new notification",
+        "date": "2021-05-10",   
+        "imgSrc": "https://www.w3schools.com/w3images/avatar6.png",
+        "URl": "https://www.google.com",
+        "readed": false
+    };
+    Request.send(BodyParams);
+    Request.onload = function () {
 
+        if (Request.status === 200) {
+            console.log("Notification Posted"); 
+            let notifications = JSON.parse(Request.responseText);
+            PlaceCards(notifications);
+        } else {
+            console.log("Error posting notification");
+        }
+    };
+
+}
+
+postrequest();
 
 function appendNotification(parentId, mainTitle, description, date, imgSrc, URl) {
     const parentElement = document.getElementById(parentId);
