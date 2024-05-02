@@ -3,9 +3,7 @@
 <a href="https://0xbadawy.github.io/Dof3aa/Website/html/login.html">
     <img height="100" src="./Website/assets/images/logo.png"><a>
     <br>
-    <H4>student platform to organize all materials
-
-</H4>
+    <H4>student platform to organize all materials</H4>
 
 ![GitHub code size in bytes](https://img.shields.io/github/languages/code-size/0xBadawy/Dof3aa)
 ![build status](https://github.com/pajecawav/ghloc-web/actions/workflows/ci.yml/badge.svg)
