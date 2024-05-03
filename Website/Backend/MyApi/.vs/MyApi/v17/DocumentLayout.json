@@ -1,12 +1,37 @@
 {
   "Version": 1,
   "WorkspaceRootPath": "F:\\FCI\\Dof3aa website\\Dof3aa\\Website\\Backend\\MyApi\\",
-  "Documents": [],
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{418F138B-989C-4620-83B5-DDF53A6D18B0}|Core\\Core.csproj|f:\\fci\\dof3aa website\\dof3aa\\website\\backend\\myapi\\core\\entities\\cource.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{418F138B-989C-4620-83B5-DDF53A6D18B0}|Core\\Core.csproj|solutionrelative:core\\entities\\cource.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
   "DocumentGroupContainers": [
     {
       "Orientation": 0,
       "VerticalTabListWidth": 256,
-      "DocumentGroups": []
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Cource.cs",
+              "DocumentMoniker": "F:\\FCI\\Dof3aa website\\Dof3aa\\Website\\Backend\\MyApi\\Core\\entities\\Cource.cs",
+              "RelativeDocumentMoniker": "Core\\entities\\Cource.cs",
+              "ToolTip": "F:\\FCI\\Dof3aa website\\Dof3aa\\Website\\Backend\\MyApi\\Core\\entities\\Cource.cs",
+              "RelativeToolTip": "Core\\entities\\Cource.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAoAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-03T12:50:06.395Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
     }
   ]
 }
