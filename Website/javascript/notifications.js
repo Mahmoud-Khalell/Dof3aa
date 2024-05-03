@@ -3,15 +3,15 @@
 // //https://6631eed9c51e14d69562d65e.mockapi.io/api/test/notifcation-tab
 function GETrequest() {
     const Request = new XMLHttpRequest();
-Request.open("GET", "../json/notifcation.json", true);
-Request.setRequestHeader("Content-Type", "application/json");
-Request.setRequestHeader("Accept", "application/json");
-Request.onreadystatechange = function () {
-    if (Request.readyState === 4 && Request.status === 200) {        
-        let notifications = JSON.parse(Request.responseText);
-        PlaceCards(notifications);       
-    }   
-};
+    Request.open("GET", "../json/notifcation.json", true);
+    Request.setRequestHeader("Content-Type", "application/json");
+    Request.setRequestHeader("Accept", "application/json");
+    Request.onreadystatechange = function () {
+        if (Request.readyState === 4 && Request.status === 200) {        
+            let notifications = JSON.parse(Request.responseText);
+            PlaceCards(notifications);       
+        }   
+    };
 Request.send();
 
 }

@@ -138,3 +138,9 @@ nav .container-fluid .collapse .navbar-nav .nav-item .nav-link {
 nav .container-fluid .collapse a span {
     color: #626262;
 }
+
+.SeconderyHeader{
+    /* From https://css.glass */
+background: rgb(255, 255, 255);
+    background: linear-gradient(0deg, rgba(255, 255, 255, 1) 14%, rgba(166, 211, 255, 1) 58%, rgba(113, 185, 255, 1) 82%);
+}

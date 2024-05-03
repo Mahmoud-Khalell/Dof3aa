@@ -1,0 +1,16 @@
+[
+    {
+        "courseId": 3012,
+        "imgIcon": "../assets/images/banner (1).png",
+        "imgBanner": "../assets/images/banner (1).png",
+        "subjectCode": "CS203",
+        "courseDepartment": "Computer Science",
+        "subjectName": "Data Structures and Algorithms",
+        "moreInfo": "",
+        "username": "Dr. Bassem abed el-atti",
+        "lastUpdated": "Last updated 3 mins ago",
+        "type": "",
+        "createdDate": "",
+        "createdBy": "Ahmed"
+    } 
+]
