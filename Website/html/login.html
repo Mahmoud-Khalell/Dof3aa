@@ -86,25 +86,26 @@
                             <p>student platform to organize all materials </p>
                         </div>
 
-                        <form class="row g-12" action="./courses.html">
-                            <div class="col-md-12    ">
+                        <form class="row g-12" 
+                            id="loginForm" method="post">
+                            <div class="col-md-12">
                                 <br>
                                 <input type="text" class="form-control"
                                     placeholder=" User Name"
-                                    id="FullName" name="FullName">
+                                    id="username" name="FullName">
                             </div>
 
                             <div class="col-md-12">
                                 <br>
-                                <input type="password" class="form-control"
-                                    placeholder="Password" id="Password"
-                                    id="NationalID" name="NationalID">
+                                <input
+                                    class="form-control"
+                                    placeholder="Password"
+                                    id="password" name="password">
                                 <br><br>
                             </div>
 
                             <div class="d-grid gap-2">
-                                <button type="submit"
-                                    class="btn btn-primary loginButton">login</button>
+                                <button type="submit" class="btn btn-primary loginButton">login</button>
                             </div>
                         </form>
                     </div>
@@ -113,11 +114,10 @@
             </div>
         </div>
 
-
-        
+        <button onclick="Get()">dsdsds</button>
 
         <!------------------------------------- scripts -------------------------------------->
-        
+
         <!------------------------------------- bootstrap scripts -------------------------------------->
         <script src="../javascript/bootstrap/all.min.js"></script>
         <script src="../javascript/bootstrap/bootstrap.bundle.js"></script>
@@ -125,6 +125,7 @@
         <script src="../javascript/bootstrap/bootstrap.bundle.min.js"></script>
         <script
             src="../javascript/bootstrap/bootstrap.bundle.min.js.map"></script>
+        <script src="../javascript/login.js"></script>
         <!------------------------------------- my scripts -------------------------------------->
 
     </body>
