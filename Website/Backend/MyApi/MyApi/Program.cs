@@ -55,7 +55,7 @@ namespace MyApi
             builder.Services.AddScoped<IUnitOfCode,UnitOfCode>();
             builder.Services.AddCors(e =>
                 {
-                    e.AddPolicy("MyPloicy", policybuilder =>  policybuilder.AllowAnyOrigin());
+                    e.AddPolicy("MyPloicy", policybuilder =>  policybuilder.AllowAnyOrigin().AllowAnyHeader());
                 }
             );
             var app = builder.Build();
