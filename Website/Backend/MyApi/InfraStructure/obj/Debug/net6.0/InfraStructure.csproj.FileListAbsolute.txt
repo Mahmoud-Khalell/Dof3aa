@@ -1,0 +1,15 @@
+C:\Users\mahmoud\Documents\MyApi\MyApi\InfraStructure\bin\Debug\net6.0\InfraStructure.deps.json
+C:\Users\mahmoud\Documents\MyApi\MyApi\InfraStructure\bin\Debug\net6.0\InfraStructure.dll
+C:\Users\mahmoud\Documents\MyApi\MyApi\InfraStructure\bin\Debug\net6.0\InfraStructure.pdb
+C:\Users\mahmoud\Documents\MyApi\MyApi\InfraStructure\bin\Debug\net6.0\Core.dll
+C:\Users\mahmoud\Documents\MyApi\MyApi\InfraStructure\bin\Debug\net6.0\Core.pdb
+C:\Users\mahmoud\Documents\MyApi\MyApi\InfraStructure\obj\Debug\net6.0\InfraStructure.csproj.AssemblyReference.cache
+C:\Users\mahmoud\Documents\MyApi\MyApi\InfraStructure\obj\Debug\net6.0\InfraStructure.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\mahmoud\Documents\MyApi\MyApi\InfraStructure\obj\Debug\net6.0\InfraStructure.AssemblyInfoInputs.cache
+C:\Users\mahmoud\Documents\MyApi\MyApi\InfraStructure\obj\Debug\net6.0\InfraStructure.AssemblyInfo.cs
+C:\Users\mahmoud\Documents\MyApi\MyApi\InfraStructure\obj\Debug\net6.0\InfraStructure.csproj.CoreCompileInputs.cache
+C:\Users\mahmoud\Documents\MyApi\MyApi\InfraStructure\obj\Debug\net6.0\InfraStr.570FDCE2.Up2Date
+C:\Users\mahmoud\Documents\MyApi\MyApi\InfraStructure\obj\Debug\net6.0\InfraStructure.dll
+C:\Users\mahmoud\Documents\MyApi\MyApi\InfraStructure\obj\Debug\net6.0\refint\InfraStructure.dll
+C:\Users\mahmoud\Documents\MyApi\MyApi\InfraStructure\obj\Debug\net6.0\InfraStructure.pdb
+C:\Users\mahmoud\Documents\MyApi\MyApi\InfraStructure\obj\Debug\net6.0\ref\InfraStructure.dll
