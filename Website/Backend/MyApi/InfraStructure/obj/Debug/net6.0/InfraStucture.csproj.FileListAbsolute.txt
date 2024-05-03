@@ -1,0 +1,11 @@
+C:\Users\mahmoud\Documents\MyApi\MyApi\InfraStructure\bin\Debug\net6.0\InfraStucture.deps.json
+C:\Users\mahmoud\Documents\MyApi\MyApi\InfraStructure\bin\Debug\net6.0\InfraStucture.dll
+C:\Users\mahmoud\Documents\MyApi\MyApi\InfraStructure\bin\Debug\net6.0\InfraStucture.pdb
+C:\Users\mahmoud\Documents\MyApi\MyApi\InfraStructure\obj\Debug\net6.0\InfraStucture.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\mahmoud\Documents\MyApi\MyApi\InfraStructure\obj\Debug\net6.0\InfraStucture.AssemblyInfoInputs.cache
+C:\Users\mahmoud\Documents\MyApi\MyApi\InfraStructure\obj\Debug\net6.0\InfraStucture.AssemblyInfo.cs
+C:\Users\mahmoud\Documents\MyApi\MyApi\InfraStructure\obj\Debug\net6.0\InfraStucture.csproj.CoreCompileInputs.cache
+C:\Users\mahmoud\Documents\MyApi\MyApi\InfraStructure\obj\Debug\net6.0\InfraStucture.dll
+C:\Users\mahmoud\Documents\MyApi\MyApi\InfraStructure\obj\Debug\net6.0\refint\InfraStucture.dll
+C:\Users\mahmoud\Documents\MyApi\MyApi\InfraStructure\obj\Debug\net6.0\InfraStucture.pdb
+C:\Users\mahmoud\Documents\MyApi\MyApi\InfraStructure\obj\Debug\net6.0\ref\InfraStucture.dll
