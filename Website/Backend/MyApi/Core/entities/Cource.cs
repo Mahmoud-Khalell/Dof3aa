@@ -8,6 +8,6 @@ namespace Core.entities
 {
     public class Cource
     {
-
+        
     }
 }
