@@ -26,11 +26,39 @@
   </head>
   <body>
 
-    <h1 class="de1">number 1
-      <div class="f2">dsd;;sd;l;</div>
-    </h1>
-    <h3>string 2</h3>
-    <p>data</p>
+    
+    <form id="userForm">
+  <input type="text" name="userName" placeholder="Username">
+  <input type="password" name="password" placeholder="Password">
+  <button type="button" onclick="submitForm()">Submit</button>
+</form>
+
+<script>
+function submitForm() {
+  const form = document.getElementById('userForm');
+  const data = {
+    userName: form.userName.value,
+    password: form.password.value
+  };
+
+  fetch('https://localhost:44303/api/User', {
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/json'
+      
+    },
+    body: JSON.stringify(data)
+  })
+  .then(response => {
+    if (response.ok) {
+      console.log("Form submitted successfully!");
+    } else {
+      console.error("Error submitting form:", response.statusText);
+    }
+  })
+  .catch(error => console.error("Network error:", error));
+}
+</script>
     <!------------------------------------- scripts -------------------------------------->
 
     <!------------------------------------- bootstrap scripts -------------------------------------->
