@@ -1,0 +1,67 @@
+const universitiesData = [
+  {
+    name: "Cairo University",
+    colleges: [
+      {
+        name: "Faculty of Engineering",
+        departments: ["Civil", "Mechanical", "Electrical", "Chemical"],
+      },
+      {
+        name: "Faculty of Medicine",
+        departments: ["Surgery", "Pediatrics", "Cardiology", "Neurology"],
+      },
+      {
+        name: "Faculty of Law",
+        departments: ["Civil Law", "Criminal Law", "Commercial Law"],
+      },
+    ],
+  },
+  {
+    name: "Ain Shams University",
+    colleges: [
+      {
+        name: "Faculty of Science",
+        departments: ["Physics", "Chemistry", "Biology", "Mathematics"],
+      },
+      {
+        name: "Faculty of Business",
+        departments: ["Accounting", "Finance", "Marketing"],
+      },
+      {
+        name: "Faculty of Arts",
+        departments: ["History", "English Literature", "Sociology"],
+      },
+    ],
+  },
+  {
+    name: "Luxor University",
+    colleges: [
+      {
+        name: "Faculty of Tourism and Hotels",
+        departments: ["Tourism", "Hotels", "Restaurants"],
+      },
+      {
+        name: "Faculty of Archaeology",
+        departments: ["Egyptology", "Greek", "Roman"],
+      },
+      {
+        name: "Faculty of copmuter science",
+        departments: ["Computer Science", "Information Systems", "Information Technology"],
+      },
+      {
+        name: "Faculty of Medicine",
+        departments: ["Surgery", "Pediatrics", "Cardiology", "Neurology"],
+      },
+      {
+        name: "Faculty of Science",
+        departments: ["Physics", "Chemistry", "Biology", "Mathematics"],
+      },
+      {
+        name: "Faculty of Arts",
+        departments: ["History", "English Literature", "Sociology"],
+      },
+    ],
+  },
+];
+
+
