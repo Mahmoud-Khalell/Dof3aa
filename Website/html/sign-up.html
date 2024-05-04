@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="../css/bootstrap/all.min.css">
+        <link rel="stylesheet" href="../css/bootstrap/bootstrap.min.css">
+        <link rel="stylesheet" href="../css/bootstrap/bootstrap.min.css.map">
+        <link rel="stylesheet" href="../css/bootstrap/Fonts.css">
+        <link rel="stylesheet" href="../css/sign-up.css">
+        <link rel="stylesheet" href="../css/login.css">
+
+        <link rel="shortcut icon" href="../assets/images/logo.png"
+            type="image/x-icon">
+        <title>DoF3aa</title>
+    </head>
+    <body>
+
+        <nav class="navbar navbar-expand-lg navbar-light   "
+            style="direction: ltr;">
+            <div class="container">
+                <a class="navbar-brand fw-bold" href="#">
+                    DoF3aa
+                    <i class>
+                        <img src="../assets/images/logo.png" alt="logo"
+                            style="width: 25px; ">
+                    </i>
+                </a>
+                <button class="navbar-toggler" type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#navbarSupportedContent"
+                    aria-controls="navbarSupportedContent" aria-expanded="false"
+                    aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <!-- 
+                <div class="collapse navbar-collapse"
+                    id="navbarSupportedContent">
+                    <ul class="navbar-nav ms-auto mb-2 mb-lg-0"
+                        style="direction: ltr;">
+
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page"
+                                href="#">Home</a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page"
+                                href="#">Article</a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page"
+                                href="#">settings</a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Profile</a>
+                        </li>
+
+                    </ul>
+                    <form class="d-flex" role="search">
+                        <input class="form-control me-2" type="search"
+                            placeholder="Search" aria-label="Search">
+                        <button class="btn btn-outline-success"
+                            style="margin:0px 20px ;"
+                            type="submit">Search</button>
+                    </form>
+                </div>
+                 -->
+            </div>
+        </nav>
+        <!------------------------------------- Main Content --------------------------------------->
+
+        <div class="MainContainer">
+            <div class="container Main" style="direction: ltr">
+                <div class="row">
+                    <div class="col-1"></div>
+                    <div class="col-10">
+
+                        <div class="title-Section">
+                            <div class="Logo">
+                                <img src="../assets/images/logo.png" alt="logo">
+                            </div>
+                            <h3>DoF3aa</h3>
+                            <p>create new account  </p>
+                            <br>
+                        </div>
+
+                        <form class="row g-3">
+
+                            <div class="col-md-4">
+                                <label for="input-FirstName"
+                                    class="form-label">First Name</label>
+                                <input type="text" class="form-control"
+                                    placeholder="First Name" required
+                                    id="input-FirstName">
+                            </div>
+                            <div class="col-md-4">
+                                <label for="input-LastName"
+                                    class="form-label">Last Name</label>
+                                <input type="text" class="form-control"
+                                    placeholder="Last Name" required
+                                    id="input-LastName">
+                            </div>
+                            <div class="col-md-3">
+                                <label class="form-label"
+                                    for="customFile">Image</label>
+                                <input type="file" class="form-control"
+                                    id="input-Profile-Image" />
+                            </div>
+                            <div class="col-md-1">
+                                <img src="../assets/images/image.png"
+                                    class="img-thumbnail" alt="..."
+                                    width="50px" height="50px"
+                                    id="Profile-Image"
+                                    style="margin-top: 26px;">
+                            </div>
+
+                            <div class="col-md-6">
+                                <label for="input-UserName"
+                                    class="form-label">User Name</label>
+                                <input type="text" class="form-control"
+                                    placeholder="User Name" required
+                                    id="input-UserName">
+                            </div>
+
+                            <div class="col-md-6">
+                                <label for="input-Email"
+                                    class="form-label">Email</label>
+                                <input type="email" class="form-control"
+                                    required
+                                    placeholder="name@example.com"
+                                    id="input-Email">
+                            </div>
+
+                            <div class="col-md-6">
+                                <label for="validationServer01"
+                                    class="form-label">Password</label>
+                                <input type="password"
+                                    class="form-control"
+                                    id="first-user-password"
+                                    placeholder="password"
+                                    required>
+                                <div class="valid-feedback"
+                                    id="valid-password-feedback">
+                                </div>
+                                <div class="invalid-feedback"
+                                    id="invalid-password-feedback">
+                                </div>
+                            </div>
+
+                            <div class="col-md-6">
+                                <label for="validationServer01"
+                                    class="form-label">Confirm Password</label>
+                                <input type="password"
+                                    class="form-control"
+                                    id="confirm-user-password"
+                                    placeholder="confirm password"
+                                    required>
+                                <div class="valid-feedback"
+                                    id="valid-confirm-password-feedback">
+                                </div>
+                                <div class="invalid-feedback"
+                                    id="invalid-confirm-password-feedback">
+                                </div>
+                            </div>
+
+                            <div class="col-md-4">
+                                <label for="input-University"
+                                    class="form-label">University</label>
+                                <select id="input-University"
+                                    class="form-select">
+                                    <option selected>Choose...</option>
+                                    <option>...</option>
+                                </select>
+                            </div>
+
+                            <div class="col-md-4">
+                                <label for="input-Faculty"
+                                    class="form-label">College</label>
+                                <select id="input-Faculty" class="form-select">
+                                    <option selected>Choose...</option>
+                                </select>
+                            </div>
+
+                            <div class="col-md-4">
+                                <label for="input-Department"
+                                    class="form-label">Department</label>
+                                <select id="input-Department"
+                                    class="form-select">
+                                    <option selected>Choose...</option>
+                                    <option>...</option>
+                                </select>
+                            </div>
+                            <div class="col-3"></div>
+                            <div class="col-6">
+                                <br>
+                                <br>
+                                <button type="submit"
+                                    class="btn btn-primary"
+                                    style="width: 100%;">Sign up</button>
+                            </div>
+                            <div class="col-3"></div>
+
+                        </form>
+
+                    </div>
+
+                    <div class="col-1"></div>
+                </div>
+            </div>
+        </div>
+
+        <!------------------------------------- scripts -------------------------------------->
+        <!------------------------------------- bootstrap scripts -------------------------------------->
+        <script src="../javascript/bootstrap/all.min.js"></script>
+        <script src="../javascript/bootstrap/bootstrap.bundle.js"></script>
+        <script src="../javascript/bootstrap/bootstrap.bundle.js.map"></script>
+        <script src="../javascript/bootstrap/bootstrap.bundle.min.js"></script>
+        <script
+            src="../javascript/bootstrap/bootstrap.bundle.min.js.map"></script>
+        <!------------------------------------- my scripts -------------------------------------->
+        <script src="../javascript/Data/uni-data.js"></script>
+        <script src="../javascript/sign-up.js"></script>
+
+    </body>
+</html>

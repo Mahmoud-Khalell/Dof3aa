@@ -32,6 +32,11 @@ function Get(){
       console.log(data);
       console.log("=== > " + data.expired);
       localStorage.setItem('token', data.token);
+      localStorage.setItem('expired', data.expired);
+      // open home page
+      
+      window.location.href = "./courses.html";
+     
 
     })
     .catch(error => {
