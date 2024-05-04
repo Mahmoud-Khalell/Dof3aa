@@ -151,6 +151,9 @@ F:\FCI\Dof3aa website\Dof3aa\Website\Backend\MyApi\MyApi\obj\Debug\net6.0\refint
 F:\FCI\Dof3aa website\Dof3aa\Website\Backend\MyApi\MyApi\obj\Debug\net6.0\MyApi.pdb
 F:\FCI\Dof3aa website\Dof3aa\Website\Backend\MyApi\MyApi\obj\Debug\net6.0\MyApi.genruntimeconfig.cache
 F:\FCI\Dof3aa website\Dof3aa\Website\Backend\MyApi\MyApi\obj\Debug\net6.0\ref\MyApi.dll
+<<<<<<< HEAD
+F:\FCI\Dof3aa website\Dof3aa\Website\Backend\MyApi\MyApi\bin\Debug\net6.0\MyApi.staticwebassets.runtime.json
+=======
 E:\Computer science\Level 3 - second term\Software development\Project\Website\Backend\MyApi\MyApi\bin\Debug\net6.0\appsettings.Development.json
 E:\Computer science\Level 3 - second term\Software development\Project\Website\Backend\MyApi\MyApi\bin\Debug\net6.0\appsettings.json
 E:\Computer science\Level 3 - second term\Software development\Project\Website\Backend\MyApi\MyApi\bin\Debug\net6.0\MyApi.exe
@@ -227,3 +230,4 @@ E:\Computer science\Level 3 - second term\Software development\Project\Website\B
 E:\Computer science\Level 3 - second term\Software development\Project\Website\Backend\MyApi\MyApi\obj\Debug\net6.0\MyApi.pdb
 E:\Computer science\Level 3 - second term\Software development\Project\Website\Backend\MyApi\MyApi\obj\Debug\net6.0\MyApi.genruntimeconfig.cache
 E:\Computer science\Level 3 - second term\Software development\Project\Website\Backend\MyApi\MyApi\obj\Debug\net6.0\ref\MyApi.dll
+>>>>>>> 29422535a0a5a1ba24a179c1c9b95f4043ac6cad

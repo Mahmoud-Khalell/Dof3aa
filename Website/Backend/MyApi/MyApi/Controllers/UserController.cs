@@ -9,7 +9,7 @@ using MyApi.Model.Interfaces;
 using System.IdentityModel.Tokens.Jwt;
 using System.Security.Claims;
 using System.Text;
-
+using MyApi.Services;
 namespace MyApi.Controllers
 {
     [Route("api/[controller]")]
@@ -32,6 +32,13 @@ namespace MyApi.Controllers
                 var user=new AppUser();
                 user.Email = registerationDTO.Email;
                 user.UserName = registerationDTO.Username;
+                user.FirstName = registerationDTO.FirstName;
+                user.LastName = registerationDTO.LastName;
+                user.Department = registerationDTO.Department;
+                user.University = registerationDTO.University;
+                user.faculty = registerationDTO.Faculty;
+                user.ImageUrl = registerationDTO.ImageUrl;
+                
                 var result=await unit.UserManager.CreateAsync(user,registerationDTO.Password);
                 if (result.Succeeded)
                     return Ok();
@@ -48,31 +55,14 @@ namespace MyApi.Controllers
             var user = await unit.UserManager.FindByNameAsync(loginDTO.UserName);
             
             if(user==null)
-                return NotFound("Username or Password is wrong");
+                return NotFound("Username not found");
 
             bool check = await unit.UserManager.CheckPasswordAsync(user, loginDTO.Password);
             if(check==false)
-                return NotFound("Username or Password is wrong");
+                return NotFound("Password is wrong");
 
-
-            var claim = new List<Claim>();
-            claim.Add(new Claim("Username", loginDTO.UserName));
-            
-
-            SecurityKey securityKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(unit.config["JWT:Secret"]));
-            SigningCredentials signingCreden = new SigningCredentials(securityKey, SecurityAlgorithms.HmacSha256);
-            JwtSecurityToken token = new JwtSecurityToken
-            (
-                issuer: unit.config["JWT:issuer"],
-                audience: unit.config["JWT:audience"],
-                claims: claim,
-                expires: DateTime.Now.AddDays(7),
-                signingCredentials: signingCreden
-               
-
-
-            );
-            return  Ok( new { expired = DateTime.Now.AddDays(7), token = new JwtSecurityTokenHandler().WriteToken(token) });
+            var token = Tokenizer.GenerateToken(loginDTO, unit);
+            return Ok(token);
         }
         [HttpGet("GetAll")]
         [Authorize(AuthenticationSchemes =JwtBearerDefaults.AuthenticationScheme)]

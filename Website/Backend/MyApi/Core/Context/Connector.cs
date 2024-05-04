@@ -17,5 +17,12 @@ namespace Core.Context
         {
 
         }
+        public DbSet<Cource> Cources { get; set; }
+        public DbSet<UserGroup> UserGroups { get; set; }
+        protected override void OnModelCreating(ModelBuilder modelBuilder)
+        {
+            base.OnModelCreating(modelBuilder);
+            modelBuilder.Entity<UserGroup>().HasKey(ug => new { ug.Username, ug.CourceId });
+        }
     }
 }
