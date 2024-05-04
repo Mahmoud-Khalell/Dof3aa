@@ -9,8 +9,6 @@ namespace Core.entities
 {
     public class BaseEntity
     {
-        [DatabaseGenerated(DatabaseGeneratedOption.None)]
         public int Id { get; set; }
-
     }
 }

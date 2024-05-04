@@ -9,6 +9,19 @@ namespace Core.entities
 {
     public class AppUser:IdentityUser
     {
+        public string FirstName { get; set; }
+        public string? LastName { get; set; }
 
+        public string? University {  get; set; }
+        public string? Department { get; set; }
+        public string? faculty {  get; set; }
+        public DateTime DateOfCreation { get; set; }
+        public string ImageUrl { get; set; }
+        public virtual ICollection<UserGroup> UserGroups { get; set; }  
+        public AppUser()
+        {
+            DateOfCreation = DateTime.Now;
+            
+        }
     }
 }

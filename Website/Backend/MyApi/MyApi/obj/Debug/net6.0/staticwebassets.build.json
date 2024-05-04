@@ -1,11 +1,19 @@
 {
   "Version": 1,
-  "Hash": "lz3V7MICChVTha4Wu2HmNJu8vg7UhsoN4/IWoYwrb24=",
+  "Hash": "MaWpV3MnHGREaA3yt0Uod6H2VJeUHVSc/7QYQO33bdg=",
   "Source": "MyApi",
   "BasePath": "_content/MyApi",
   "Mode": "Default",
   "ManifestType": "Build",
   "ReferencedProjectsConfiguration": [],
-  "DiscoveryPatterns": [],
+  "DiscoveryPatterns": [
+    {
+      "Name": "MyApi\\wwwroot",
+      "Source": "MyApi",
+      "ContentRoot": "F:\\FCI\\Dof3aa website\\Dof3aa\\Website\\Backend\\MyApi\\MyApi\\wwwroot\\",
+      "BasePath": "_content/MyApi",
+      "Pattern": "**"
+    }
+  ],
   "Assets": []
 }
