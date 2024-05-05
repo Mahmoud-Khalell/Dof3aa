@@ -56,6 +56,9 @@ namespace MyApi
             }).AddEntityFrameworkStores<Connector>().AddDefaultTokenProviders();
             
             builder.Services.AddScoped<IUnitOfCode,UnitOfCode>();
+            builder.Services.AddScoped<ICource,CourceRepositiory>();
+            builder.Services.AddScoped<IUserGroup,UserGroupRepository>();
+
             builder.Services.AddCors(e =>
                 {
                     e.AddPolicy("MyPloicy", policybuilder =>  policybuilder.AllowAnyOrigin().AllowAnyHeader());

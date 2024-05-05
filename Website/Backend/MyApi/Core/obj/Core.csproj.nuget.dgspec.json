@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "F:\\FCI\\Dof3aa website\\Dof3aa\\Website\\Backend\\MyApi\\Core\\Core.csproj": {}
+    "F:\\FCI\\Dof3aa\\Dof3aa\\Website\\Backend\\MyApi\\Core\\Core.csproj": {}
   },
   "projects": {
-    "F:\\FCI\\Dof3aa website\\Dof3aa\\Website\\Backend\\MyApi\\Core\\Core.csproj": {
+    "F:\\FCI\\Dof3aa\\Dof3aa\\Website\\Backend\\MyApi\\Core\\Core.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "F:\\FCI\\Dof3aa website\\Dof3aa\\Website\\Backend\\MyApi\\Core\\Core.csproj",
+        "projectUniqueName": "F:\\FCI\\Dof3aa\\Dof3aa\\Website\\Backend\\MyApi\\Core\\Core.csproj",
         "projectName": "Core",
-        "projectPath": "F:\\FCI\\Dof3aa website\\Dof3aa\\Website\\Backend\\MyApi\\Core\\Core.csproj",
+        "projectPath": "F:\\FCI\\Dof3aa\\Dof3aa\\Website\\Backend\\MyApi\\Core\\Core.csproj",
         "packagesPath": "C:\\Users\\mahmoud\\.nuget\\packages\\",
-        "outputPath": "F:\\FCI\\Dof3aa website\\Dof3aa\\Website\\Backend\\MyApi\\Core\\obj\\",
+        "outputPath": "F:\\FCI\\Dof3aa\\Dof3aa\\Website\\Backend\\MyApi\\Core\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\mahmoud\\AppData\\Roaming\\NuGet\\NuGet.Config",

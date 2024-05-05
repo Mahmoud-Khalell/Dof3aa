@@ -10,6 +10,7 @@ using System.IdentityModel.Tokens.Jwt;
 using System.Security.Claims;
 using System.Text;
 using MyApi.Services;
+using Microsoft.EntityFrameworkCore;
 namespace MyApi.Controllers
 {
     [Route("api/[controller]")]
@@ -22,18 +23,24 @@ namespace MyApi.Controllers
         {
             this.unit = unit;
         }
+
+        #region Confirm Email
         [HttpGet("ConfirmEmail")]
         public async Task<IActionResult> ConfirmEmail(string email, string token)
         {
             var user = unit.UserManager.Users.FirstOrDefault(e => e.Email == email);
             if (user == null)
-                return NotFound();
+                return NotFound("Invalid User");
             var result = await unit.UserManager.ConfirmEmailAsync(user, token);
             if (result.Succeeded)
-                return Ok();
+                return Ok("Email Confirmed successfully");
             return BadRequest(result.Errors.FirstOrDefault());
         }
-        private async Task<IActionResult> confirmEmail(string email)
+        #endregion
+
+        #region Send Email Confirmation
+        [HttpGet("SendEmailConfirmation")]
+        public async Task<IActionResult> SendconfirmEmail(string email)
         {
             var user = unit.UserManager.Users.FirstOrDefault(e => e.Email == email);
             if (user == null)
@@ -52,10 +59,12 @@ namespace MyApi.Controllers
 
 
         }
+        #endregion
 
+        #region Register
         [HttpPost("Register")]
         
-        public async Task<IActionResult> Register(RegisterationDTO registerationDTO)
+        public async Task<IActionResult> Register([FromForm]RegisterationDTO registerationDTO)
         {
             if(ModelState.IsValid)
             {
@@ -65,7 +74,7 @@ namespace MyApi.Controllers
                 if (result.Succeeded)
                 {
                     //confirm email
-                    confirmEmail(user.Email);
+                    SendconfirmEmail(user.Email);
                     return Ok();
                 }
                 else
@@ -76,7 +85,10 @@ namespace MyApi.Controllers
             }
             return BadRequest(ModelState);
         }
-        [HttpPost]
+        #endregion
+
+        #region Login
+        [HttpPost("Login")]
         public async Task<IActionResult>Login(LoginDTO loginDTO)
         {
             if (ModelState.IsValid == false)
@@ -95,6 +107,9 @@ namespace MyApi.Controllers
             var token = Tokenizer.GenerateToken(loginDTO, unit);
             return Ok(token);
         }
+        #endregion
+
+        #region Get All Users
         [HttpGet("GetAll")]
         [Authorize(AuthenticationSchemes =JwtBearerDefaults.AuthenticationScheme)]
         public IActionResult GetAll()
@@ -102,6 +117,10 @@ namespace MyApi.Controllers
            var users= unit.UserManager.Users.ToList();
             return Ok(users);
         }
+
+        #endregion
+
+        #region Remove All Users
         [HttpGet("RemoveAll")]
         public async Task<IActionResult> RemoveAll()
         {
@@ -110,13 +129,25 @@ namespace MyApi.Controllers
                 await unit.UserManager.DeleteAsync(user);
             return Ok();
         }
-        [HttpGet("GetCurentUser")]
-        [Authorize(AuthenticationSchemes =JwtBearerDefaults.AuthenticationScheme)]
-        public IActionResult GetCurentUser()
+        #endregion
+
+        #region Get User Info
+        [HttpGet("GetUserInfo")]
+        [Authorize(AuthenticationSchemes = JwtBearerDefaults.AuthenticationScheme)]
+        public IActionResult GetUserInfo()
         {
-            var item = User.Claims.FirstOrDefault(e => e.Type == "Username").Value;
-            return Ok(item);
+            var userName = User.Claims.FirstOrDefault(e => e.Type == "Username").Value;
+            var user = unit.UserManager.Users.Include(e => e.UserGroups).ThenInclude(e=>e.Cource).FirstOrDefault(e => e.UserName == userName);
+            if (user == null)
+                return NotFound();
+            var userDTO = Mapper.User2UserDTO(user);
+            return Ok(userDTO);
         }
+        #endregion
+
+
+
+
 
 
     }
