@@ -1,9 +1,11 @@
 // const subjects = require('./datatest.js');
 
 
+// if not logged in, redirect to login page
+
+
 
 var colors = ['#D2EFFB', '#D2EFFB', '#E2F4DC', '#D2EFFB', '#EFEBF9','#E2F4DC'];
-
 
 function createCardLecture(courseId ,imgSrc, subjectCode,subjectName, moreInfo, username, lastUpdated) {
     const cardDiv = document.createElement('div');
@@ -12,17 +14,9 @@ function createCardLecture(courseId ,imgSrc, subjectCode,subjectName, moreInfo, 
     const card = document.createElement('div');
     card.classList.add('card', 'h-100');
     
-    // add on click event to the card
-    card.addEventListener('click', () => {
-
-        
+    card.addEventListener('click', () => {        
         window.location.href = `weeks.html?id=${courseId}`;
-        
-        
-
     });
-
-
     const img = document.createElement('img');
     img.src = imgSrc;
     img.classList.add('card-img-top');

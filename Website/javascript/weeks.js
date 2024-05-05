@@ -163,8 +163,6 @@ function createAddWeeksCard() {
     
 }
 
-
-
 function createTaskCard(taskName, description, datetimedeadline,matrialLink ) {
     const cardDiv = document.createElement('div');
     cardDiv.classList.add('col-sm-6', 'mb-3', 'mb-sm-0');

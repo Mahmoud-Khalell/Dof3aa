@@ -4,15 +4,15 @@ const universitiesData = [
     colleges: [
       {
         name: "Faculty of Engineering",
-        departments: ["Civil", "Mechanical", "Electrical", "Chemical"],
+        departments: ["General","Civil", "Mechanical", "Electrical", "Chemical"],
       },
       {
         name: "Faculty of Medicine",
-        departments: ["Surgery", "Pediatrics", "Cardiology", "Neurology"],
+        departments: ["General","Surgery", "Pediatrics", "Cardiology", "Neurology"],
       },
       {
         name: "Faculty of Law",
-        departments: ["Civil Law", "Criminal Law", "Commercial Law"],
+        departments: ["General","Civil Law", "Criminal Law", "Commercial Law"],
       },
     ],
   },
@@ -21,15 +21,15 @@ const universitiesData = [
     colleges: [
       {
         name: "Faculty of Science",
-        departments: ["Physics", "Chemistry", "Biology", "Mathematics"],
+        departments: ["General","Physics", "Chemistry", "Biology", "Mathematics"],
       },
       {
         name: "Faculty of Business",
-        departments: ["Accounting", "Finance", "Marketing"],
+        departments: ["General","Accounting", "Finance", "Marketing"],
       },
       {
         name: "Faculty of Arts",
-        departments: ["History", "English Literature", "Sociology"],
+        departments: ["General","History", "English Literature", "Sociology"],
       },
     ],
   },
@@ -38,27 +38,27 @@ const universitiesData = [
     colleges: [
       {
         name: "Faculty of Tourism and Hotels",
-        departments: ["Tourism", "Hotels", "Restaurants"],
+        departments: ["General","Tourism", "Hotels", "Restaurants"],
       },
       {
         name: "Faculty of Archaeology",
-        departments: ["Egyptology", "Greek", "Roman"],
+        departments: ["General","Egyptology", "Greek", "Roman"],
       },
       {
         name: "Faculty of copmuter science",
-        departments: ["Computer Science", "Information Systems", "Information Technology"],
+        departments: ["General","Computer Science", "Information Systems", "Information Technology"],
       },
       {
         name: "Faculty of Medicine",
-        departments: ["Surgery", "Pediatrics", "Cardiology", "Neurology"],
+        departments: ["General","Surgery", "Pediatrics", "Cardiology", "Neurology"],
       },
       {
         name: "Faculty of Science",
-        departments: ["Physics", "Chemistry", "Biology", "Mathematics"],
+        departments: ["General","Physics", "Chemistry", "Biology", "Mathematics"],
       },
       {
         name: "Faculty of Arts",
-        departments: ["History", "English Literature", "Sociology"],
+        departments: ["General","History", "English Literature", "Sociology"],
       },
     ],
   },

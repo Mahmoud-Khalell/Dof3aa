@@ -20,7 +20,6 @@
     <body>
 
         <!------------------------------------- NavBar -------------------------------------->
-
         <nav class="navbar navbar-expand-lg navbar-light bg-body-tertiary"
             style="height: 45px;">
             <div class="container-fluid container">
@@ -73,6 +72,7 @@
                             class="btn btn-primary position-relative bg-transparent border-0 text-primary">
                             <i class="fa-solid fa-bell "></i>
                             <span style="margin:9px -6px ; font-size: 10px;"
+                                id="span-number-of-alerts"
                                 class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">5
                             </span>
                         </button>
@@ -120,7 +120,8 @@
                             <li><a class="dropdown-item" href="#">Your
                                     group</a></li>
                             <li><hr class="dropdown-divider"></li>
-                            <li><a class="dropdown-item" href="#">
+                            <li id="sign-out-nav"><a class="dropdown-item"
+                                    href="#">
                                     Sign out
                                     <i
                                         class="fa-solid fa-right-from-bracket"></i>
@@ -172,6 +173,15 @@
                                 class="fa-solid fa-users-rectangle"></i> Join
                             Group<span
                                 class="badge badge-primary badge-pill"></span></a>
+
+                        <a class="list-group-item with-badge"
+                            data-bs-toggle="modal"
+                            data-bs-target="#staticBackdrop">
+                            <i class="fa-solid fa-users-rectangle"></i>
+                            Create New Group<span
+                                class="badge badge-primary badge-pill"></span>
+                        </a>
+
                     </nav>
                 </div>
                 <div class="col-lg-8">
@@ -209,6 +219,127 @@
                     </div>
                     <!-- <hr class="mb-4"> -->
 
+                </div>
+            </div>
+        </div>
+
+        <!------------------------------------- add Group --------------------------------------->
+        <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static"
+            data-bs-keyboard="false" tabindex="-1"
+            aria-labelledby="staticBackdropLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h1 class="modal-title fs-5"
+                            id="staticBackdropLabel"> Add New Group</h1>
+                        <button type="button" class="btn-close"
+                            data-bs-dismiss="modal"
+                            aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+
+                        <form action method="post">
+
+                            <div class="mb-3">
+                                <label for="validationServer01"
+                                    class="form-label">Course ID * <sub>used to
+                                        join course</sub></label>
+                                <input type="text"
+                                    class="form-control"
+                                    id="courseIDinput"
+                                    placeholder="Course ID"
+                                    required>
+                                <div class="valid-feedback"
+                                    id="valid-id-feedback">
+                                </div>
+                                <div class="invalid-feedback"
+                                    id="invalid-id-feedback">
+                                </div>
+                            </div>
+
+                            <div class="mb-3">
+
+                                <label for="courseTitleinput"
+                                    class="form-label">Title * <sub>used to
+                                        join course</sub></label>
+                                <input type="text"
+                                    class="form-control"
+                                    id="courseTitleinput"
+                                    placeholder="Title"
+                                    required>
+                                <div class="valid-feedback"
+                                    id="valid-Title-feedback">
+                                </div>
+                                <div class="invalid-feedback"
+                                    id="invalid-Title-feedback">
+                                </div>
+                            </div>
+
+                            <div class="mb-3">
+                                <label for="courseSupTitleinput"
+                                    class="form-label">Sub Title
+                                    <sub>(optional)</sub></label>
+                                <input type="text"
+                                    class="form-control"
+                                    id="courseSupTitleinput"
+                                    placeholder="Sub Title">
+                                <div class="valid-feedback"
+                                    id="valid-SupTitle-feedback">
+                                </div>
+                                <div class="invalid-feedback"
+                                    id="invalid-SupTitle-feedback">
+                                </div>
+                            </div>
+
+                            <div class="mb-3">
+                                <label for="material-description"
+                                    class="form-label">Group
+                                    Description *</label>
+                                <textarea class="form-control" required
+                                    id="material-description"
+                                    placeholder="Group Description"
+                                    rows="3"></textarea>
+                            </div>
+
+                            <div class="mb-3">
+                                <label for="material-type"
+                                    class="form-label">Group
+                                    type *</label>
+
+                                <select class="form-select" id="material-type"
+                                    required>
+                                    <option value="General">General</option>
+                                    <option value="Lecture">Lecture</option>
+                                    <option value="Section">Section</option>
+                                </select>
+                            </div>
+                            
+                            <div class="mb-3">
+                                <label for="material-file"
+                                    class="form-label">Group
+                                    Image *</label>
+                                <input class="form-control" type="file"
+                                    id="material-file" required>
+                            </div>
+
+                            <div class="mb-3">
+                                <label for="material-file"
+                                    class="form-label">Group
+                                    Logo *</label>
+                                <input class="form-control" type="file"
+                                    id="material-file" required>
+                            </div>
+
+                            <button type="submit"
+                                class="btn btn-primary">Submit</button>
+                        </form>
+
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary"
+                            data-bs-dismiss="modal">Close</button>
+
+                    </div>
                 </div>
             </div>
         </div>

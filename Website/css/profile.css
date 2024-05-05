@@ -362,5 +362,10 @@ a.list-group-item,
 /* add on hover effect on .list-group .list-group-item */
 .list-group .list-group-item:hover {
     background-color: #4671ff;
-    color: #0da9ef;
+    color: #ffffff;
+}
+
+
+.list-group-item:hover{
+    cursor:pointer;
 }

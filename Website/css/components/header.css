@@ -65,7 +65,7 @@
 
 
 .thirdHeader {
-    background-color: #b3d3e0;
+    background-color: #6172e1;
     height: 40px;
     margin-bottom: 13px;
 }
@@ -93,14 +93,14 @@
 }
 
 .pageName h1 {
-    color: #000;
+    color: #FFF;
     font-weight: 700;
     margin-top: 20px;
     /* margin-bottom: 20px; */
 }
 
 .pageName h6 {
-    color: #4857e2;
+    color: #FFF;
     /* margin-bottom: 20px; */
 }
 
@@ -142,5 +142,9 @@ nav .container-fluid .collapse a span {
 .SeconderyHeader{
     /* From https://css.glass */
 background: rgb(255, 255, 255);
-    background: linear-gradient(0deg, rgba(255, 255, 255, 1) 14%, rgba(166, 211, 255, 1) 58%, rgba(113, 185, 255, 1) 82%);
+    background: linear-gradient(180deg, #0183FB,#0664D5, #0B4AB4);
+}
+
+#page-h5-text-fullPage{
+    color: #eaeaea;
 }

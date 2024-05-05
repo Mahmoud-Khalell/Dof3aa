@@ -79,6 +79,7 @@
                             class="btn btn-primary position-relative bg-transparent border-0 text-primary">
                             <i class="fa-solid fa-bell "></i>
                             <span style="margin:9px -6px ; font-size: 10px;"
+                                id="span-number-of-alerts"
                                 class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">5
                             </span>
                         </button>
@@ -126,7 +127,8 @@
                             <li><a class="dropdown-item" href="#">Your
                                     group</a></li>
                             <li><hr class="dropdown-divider"></li>
-                            <li><a class="dropdown-item" href="#">
+                            <li id="sign-out-nav"><a class="dropdown-item"
+                                    href="#">
                                     Sign out
                                     <i
                                         class="fa-solid fa-right-from-bracket"></i>
@@ -266,17 +268,10 @@
                         tabindex="0">
                         <!-- the content inside alerts tab -------------------------------------------->
 
-
-
                         <div class="list-group"
-                        id="week-alerts-tab-parant">
-                         
-                      
+                            id="week-alerts-tab-parant">
 
-
-
-
-                        <!-- end of alert ------------------------------------>
+                            <!-- end of alert ------------------------------------>
                         </div>
                     </div>
 
@@ -296,7 +291,6 @@
         <br><br><br>
 
         <!------------------------------------- add Week --------------------------------------->
-
         <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static"
             data-bs-keyboard="false" tabindex="-1"
             aria-labelledby="staticBackdropLabel" aria-hidden="true">

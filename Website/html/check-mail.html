@@ -9,6 +9,7 @@
         <link rel="stylesheet" href="../css/bootstrap/Fonts.css">
         <link rel="stylesheet" href="../css/login.css">
         <link rel="stylesheet" href="../css/components/loginLoading.css">
+        <link rel="stylesheet" href="../css/check-mail.css">
 
         <link rel="shortcut icon" href="../assets/images/logo.png"
             type="image/x-icon">
@@ -70,75 +71,34 @@
             </div>
         </nav>
         <!------------------------------------- Main Content --------------------------------------->
-        <div class="loadingDiv" id="loadingDiv" style="display: none;">
-            <div class="spinner-border" role="status">
-                <span class="visually-hidden">Loading...</span>
-            </div>
-        </div>
-        <div class="MainContainer" id="loginformcontainer">
-            <div class="container Main" style="direction: ltr">
-                <div class="row">
-                    <div class="col-4 Right">
-                    </div>
-                    <div class="col">
-                        <div class="title-Section">
-                            <div class="Logo">
-                                <img src="../assets/images/logo.png" alt="logo">
-                            </div>
-                            <h3>DoF3aa</h3>
-                            <p>student platform to organize all materials </p>
-                        </div>
-                        <form class="row g-12"
-                            id="loginForm" method="post">
-                            <div class="col-md-12">
-                                <br>
-                                <input type="text" class="form-control"
-                                    placeholder=" User Name"
-                                    id="username" name="username">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-3"></div>
+                <div class="col-md-6">
+                    <br><br><br><br><br><br>
 
-                                <span style="color: #c50a0a; display: none;"  id="span-user">
-                                    <i class="fa-solid fa-xmark"></i>
-                                    username not found
-                                </span>
+                    <div class="check-mail
+                        text-center">
+                        <img src="../assets/images/email.gif" width="250px">
+                        <h1 class="text-center">Check Your Mail</h1>
+                        <p class="text-center">We have sent a verification
+                            code to your email <br> confirm your email and
+                            login</p>
+                        <form action="check-mail.html" method="post">
 
-                            </div>
-                            <div class="col-md-12">
-                                <br>
-                                <input
-                                    class="form-control"
-                                    placeholder="Password"
-                                    id="password" name="password">
-
-                                <span style="color: #c50a0a; display: none;" id="span-password">
-                                    <i class="fa-solid fa-xmark"></i>
-                                    password not correct
-                                </span>
-                            </div>
-                            <div class="col-md-12">
-                                <br>
-                                <!-- <div class="form-check">
-                                    <input class="form-check-input"
-                                        type="checkbox" value
-                                        id="flexCheckDefault">remember me
-                                </div> -->
-                            </div>
-                            <div class="d-grid gap-2">
-                                <button type="submit"
-                                    class="btn btn-primary loginButton">log
-                                    in</button>
-                            </div>
-                            <div class="d-grid ">
-                                <br>
-                                <a href="./sign-up.html"
-                                    class="btn sign-up-btn">Sign
-                                    Up</a>
+                            <div class="form-group text-center">
+                                <a type="submit" style="width: 50%;"
+                                    href="./login.html"
+                                    class="btn btn-primary">login</a>
                             </div>
                         </form>
                     </div>
-                    <div class="col-4"></div>
+                    <div class="col-md-3"></div>
+
                 </div>
             </div>
         </div>
+
         <!------------------------------------- scripts -------------------------------------->
         <!------------------------------------- bootstrap scripts -------------------------------------->
         <script src="../javascript/bootstrap/all.min.js"></script>

@@ -102,10 +102,132 @@ collegeSelect.onchange = function () {
 var FileImage = document.getElementById("input-Profile-Image");
 var DisplayImage = document.getElementById("Profile-Image");
 
-FileImage.onchange = function () {
+FileImage.onchange = function () {    
+    // check file size and type 
+    var file = FileImage.files[0];
+    var fileType = file.type;
+    var fileSize = file.size;
+    var validTypes = ["image/jpeg", "image/png", "image/jpg"];
+    var validSize = 1024 * 1024 * 2; // 2MB
+    if (!validTypes.includes(fileType)) {
+        alert("Invalid file type");
+        FileImage.value = "";
+        DisplayImage.src = "";
+
+        return;
+    } else if (fileSize > validSize) {
+        alert("Invalid file size");
+        FileImage.value = "";
+        DisplayImage.src = "";
+        return;
+    }
+    
     var reader = new FileReader();
     reader.onload = function (e) {
         DisplayImage.src = e.target.result;
     }
     reader.readAsDataURL(FileImage.files[0]);
+}
+
+
+
+
+
+
+document.querySelector('form').addEventListener('submit', function(event) {
+   
+    // go to page courses.html
+    event.preventDefault(); 
+    var firstName = document.getElementById("input-FirstName").value;
+    var lastName = document.getElementById("input-LastName").value;
+    var username = document.getElementById("input-UserName").value;
+    var email = document.getElementById("input-Email").value;
+    var password = document.getElementById("first-user-password").value;
+    var confirmPassword = document.getElementById("confirm-user-password").value;
+    var university = document.getElementById("input-University").value;
+    var college = document.getElementById("input-Faculty").value;
+    var department = document.getElementById("input-Department").value;
+    var image = document.getElementById("input-Profile-Image").src;
+    var valid = true;
+    if (!checkPassword(password)) {
+        valid = false;
+        console.log("password");
+    }
+    if (password !== confirmPassword) {
+        alert("Passwords do not match");
+        valid = false;
+    }
+    if (valid) {
+        var data = {
+            firstName: firstName,
+            lastName: lastName,
+            username: username,
+            email: email,
+            password: password,
+            university: university,
+            college: college,
+            department: department,
+            image: image
+        }
+        console.log(data);
+        //sendDatatoServer(data);
+        showloading();
+        setTimeout(() => {
+            hideloading();
+            
+        }, 2000);
+
+    }
+});
+
+
+
+function sendDatatoServer(data) {
+    
+    const url = 'https://localhost:44303/api/User';
+
+    fetch(url, {
+        method: 'POST', 
+        headers: {
+        'Content-Type': 'application/json',
+        // 'Authorization': 'Bearer ' + localStorage.getItem('token')
+        },
+        body: JSON.stringify(data)
+    })
+    .then(response => {
+        hideloading()
+        if (!response.ok) {     
+            throw new Error('Network response was not ok');
+        }
+        return response.json();
+
+    })
+        .then(data => {
+        hideloading()
+        console.log("Data is : ");
+        console.log(data);
+        console.log("=== > " + data.expired);
+        localStorage.setItem('token', data.token);
+        localStorage.setItem('expired', data.expired);
+        window.location.href = "./courses.html";
+    })
+        .catch(error => {
+        hideloading()
+
+        console.error('There was a problem with the fetch operation:', error);
+    });
+
+
+
+}
+
+
+
+
+
+function showloading(){
+  document.getElementById('loadingDiv').style.display = 'flex';
+}
+function hideloading(){
+  document.getElementById('loadingDiv').style.display = 'none';
 }
