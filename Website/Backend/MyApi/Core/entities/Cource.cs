@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace Core.entities
 {
-    public class Cource
+    public class Cource:BaseEntity
     {
 
         [DatabaseGenerated(DatabaseGeneratedOption.None)]

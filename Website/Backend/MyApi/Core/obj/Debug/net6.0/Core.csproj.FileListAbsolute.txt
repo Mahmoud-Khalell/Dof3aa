@@ -1,15 +1,3 @@
-C:\Users\mahmoud\Documents\MyApi\MyApi\Core\bin\Debug\net6.0\Core.deps.json
-C:\Users\mahmoud\Documents\MyApi\MyApi\Core\bin\Debug\net6.0\Core.dll
-C:\Users\mahmoud\Documents\MyApi\MyApi\Core\bin\Debug\net6.0\Core.pdb
-C:\Users\mahmoud\Documents\MyApi\MyApi\Core\obj\Debug\net6.0\Core.csproj.AssemblyReference.cache
-C:\Users\mahmoud\Documents\MyApi\MyApi\Core\obj\Debug\net6.0\Core.GeneratedMSBuildEditorConfig.editorconfig
-C:\Users\mahmoud\Documents\MyApi\MyApi\Core\obj\Debug\net6.0\Core.AssemblyInfoInputs.cache
-C:\Users\mahmoud\Documents\MyApi\MyApi\Core\obj\Debug\net6.0\Core.AssemblyInfo.cs
-C:\Users\mahmoud\Documents\MyApi\MyApi\Core\obj\Debug\net6.0\Core.csproj.CoreCompileInputs.cache
-C:\Users\mahmoud\Documents\MyApi\MyApi\Core\obj\Debug\net6.0\Core.dll
-C:\Users\mahmoud\Documents\MyApi\MyApi\Core\obj\Debug\net6.0\refint\Core.dll
-C:\Users\mahmoud\Documents\MyApi\MyApi\Core\obj\Debug\net6.0\Core.pdb
-C:\Users\mahmoud\Documents\MyApi\MyApi\Core\obj\Debug\net6.0\ref\Core.dll
 F:\FCI\Dof3aa website\Dof3aa\Website\Backend\MyApi\Core\bin\Debug\net6.0\Core.deps.json
 F:\FCI\Dof3aa website\Dof3aa\Website\Backend\MyApi\Core\bin\Debug\net6.0\Core.dll
 F:\FCI\Dof3aa website\Dof3aa\Website\Backend\MyApi\Core\bin\Debug\net6.0\Core.pdb
@@ -23,15 +11,16 @@ F:\FCI\Dof3aa website\Dof3aa\Website\Backend\MyApi\Core\obj\Debug\net6.0\Core.dl
 F:\FCI\Dof3aa website\Dof3aa\Website\Backend\MyApi\Core\obj\Debug\net6.0\refint\Core.dll
 F:\FCI\Dof3aa website\Dof3aa\Website\Backend\MyApi\Core\obj\Debug\net6.0\Core.pdb
 F:\FCI\Dof3aa website\Dof3aa\Website\Backend\MyApi\Core\obj\Debug\net6.0\ref\Core.dll
-E:\Computer science\Level 3 - second term\Software development\Project\Website\Backend\MyApi\Core\bin\Debug\net6.0\Core.deps.json
-E:\Computer science\Level 3 - second term\Software development\Project\Website\Backend\MyApi\Core\bin\Debug\net6.0\Core.dll
-E:\Computer science\Level 3 - second term\Software development\Project\Website\Backend\MyApi\Core\bin\Debug\net6.0\Core.pdb
-E:\Computer science\Level 3 - second term\Software development\Project\Website\Backend\MyApi\Core\obj\Debug\net6.0\Core.csproj.AssemblyReference.cache
-E:\Computer science\Level 3 - second term\Software development\Project\Website\Backend\MyApi\Core\obj\Debug\net6.0\Core.GeneratedMSBuildEditorConfig.editorconfig
-E:\Computer science\Level 3 - second term\Software development\Project\Website\Backend\MyApi\Core\obj\Debug\net6.0\Core.AssemblyInfoInputs.cache
-E:\Computer science\Level 3 - second term\Software development\Project\Website\Backend\MyApi\Core\obj\Debug\net6.0\Core.AssemblyInfo.cs
-E:\Computer science\Level 3 - second term\Software development\Project\Website\Backend\MyApi\Core\obj\Debug\net6.0\Core.csproj.CoreCompileInputs.cache
-E:\Computer science\Level 3 - second term\Software development\Project\Website\Backend\MyApi\Core\obj\Debug\net6.0\Core.dll
-E:\Computer science\Level 3 - second term\Software development\Project\Website\Backend\MyApi\Core\obj\Debug\net6.0\refint\Core.dll
-E:\Computer science\Level 3 - second term\Software development\Project\Website\Backend\MyApi\Core\obj\Debug\net6.0\Core.pdb
-E:\Computer science\Level 3 - second term\Software development\Project\Website\Backend\MyApi\Core\obj\Debug\net6.0\ref\Core.dll
+F:\FCI\Dof3aa\Dof3aa\Website\Backend\MyApi\Core\bin\Debug\net6.0\Core.deps.json
+F:\FCI\Dof3aa\Dof3aa\Website\Backend\MyApi\Core\bin\Debug\net6.0\Core.dll
+F:\FCI\Dof3aa\Dof3aa\Website\Backend\MyApi\Core\bin\Debug\net6.0\Core.pdb
+F:\FCI\Dof3aa\Dof3aa\Website\Backend\MyApi\Core\obj\Debug\net6.0\Core.csproj.AssemblyReference.cache
+F:\FCI\Dof3aa\Dof3aa\Website\Backend\MyApi\Core\obj\Debug\net6.0\Core.GeneratedMSBuildEditorConfig.editorconfig
+F:\FCI\Dof3aa\Dof3aa\Website\Backend\MyApi\Core\obj\Debug\net6.0\Core.AssemblyInfoInputs.cache
+F:\FCI\Dof3aa\Dof3aa\Website\Backend\MyApi\Core\obj\Debug\net6.0\Core.AssemblyInfo.cs
+F:\FCI\Dof3aa\Dof3aa\Website\Backend\MyApi\Core\obj\Debug\net6.0\Core.csproj.CoreCompileInputs.cache
+F:\FCI\Dof3aa\Dof3aa\Website\Backend\MyApi\Core\obj\Debug\net6.0\Core.sourcelink.json
+F:\FCI\Dof3aa\Dof3aa\Website\Backend\MyApi\Core\obj\Debug\net6.0\Core.dll
+F:\FCI\Dof3aa\Dof3aa\Website\Backend\MyApi\Core\obj\Debug\net6.0\refint\Core.dll
+F:\FCI\Dof3aa\Dof3aa\Website\Backend\MyApi\Core\obj\Debug\net6.0\Core.pdb
+F:\FCI\Dof3aa\Dof3aa\Website\Backend\MyApi\Core\obj\Debug\net6.0\ref\Core.dll

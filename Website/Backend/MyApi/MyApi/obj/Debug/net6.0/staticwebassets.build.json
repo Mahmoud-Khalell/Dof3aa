@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "MaWpV3MnHGREaA3yt0Uod6H2VJeUHVSc/7QYQO33bdg=",
+  "Hash": "RA6g8wJAuzcQvs9k5/Z9alkCayRPdSt0pnnr0XqT+G4=",
   "Source": "MyApi",
   "BasePath": "_content/MyApi",
   "Mode": "Default",
@@ -10,7 +10,7 @@
     {
       "Name": "MyApi\\wwwroot",
       "Source": "MyApi",
-      "ContentRoot": "F:\\FCI\\Dof3aa website\\Dof3aa\\Website\\Backend\\MyApi\\MyApi\\wwwroot\\",
+      "ContentRoot": "F:\\FCI\\Dof3aa\\Dof3aa\\Website\\Backend\\MyApi\\MyApi\\wwwroot\\",
       "BasePath": "_content/MyApi",
       "Pattern": "**"
     }

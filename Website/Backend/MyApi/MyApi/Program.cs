@@ -50,9 +50,15 @@ namespace MyApi
                  };
      });
             builder.Services.AddAuthorization();
-            builder.Services.AddIdentity<AppUser, IdentityRole>().AddEntityFrameworkStores<Connector>();
+            builder.Services.AddIdentity<AppUser, IdentityRole>(options =>
+            {
+                options.Tokens.EmailConfirmationTokenProvider= "Default";
+            }).AddEntityFrameworkStores<Connector>().AddDefaultTokenProviders();
             
             builder.Services.AddScoped<IUnitOfCode,UnitOfCode>();
+            builder.Services.AddScoped<ICource,CourceRepositiory>();
+            builder.Services.AddScoped<IUserGroup,UserGroupRepository>();
+
             builder.Services.AddCors(e =>
                 {
                     e.AddPolicy("MyPloicy", policybuilder =>  policybuilder.AllowAnyOrigin().AllowAnyHeader());
@@ -71,7 +77,7 @@ namespace MyApi
              app.UseCors("MyPloicy");
             app.UseAuthentication();
             app.UseAuthorization();
-
+            
 
             app.MapControllers();
 

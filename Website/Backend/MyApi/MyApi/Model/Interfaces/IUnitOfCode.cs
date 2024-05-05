@@ -7,5 +7,8 @@ namespace MyApi.Model.Interfaces
     {
         public UserManager<AppUser> UserManager { get; set; }
         public IConfiguration config { get; set; }
+        public ICource Cource { get; set; }
+        public IUserGroup UserGroup { get; set; }
+
     }
 }
