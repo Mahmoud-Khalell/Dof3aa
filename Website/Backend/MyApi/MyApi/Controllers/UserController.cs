@@ -22,28 +22,57 @@ namespace MyApi.Controllers
         {
             this.unit = unit;
         }
-        
+        [HttpGet("ConfirmEmail")]
+        public async Task<IActionResult> ConfirmEmail(string email, string token)
+        {
+            var user = unit.UserManager.Users.FirstOrDefault(e => e.Email == email);
+            if (user == null)
+                return NotFound();
+            var result = await unit.UserManager.ConfirmEmailAsync(user, token);
+            if (result.Succeeded)
+                return Ok();
+            return BadRequest(result.Errors.FirstOrDefault());
+        }
+        private async Task<IActionResult> confirmEmail(string email)
+        {
+            var user = unit.UserManager.Users.FirstOrDefault(e => e.Email == email);
+            if (user == null)
+                return NotFound();
+            var token = await unit.UserManager.GenerateEmailConfirmationTokenAsync(user);
+            // crete link that lead to endpoint ConfirmEmail 
+            var link = Url.Action("ConfirmEmail", "User", new { email = email, token = token }, Request.Scheme, Request.Host.ToString());
+            Email Reciever = new Email()
+            {
+                To = email,
+                Title = "Confirm Email",
+                Body = link
+            };
+            EmailService.SendEmail(Reciever);
+            return Ok();
+
+
+        }
+
         [HttpPost("Register")]
         
         public async Task<IActionResult> Register(RegisterationDTO registerationDTO)
         {
             if(ModelState.IsValid)
             {
-                var user=new AppUser();
-                user.Email = registerationDTO.Email;
-                user.UserName = registerationDTO.Username;
-                user.FirstName = registerationDTO.FirstName;
-                user.LastName = registerationDTO.LastName;
-                user.Department = registerationDTO.Department;
-                user.University = registerationDTO.University;
-                user.faculty = registerationDTO.Faculty;
-                user.ImageUrl = registerationDTO.ImageUrl;
+                var user=Mapper.RegisDTO2User(registerationDTO);
                 
                 var result=await unit.UserManager.CreateAsync(user,registerationDTO.Password);
                 if (result.Succeeded)
+                {
+                    //confirm email
+                    confirmEmail(user.Email);
                     return Ok();
+                }
                 else
+                {
+                    DocumentServices.DeleteFile(user.ImageUrl);
                     return BadRequest(result.Errors.FirstOrDefault());
+                }
             }
             return BadRequest(ModelState);
         }
@@ -56,6 +85,8 @@ namespace MyApi.Controllers
             
             if(user==null)
                 return NotFound("Username not found");
+            if (user.EmailConfirmed == false)
+                return NotFound("Email not confirmed");
 
             bool check = await unit.UserManager.CheckPasswordAsync(user, loginDTO.Password);
             if(check==false)

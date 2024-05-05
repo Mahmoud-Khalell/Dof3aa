@@ -50,7 +50,10 @@ namespace MyApi
                  };
      });
             builder.Services.AddAuthorization();
-            builder.Services.AddIdentity<AppUser, IdentityRole>().AddEntityFrameworkStores<Connector>();
+            builder.Services.AddIdentity<AppUser, IdentityRole>(options =>
+            {
+                options.Tokens.EmailConfirmationTokenProvider= "Default";
+            }).AddEntityFrameworkStores<Connector>().AddDefaultTokenProviders();
             
             builder.Services.AddScoped<IUnitOfCode,UnitOfCode>();
             builder.Services.AddCors(e =>
@@ -71,7 +74,7 @@ namespace MyApi
              app.UseCors("MyPloicy");
             app.UseAuthentication();
             app.UseAuthorization();
-
+            
 
             app.MapControllers();
 

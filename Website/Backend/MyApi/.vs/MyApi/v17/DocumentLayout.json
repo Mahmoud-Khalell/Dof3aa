@@ -1,12 +1,73 @@
 {
   "Version": 1,
   "WorkspaceRootPath": "F:\\FCI\\Dof3aa website\\Dof3aa\\Website\\Backend\\MyApi\\",
-  "Documents": [],
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{5FF05F6F-0AA1-47BC-8466-DD2319505E44}|MyApi\\MyApi.csproj|f:\\fci\\dof3aa website\\dof3aa\\website\\backend\\myapi\\myapi\\controllers\\usercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5FF05F6F-0AA1-47BC-8466-DD2319505E44}|MyApi\\MyApi.csproj|solutionrelative:myapi\\controllers\\usercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5FF05F6F-0AA1-47BC-8466-DD2319505E44}|MyApi\\MyApi.csproj|F:\\FCI\\Dof3aa website\\Dof3aa\\Website\\Backend\\MyApi\\myapi\\dto\\mapper.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5FF05F6F-0AA1-47BC-8466-DD2319505E44}|MyApi\\MyApi.csproj|solutionrelative:myapi\\dto\\mapper.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5FF05F6F-0AA1-47BC-8466-DD2319505E44}|MyApi\\MyApi.csproj|F:\\FCI\\Dof3aa website\\Dof3aa\\Website\\Backend\\MyApi\\myapi\\dto\\registerationdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5FF05F6F-0AA1-47BC-8466-DD2319505E44}|MyApi\\MyApi.csproj|solutionrelative:myapi\\dto\\registerationdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
   "DocumentGroupContainers": [
     {
       "Orientation": 0,
       "VerticalTabListWidth": 256,
-      "DocumentGroups": []
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 3,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{3ae79031-e1bc-11d0-8f78-00a0c9110057}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Mapper.cs",
+              "DocumentMoniker": "F:\\FCI\\Dof3aa website\\Dof3aa\\Website\\Backend\\MyApi\\MyApi\\DTO\\Mapper.cs",
+              "RelativeDocumentMoniker": "MyApi\\DTO\\Mapper.cs",
+              "ToolTip": "F:\\FCI\\Dof3aa website\\Dof3aa\\Website\\Backend\\MyApi\\MyApi\\DTO\\Mapper.cs",
+              "RelativeToolTip": "MyApi\\DTO\\Mapper.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-05T08:58:29.964Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "RegisterationDTO.cs",
+              "DocumentMoniker": "F:\\FCI\\Dof3aa website\\Dof3aa\\Website\\Backend\\MyApi\\MyApi\\DTO\\RegisterationDTO.cs",
+              "RelativeDocumentMoniker": "MyApi\\DTO\\RegisterationDTO.cs",
+              "ToolTip": "F:\\FCI\\Dof3aa website\\Dof3aa\\Website\\Backend\\MyApi\\MyApi\\DTO\\RegisterationDTO.cs",
+              "RelativeToolTip": "MyApi\\DTO\\RegisterationDTO.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-05T08:58:16.512Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "UserController.cs",
+              "DocumentMoniker": "F:\\FCI\\Dof3aa website\\Dof3aa\\Website\\Backend\\MyApi\\MyApi\\Controllers\\UserController.cs",
+              "RelativeDocumentMoniker": "MyApi\\Controllers\\UserController.cs",
+              "ToolTip": "F:\\FCI\\Dof3aa website\\Dof3aa\\Website\\Backend\\MyApi\\MyApi\\Controllers\\UserController.cs",
+              "RelativeToolTip": "MyApi\\Controllers\\UserController.cs",
+              "ViewState": "AQIAAGQAAAAAAAAAAAAqwHUAAAAcAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-05T08:55:46.428Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
     }
   ]
 }

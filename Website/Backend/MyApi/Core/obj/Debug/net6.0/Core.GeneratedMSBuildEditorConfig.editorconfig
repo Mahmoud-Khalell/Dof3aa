@@ -8,4 +8,6 @@ build_property.PlatformNeutralAssembly =
 build_property.EnforceExtendedAnalyzerRules = 
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = Core
-build_property.ProjectDir = E:\Computer science\Level 3 - second term\Software development\Project\Website\Backend\MyApi\Core\
+build_property.ProjectDir = F:\FCI\Dof3aa website\Dof3aa\Website\Backend\MyApi\Core\
+build_property.EnableComHosting = 
+build_property.EnableGeneratedComInterfaceComImportInterop = 
