@@ -35,7 +35,18 @@
 
 .loginButton{ 
     font-size: 20px;
-    font-weight: bold;  
     cursor: pointer;
     transition: 0.3s;
+}
+
+
+.sign-up-btn{
+    font-size: 20px;
+    cursor: pointer;
+    transition: 0.3s;
+    margin-top: -10px;
+}
+
+.sign-up-btn:hover{
+    color: #4e0086;
 }

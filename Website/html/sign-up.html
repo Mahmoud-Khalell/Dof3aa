@@ -8,7 +8,7 @@
         <link rel="stylesheet" href="../css/bootstrap/bootstrap.min.css.map">
         <link rel="stylesheet" href="../css/bootstrap/Fonts.css">
         <link rel="stylesheet" href="../css/sign-up.css">
-        <link rel="stylesheet" href="../css/login.css">
+        <link rel="stylesheet" href="../css/components/loginLoading.css">
 
         <link rel="shortcut icon" href="../assets/images/logo.png"
             type="image/x-icon">
@@ -73,6 +73,12 @@
         </nav>
         <!------------------------------------- Main Content --------------------------------------->
 
+        <div class="loadingDiv" id="loadingDiv" style="display: none;">
+            <div class="spinner-border" role="status">
+                <span class="visually-hidden">Loading...</span>
+            </div>
+        </div>
+
         <div class="MainContainer">
             <div class="container Main" style="direction: ltr">
                 <div class="row">
@@ -84,15 +90,14 @@
                                 <img src="../assets/images/logo.png" alt="logo">
                             </div>
                             <h3>DoF3aa</h3>
-                            <p>create new account  </p>
-                            <br>
+                            <p>create new account </p>
                         </div>
 
-                        <form class="row g-3">
+                        <form class="row g-3" method="post">
 
                             <div class="col-md-4">
                                 <label for="input-FirstName"
-                                    class="form-label">First Name</label>
+                                    class="form-label">First Name *</label>
                                 <input type="text" class="form-control"
                                     placeholder="First Name" required
                                     id="input-FirstName">
@@ -101,7 +106,7 @@
                                 <label for="input-LastName"
                                     class="form-label">Last Name</label>
                                 <input type="text" class="form-control"
-                                    placeholder="Last Name" required
+                                    placeholder="Last Name"
                                     id="input-LastName">
                             </div>
                             <div class="col-md-3">
@@ -120,7 +125,7 @@
 
                             <div class="col-md-6">
                                 <label for="input-UserName"
-                                    class="form-label">User Name</label>
+                                    class="form-label">User Name *</label>
                                 <input type="text" class="form-control"
                                     placeholder="User Name" required
                                     id="input-UserName">
@@ -128,7 +133,7 @@
 
                             <div class="col-md-6">
                                 <label for="input-Email"
-                                    class="form-label">Email</label>
+                                    class="form-label">Email *</label>
                                 <input type="email" class="form-control"
                                     required
                                     placeholder="name@example.com"
@@ -137,7 +142,7 @@
 
                             <div class="col-md-6">
                                 <label for="validationServer01"
-                                    class="form-label">Password</label>
+                                    class="form-label">Password *</label>
                                 <input type="password"
                                     class="form-control"
                                     id="first-user-password"
@@ -153,7 +158,8 @@
 
                             <div class="col-md-6">
                                 <label for="validationServer01"
-                                    class="form-label">Confirm Password</label>
+                                    class="form-label">Confirm Password
+                                    *</label>
                                 <input type="password"
                                     class="form-control"
                                     id="confirm-user-password"
@@ -173,7 +179,6 @@
                                 <select id="input-University"
                                     class="form-select">
                                     <option selected>Choose...</option>
-                                    <option>...</option>
                                 </select>
                             </div>
 
@@ -191,13 +196,12 @@
                                 <select id="input-Department"
                                     class="form-select">
                                     <option selected>Choose...</option>
-                                    <option>...</option>
                                 </select>
                             </div>
+
                             <div class="col-3"></div>
                             <div class="col-6">
-                                <br>
-                                <br>
+                                <br><br>
                                 <button type="submit"
                                     class="btn btn-primary"
                                     style="width: 100%;">Sign up</button>

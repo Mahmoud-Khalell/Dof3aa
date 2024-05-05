@@ -15,6 +15,8 @@
         <title>DoF3aa Courses</title>
         <link rel="shortcut icon" href="../assets/images/logo.png"
             type="image/x-icon">
+
+        <script src="../javascript/check-login.js"></script>
     </head>
     <body>
 
@@ -69,7 +71,7 @@
                         <button type="button"
                             class="btn btn-primary position-relative bg-transparent border-0 text-primary">
                             <i class="fa-solid fa-bell "></i>
-                            <span style="margin:9px -6px ; font-size: 10px;"
+                            <span style="margin:9px -6px ; font-size: 10px;" id="span-number-of-alerts"
                                 class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">5
                             </span>
                         </button>
@@ -103,7 +105,7 @@
                             class="dropdown-toggle d-flex align-items-center hidden-arrow"
                             href="#" id="navbarDropdownMenuAvatar" role="button"
                             data-bs-toggle="dropdown" aria-expanded="false">
-                            <img
+                            <img id="profile-nav-pic"
                                 src="../assets/images/Profile.png"
                                 class="rounded-circle"
                                 height="25"
@@ -117,7 +119,7 @@
                             <li><a class="dropdown-item" href="#">Your
                                     group</a></li>
                             <li><hr class="dropdown-divider"></li>
-                            <li><a class="dropdown-item" href="#">
+                            <li id="sign-out-nav"><a class="dropdown-item">
                                     Sign out
                                     <i
                                         class="fa-solid fa-right-from-bracket"></i>
@@ -235,32 +237,9 @@
             </div>
         </div>
         <br>
-    
+
         <!------------------------------------- footer --------------------------------------->
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
+
         <!------------------------------------- scripts -------------------------------------->
 
         <!------------------------------------- bootstrap scripts -------------------------------------->
@@ -275,5 +254,6 @@
         <script src="../javascript/datatest.js"></script>
         <script src="../javascript/DisplyCourseCardScript.js"></script>
         <script type="module" src="../javascript/general.js"></script>
+        <script src="../javascript/nav-bar.js"></script>
     </body>
 </html>
