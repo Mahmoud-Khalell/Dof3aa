@@ -13,6 +13,7 @@ namespace MyApi.Services
                     Title = "AppDemo",
                     Version = "v1"
                 });
+
                 var securityScema = new OpenApiSecurityScheme
                 {
                     Description = "jwt description",

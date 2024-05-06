@@ -2677,24 +2677,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\PC\\.nuget\\packages\\": {},
-    "C:\\Program Files\\DevExpress 23.1\\Components\\Offline Packages": {}
+    "C:\\Users\\mahmoud\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "E:\\Computer science\\Level 3 - second term\\Software development\\Project\\Website\\Backend\\MyApi\\MyApi\\MyApi.csproj",
+      "projectUniqueName": "F:\\FCI\\Dof3aa\\Dof3aa\\Website\\Backend\\MyApi\\MyApi\\MyApi.csproj",
       "projectName": "MyApi",
-      "projectPath": "E:\\Computer science\\Level 3 - second term\\Software development\\Project\\Website\\Backend\\MyApi\\MyApi\\MyApi.csproj",
-      "packagesPath": "C:\\Users\\PC\\.nuget\\packages\\",
-      "outputPath": "E:\\Computer science\\Level 3 - second term\\Software development\\Project\\Website\\Backend\\MyApi\\MyApi\\obj\\",
+      "projectPath": "F:\\FCI\\Dof3aa\\Dof3aa\\Website\\Backend\\MyApi\\MyApi\\MyApi.csproj",
+      "packagesPath": "C:\\Users\\mahmoud\\.nuget\\packages\\",
+      "outputPath": "F:\\FCI\\Dof3aa\\Dof3aa\\Website\\Backend\\MyApi\\MyApi\\obj\\",
       "projectStyle": "PackageReference",
-      "fallbackFolders": [
-        "C:\\Program Files\\DevExpress 23.1\\Components\\Offline Packages"
-      ],
       "configFilePaths": [
-        "C:\\Users\\PC\\AppData\\Roaming\\NuGet\\NuGet.Config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\DevExpress 23.1.config",
+        "C:\\Users\\mahmoud\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -2702,15 +2697,14 @@
       ],
       "sources": {
         "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-        "C:\\Program Files\\DevExpress 23.1\\Components\\System\\Components\\Packages": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
         "net6.0": {
           "targetAlias": "net6.0",
           "projectReferences": {
-            "E:\\Computer science\\Level 3 - second term\\Software development\\Project\\Website\\Backend\\MyApi\\Core\\Core.csproj": {
-              "projectPath": "E:\\Computer science\\Level 3 - second term\\Software development\\Project\\Website\\Backend\\MyApi\\Core\\Core.csproj"
+            "F:\\FCI\\Dof3aa\\Dof3aa\\Website\\Backend\\MyApi\\Core\\Core.csproj": {
+              "projectPath": "F:\\FCI\\Dof3aa\\Dof3aa\\Website\\Backend\\MyApi\\Core\\Core.csproj"
             }
           }
         }
@@ -2719,6 +2713,11 @@
         "warnAsError": [
           "NU1605"
         ]
+      },
+      "restoreAuditProperties": {
+        "enableAudit": "true",
+        "auditLevel": "low",
+        "auditMode": "direct"
       }
     },
     "frameworks": {
@@ -2755,7 +2754,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.403\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.204\\RuntimeIdentifierGraph.json"
       }
     }
   }
