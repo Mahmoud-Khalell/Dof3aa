@@ -74,6 +74,7 @@ var invalidfeedback = document.getElementById("invalid-id-feedback");
 
 checkCourseID.oninput = function () {
   var pa = checkCourseID.value;
+
   if (pa.length < 4 || pa.length > 25) {
     validfeedback.innerHTML = "";
     invalidfeedback.innerHTML =
