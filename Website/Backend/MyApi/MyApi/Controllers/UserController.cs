@@ -89,7 +89,7 @@ namespace MyApi.Controllers
 
         #region Login
         [HttpPost("Login")]
-        public async Task<IActionResult>Login(LoginDTO loginDTO)
+        public async Task<IActionResult>Login([FromForm]LoginDTO loginDTO)
         {
             if (ModelState.IsValid == false)
                 return Unauthorized(ModelState);
@@ -125,8 +125,11 @@ namespace MyApi.Controllers
         public async Task<IActionResult> RemoveAll()
         {
             var users= unit.UserManager.Users.ToList();
-            foreach(var user in users)
+            foreach (var user in users)
+            {
                 await unit.UserManager.DeleteAsync(user);
+                DocumentServices.DeleteFile(user.ImageUrl);
+            }
             return Ok();
         }
         #endregion
