@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "AnxvjGNvWVmTm9jGnXQsrpOQOKWfZgteMEP6JQahG48=",
+  "Hash": "/ZXFCrYY6QW7grXTeSbj14GJnKOfw+qFUo2jYKCwfcs=",
   "Source": "MyApi",
   "BasePath": "_content/MyApi",
   "Mode": "Default",
@@ -10,68 +10,10 @@
     {
       "Name": "MyApi\\wwwroot",
       "Source": "MyApi",
-      "ContentRoot": "F:\\FCI\\Dof3aa\\Dof3aa\\Website\\Backend\\MyApi\\MyApi\\wwwroot\\",
+      "ContentRoot": "E:\\Computer science\\Level 3 - second term\\Software development\\Dof3aa\\Website\\Backend\\MyApi\\MyApi\\wwwroot\\",
       "BasePath": "_content/MyApi",
       "Pattern": "**"
     }
   ],
-  "Assets": [
-    {
-      "Identity": "F:\\FCI\\Dof3aa\\Dof3aa\\Website\\Backend\\MyApi\\MyApi\\wwwroot\\152756b9-0fa0-43f6-84e3-69e94df0e20428378347_1781421245485136_567343695676600819_n.jpg-image@jpeg",
-      "SourceId": "MyApi",
-      "SourceType": "Discovered",
-      "ContentRoot": "F:\\FCI\\Dof3aa\\Dof3aa\\Website\\Backend\\MyApi\\MyApi\\wwwroot\\",
-      "BasePath": "_content/MyApi",
-      "RelativePath": "152756b9-0fa0-43f6-84e3-69e94df0e20428378347_1781421245485136_567343695676600819_n.jpg-image@jpeg",
-      "AssetKind": "All",
-      "AssetMode": "All",
-      "AssetRole": "Primary",
-      "AssetMergeBehavior": "PreferTarget",
-      "AssetMergeSource": "",
-      "RelatedAsset": "",
-      "AssetTraitName": "",
-      "AssetTraitValue": "",
-      "CopyToOutputDirectory": "Never",
-      "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\152756b9-0fa0-43f6-84e3-69e94df0e20428378347_1781421245485136_567343695676600819_n.jpg-image@jpeg"
-    },
-    {
-      "Identity": "F:\\FCI\\Dof3aa\\Dof3aa\\Website\\Backend\\MyApi\\MyApi\\wwwroot\\7f501b7e-24fc-4f89-9820-02973736e78128378347_1781421245485136_567343695676600819_n.jpg-image@jpeg",
-      "SourceId": "MyApi",
-      "SourceType": "Discovered",
-      "ContentRoot": "F:\\FCI\\Dof3aa\\Dof3aa\\Website\\Backend\\MyApi\\MyApi\\wwwroot\\",
-      "BasePath": "_content/MyApi",
-      "RelativePath": "7f501b7e-24fc-4f89-9820-02973736e78128378347_1781421245485136_567343695676600819_n.jpg-image@jpeg",
-      "AssetKind": "All",
-      "AssetMode": "All",
-      "AssetRole": "Primary",
-      "AssetMergeBehavior": "PreferTarget",
-      "AssetMergeSource": "",
-      "RelatedAsset": "",
-      "AssetTraitName": "",
-      "AssetTraitValue": "",
-      "CopyToOutputDirectory": "Never",
-      "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\7f501b7e-24fc-4f89-9820-02973736e78128378347_1781421245485136_567343695676600819_n.jpg-image@jpeg"
-    },
-    {
-      "Identity": "F:\\FCI\\Dof3aa\\Dof3aa\\Website\\Backend\\MyApi\\MyApi\\wwwroot\\b0e7c859-5e42-444d-9068-3c126512897528378347_1781421245485136_567343695676600819_n.jpg-image@jpeg",
-      "SourceId": "MyApi",
-      "SourceType": "Discovered",
-      "ContentRoot": "F:\\FCI\\Dof3aa\\Dof3aa\\Website\\Backend\\MyApi\\MyApi\\wwwroot\\",
-      "BasePath": "_content/MyApi",
-      "RelativePath": "b0e7c859-5e42-444d-9068-3c126512897528378347_1781421245485136_567343695676600819_n.jpg-image@jpeg",
-      "AssetKind": "All",
-      "AssetMode": "All",
-      "AssetRole": "Primary",
-      "AssetMergeBehavior": "PreferTarget",
-      "AssetMergeSource": "",
-      "RelatedAsset": "",
-      "AssetTraitName": "",
-      "AssetTraitValue": "",
-      "CopyToOutputDirectory": "Never",
-      "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\b0e7c859-5e42-444d-9068-3c126512897528378347_1781421245485136_567343695676600819_n.jpg-image@jpeg"
-    }
-  ]
+  "Assets": []
 }

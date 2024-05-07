@@ -1,101 +1,67 @@
+var form = document.getElementById("loginForm");
 
+// create a function login on to the API endpoint for login using xmlhttprequest and send the data to the server
+function login() {
+  var username = document.getElementById("username").value;
+  var password = document.getElementById("password").value;
+  var data = {
+    UserName: "Badawy",
+    password: "As@1234",
+  };
 
-function Get(){
-    const url = 'https://localhost:44303/api/User';
-    const username = document.getElementById('username').value;
-    const password = document.getElementById('password').value;
-  
-    console.log(username);
-    console.log(password);
-
-    const requestBody = {
-      username: username,
-      PasSword: password
-    };
-
-    fetch(url, {
-      method: 'POST', 
-      headers: {
-        'Content-Type': 'application/json',
-        'Authorization': 'Bearer ' + localStorage.getItem('token')
-      },
-      body: JSON.stringify(requestBody)
-    })
-      .then(response => {
-      hideloading()
-      if (!response.ok) {    
-        throw new Error('Network response was not ok');
+  var xhr = new XMLHttpRequest();
+  xhr.open("POST", "https://localhost:44303/api/User/Login", true);
+  xhr.setRequestHeader("Content-Type", "application/json");
+  xhr.onreadystatechange = function () {
+    if (xhr.readyState == 4 && xhr.status == 200) {
+      var result = JSON.parse(xhr.responseText);
+      localStorage.setItem("token", result.token);
+      localStorage.setItem("username", username);
+      // window.location.href = "index.html";
+    } else if (xhr.readyState == 4) {
+      var result = JSON.parse(xhr.responseText);
+      if (result.username) {
+        ShowWrongUsername(true);
+      } else if (result.password) {
+        ShowWrongPassword(true);
       }
-      return response.json();
-
-    })
-      .then(data => {
-      hideloading()
-      console.log("Data is : ");
-      console.log(data);
-      console.log("=== > " + data.expired);
-      localStorage.setItem('token', data.token);
-      localStorage.setItem('expired', data.expired);
-      // open home page
-      
-      window.location.href = "./courses.html";
-    })
-      .catch(error => {
-      hideloading()
-
-      console.error('There was a problem with the fetch operation:', error);
-    });
-  
-
+    }
+  };
+  xhr.send(JSON.stringify(data));
 }
 
-document.querySelector('form').addEventListener('submit', function(event) {
-    event.preventDefault();
-    showloading();
-  Get();
-  
-});
-
-
-function showloading(){
-  document.getElementById('loadingDiv').style.display = 'flex';
+function showloading() {
+  document.getElementById("loadingDiv").style.display = "flex";
 }
-function hideloading(){
-  document.getElementById('loadingDiv').style.display = 'none';
+function hideloading() {
+  document.getElementById("loadingDiv").style.display = "none";
 }
-// tohidediv();
-
-
-
-
-/// on text change id password do function
-
 
 function ShowWrongPassword(state) {
-    if (state) {
-        document.getElementById('span-password').style.display = 'block';
-    } else {
-        document.getElementById('span-password').style.display = 'none';
-    }
+  if (state) {
+    document.getElementById("span-password").style.display = "block";
+  } else {
+    document.getElementById("span-password").style.display = "none";
+  }
 }
 
 function ShowWrongUsername(state) {
-    if (state) {
-        document.getElementById('span-user').style.display = 'block';
-    } else {
-        document.getElementById('span-user').style.display = 'none';
-    }
+  if (state) {
+    document.getElementById("span-user").style.display = "block";
+  } else {
+    document.getElementById("span-user").style.display = "none";
+  }
 }
 
-ShowWrongUsername(true);
-ShowWrongPassword(true);
+// ShowWrongUsername(true);
+// ShowWrongPassword(true);
 
-document.getElementById('password').oninput = function() {
-    ShowWrongUsername(false);
+document.getElementById("password").oninput = function () {
+  ShowWrongUsername(false);
   ShowWrongPassword(false);
- }
+};
 
-document.getElementById('username').oninput = function() {
-    ShowWrongUsername(false);
-    ShowWrongPassword(false);
- }
+document.getElementById("username").oninput = function () {
+  ShowWrongUsername(false);
+  ShowWrongPassword(false);
+};
