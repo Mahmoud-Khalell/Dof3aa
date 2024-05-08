@@ -1,87 +1,16 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Login Form</title>
-    <!-- Add any necessary CSS for styling -->
-</head>
-<body>
+<html>
+    <head>
+        <script src="../javascript/Test.js"></script>
+    </head>
+    <body>
+        <form id="myForm" enctype="multipart/form-data">
+            <!-- Your form inputs and file inputs go here -->
+            <input type="text" name="username"><br>
+            <input type="text" name="password">
 
-    <h2>Login</h2>
-    <form id="login-form">
-        <label for="UserName">UserName:</label>
-        <input type="text" id="UserName" name="UserName" required><br><br>
-        
-        <label for="password">Password:</label>
-        <input type="password" id="password" name="password" required><br><br>
-        
-        <button type="submit">Login</button>
-    </form>
+            <button type="button" onclick="submitForm()">Submit</button>
+        </form>
 
-    <!-- Container to display messages to the user -->
-    <div id="message"></div>
-
-    <script>
-        // Function to handle form submission
-        async function handleLoginFormSubmit(event) {
-            // Prevent the form from submitting in the default way
-            event.preventDefault();
-
-            const form = event.target; // Reference to the form that triggered the event
-            const formData = new FormData(form); // Get the form data
-
-            // Get UserName and password, trim to remove leading/trailing whitespace
-            const UserName = formData.get('UserName')?.trim() || ''; // Safe access and trim
-            const password = formData.get('password')?.trim() || ''; // Safe access and trim
-
-            // Basic validation to check for empty fields
-            if (UserName === '' || password === '') {
-                document.getElementById('message').textContent = "Please enter both UserName and password.";
-                return;
-            }
-
-            // Create the data to send to the API
-            const loginData = {
-                UserName: "Badawy", // Ensure correct field names
-                Password: "As@1234"
-            };
-
-            const apiEndpoint = 'https://localhost:44303/api/User/Login'; // Change to your API endpoint
-
-            try {
-                // Send a POST request to the login endpoint
-                const response = await fetch(apiEndpoint, {
-                    method: 'POST',
-                    headers: {
-                        'Content-Type': 'application/json' // Ensure correct content type
-                    },
-                    body: JSON.stringify(loginData)
-                });
-
-                if (!response.ok) {
-                    const errorData = await response.json(); // Parse response to understand the error
-                    document.getElementById('message').textContent = `Error: ${errorData.title || 'Login failed.'}`;
-                    console.error("Validation Errors:", errorData.errors); // Log validation errors
-                    return;
-                }
-
-                // If successful, process the response
-                document.getElementById('message').textContent = 'Login successful!';
-                const responseBody = await response.json(); // Get the response body
-                // Example: Save token or handle successful login
-                if (responseBody.token) {
-                    localStorage.setItem('authToken', responseBody.token); // Save the token for later use
-                }
-
-            } catch (error) {
-                console.error("Error during login:", error); // Log any exceptions
-                document.getElementById('message').textContent = "An error occurred. Please try again."; // User feedback
-            }
-        }
-
-        // Attach the event listener to the form submit event
-        document.getElementById('login-form').addEventListener('submit', handleLoginFormSubmit);
-    </script>
-
-</body>
+    </body>
 </html>

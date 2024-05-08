@@ -16,7 +16,9 @@ namespace MyApi.Services
             user.Department = registerationDTO.Department;
             user.University = registerationDTO.University;
             user.faculty = registerationDTO.Faculty;
+          
             user.ImageUrl = DocumentServices.Uploadfile(registerationDTO.Image);
+            
             return user;
 
         }
