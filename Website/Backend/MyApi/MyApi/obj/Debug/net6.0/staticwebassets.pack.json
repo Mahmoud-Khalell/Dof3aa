@@ -1,16 +1,8 @@
 {
   "Files": [
     {
-      "Id": "F:\\FCI\\Dof3aa\\Dof3aa\\Website\\Backend\\MyApi\\MyApi\\wwwroot\\152756b9-0fa0-43f6-84e3-69e94df0e20428378347_1781421245485136_567343695676600819_n.jpg-image@jpeg",
-      "PackagePath": "staticwebassets\\152756b9-0fa0-43f6-84e3-69e94df0e20428378347_1781421245485136_567343695676600819_n.jpg-image@jpeg"
-    },
-    {
-      "Id": "F:\\FCI\\Dof3aa\\Dof3aa\\Website\\Backend\\MyApi\\MyApi\\wwwroot\\7f501b7e-24fc-4f89-9820-02973736e78128378347_1781421245485136_567343695676600819_n.jpg-image@jpeg",
-      "PackagePath": "staticwebassets\\7f501b7e-24fc-4f89-9820-02973736e78128378347_1781421245485136_567343695676600819_n.jpg-image@jpeg"
-    },
-    {
-      "Id": "F:\\FCI\\Dof3aa\\Dof3aa\\Website\\Backend\\MyApi\\MyApi\\wwwroot\\b0e7c859-5e42-444d-9068-3c126512897528378347_1781421245485136_567343695676600819_n.jpg-image@jpeg",
-      "PackagePath": "staticwebassets\\b0e7c859-5e42-444d-9068-3c126512897528378347_1781421245485136_567343695676600819_n.jpg-image@jpeg"
+      "Id": "F:\\FCI\\Dof3aa\\Dof3aa\\Website\\Backend\\MyApi\\MyApi\\wwwroot\\dcb4d14a-956d-404d-8386-c790708b1207440969527_7393307810781782_7642599652464116630_n.jpg-image@jpeg",
+      "PackagePath": "staticwebassets\\dcb4d14a-956d-404d-8386-c790708b1207440969527_7393307810781782_7642599652464116630_n.jpg-image@jpeg"
     },
     {
       "Id": "obj\\Debug\\net6.0\\staticwebassets\\msbuild.MyApi.Microsoft.AspNetCore.StaticWebAssets.props",

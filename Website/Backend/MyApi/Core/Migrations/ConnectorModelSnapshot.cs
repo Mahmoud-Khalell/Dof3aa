@@ -22,6 +22,41 @@ namespace Core.Migrations
 
             SqlServerModelBuilderExtensions.UseIdentityColumns(modelBuilder, 1L, 1);
 
+            modelBuilder.Entity("Core.entities.Announcement", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"), 1L, 1);
+
+                    b.Property<int>("CourceId")
+                        .HasColumnType("int");
+
+                    b.Property<DateTime>("CreateDate")
+                        .HasColumnType("datetime2");
+
+                    b.Property<string>("Description")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("PublisherUserName")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(256)");
+
+                    b.Property<string>("Title")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("CourceId");
+
+                    b.HasIndex("PublisherUserName");
+
+                    b.ToTable("Announcements");
+                });
+
             modelBuilder.Entity("Core.entities.AppUser", b =>
                 {
                     b.Property<string>("UserName")
@@ -139,6 +174,73 @@ namespace Core.Migrations
                     b.ToTable("Cources");
                 });
 
+            modelBuilder.Entity("Core.entities.Notification", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"), 1L, 1);
+
+                    b.Property<DateTime>("CreationDate")
+                        .HasColumnType("datetime2");
+
+                    b.Property<string>("description")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("publiserUsername")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(256)");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("publiserUsername");
+
+                    b.ToTable("Notifications");
+                });
+
+            modelBuilder.Entity("Core.entities.Task", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"), 1L, 1);
+
+                    b.Property<int>("CourceId")
+                        .HasColumnType("int");
+
+                    b.Property<DateTime>("CreateDate")
+                        .HasColumnType("datetime2");
+
+                    b.Property<DateTime>("DeadLine")
+                        .HasColumnType("datetime2");
+
+                    b.Property<string>("Description")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("PublisherUserName")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(256)");
+
+                    b.Property<string>("SaurceUrl")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Title")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("CourceId");
+
+                    b.HasIndex("PublisherUserName");
+
+                    b.ToTable("Tasks");
+                });
+
             modelBuilder.Entity("Core.entities.UserGroup", b =>
                 {
                     b.Property<string>("Username")
@@ -158,6 +260,27 @@ namespace Core.Migrations
                     b.HasIndex("CourceId");
 
                     b.ToTable("UserGroups");
+                });
+
+            modelBuilder.Entity("Core.entities.UserNotification", b =>
+                {
+                    b.Property<int>("NotificationId")
+                        .HasColumnType("int");
+
+                    b.Property<string>("ReceiverUserName")
+                        .HasColumnType("nvarchar(256)");
+
+                    b.Property<int>("Id")
+                        .HasColumnType("int");
+
+                    b.Property<bool>("IsRead")
+                        .HasColumnType("bit");
+
+                    b.HasKey("NotificationId", "ReceiverUserName");
+
+                    b.HasIndex("ReceiverUserName");
+
+                    b.ToTable("UserNotifications");
                 });
 
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityRole", b =>
@@ -293,6 +416,55 @@ namespace Core.Migrations
                     b.ToTable("AspNetUserTokens", (string)null);
                 });
 
+            modelBuilder.Entity("Core.entities.Announcement", b =>
+                {
+                    b.HasOne("Core.entities.Cource", "Cource")
+                        .WithMany()
+                        .HasForeignKey("CourceId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("Core.entities.AppUser", "PublisherUser")
+                        .WithMany()
+                        .HasForeignKey("PublisherUserName")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("Cource");
+
+                    b.Navigation("PublisherUser");
+                });
+
+            modelBuilder.Entity("Core.entities.Notification", b =>
+                {
+                    b.HasOne("Core.entities.AppUser", "User")
+                        .WithMany()
+                        .HasForeignKey("publiserUsername")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("User");
+                });
+
+            modelBuilder.Entity("Core.entities.Task", b =>
+                {
+                    b.HasOne("Core.entities.Cource", "Cource")
+                        .WithMany()
+                        .HasForeignKey("CourceId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("Core.entities.AppUser", "PublisherUser")
+                        .WithMany()
+                        .HasForeignKey("PublisherUserName")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("Cource");
+
+                    b.Navigation("PublisherUser");
+                });
+
             modelBuilder.Entity("Core.entities.UserGroup", b =>
                 {
                     b.HasOne("Core.entities.Cource", "Cource")
@@ -310,6 +482,25 @@ namespace Core.Migrations
                     b.Navigation("Cource");
 
                     b.Navigation("User");
+                });
+
+            modelBuilder.Entity("Core.entities.UserNotification", b =>
+                {
+                    b.HasOne("Core.entities.Notification", "Notification")
+                        .WithMany()
+                        .HasForeignKey("NotificationId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("Core.entities.AppUser", "ReceiverUser")
+                        .WithMany()
+                        .HasForeignKey("ReceiverUserName")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("Notification");
+
+                    b.Navigation("ReceiverUser");
                 });
 
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityRoleClaim<string>", b =>

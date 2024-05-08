@@ -1,5 +1,4 @@
 ﻿using Core.entities;
-using Core.Migrations;
 using Microsoft.IdentityModel.Tokens;
 using MyApi.DTO;
 using MyApi.Model.Interfaces;

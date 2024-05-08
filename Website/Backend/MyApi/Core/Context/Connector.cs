@@ -19,6 +19,12 @@ namespace Core.Context
         }
         public DbSet<Cource> Cources { get; set; }
         public DbSet<UserGroup> UserGroups { get; set; }
+        public DbSet<task> Tasks { get; set; }
+        public DbSet<Notification> Notifications { get; set; }
+        public DbSet<UserNotification> UserNotifications { get; set; }
+        public DbSet<Announcement> Announcements { get; set; }
+
+
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             base.OnModelCreating(modelBuilder);
@@ -26,7 +32,7 @@ namespace Core.Context
             modelBuilder.Entity<UserGroup>().HasKey(ug => new { ug.Username, ug.CourceId });
             modelBuilder.Entity<UserGroup>().HasOne(ug => ug.User).WithMany(u => u.UserGroups).HasForeignKey(ug => ug.Username);
             modelBuilder.Entity<UserGroup>().HasOne(ug => ug.Cource).WithMany(c => c.UserGroups).HasForeignKey(ug => ug.CourceId);
-
+            modelBuilder.Entity<UserNotification>().HasKey(un => new { un.NotificationId, un.ReceiverUserName });
         }
     }
 }
