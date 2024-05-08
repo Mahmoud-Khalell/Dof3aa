@@ -37,7 +37,8 @@ namespace MyApi.Services
             return cource;
         }
         #endregion
-
+        
+        
         #region user2UserDTO
         public static UserDTO User2UserDTO(AppUser user)
         {
@@ -46,7 +47,15 @@ namespace MyApi.Services
             userDTO.Email = user.Email;
             userDTO.firstName = user.FirstName;
             userDTO.lastName = user.LastName;
-            userDTO.Groups = user.UserGroups.Select(e => new { e.CourceId,e.Cource.Title, e.rule });
+            
+            userDTO.Groups = user.UserGroups.Select(e => new 
+            {
+                e.CourceId,
+                title = e.Cource.Title.Split('@')[0],
+                subtitle = e.Cource.Title.Split('@')[1],
+
+                e.rule 
+            });
             return userDTO;
         }
         #endregion

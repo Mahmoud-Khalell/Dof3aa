@@ -1,24 +1,39 @@
 function submitForm() {
-  var formData = new FormData();
-  formData.append("username", "Mahmoud");
-  formData.append("password", "Std#031221");
-
   var xhr = new XMLHttpRequest();
 
   // Set up the request
-  xhr.open("POST", "https://localhost:44303/api/User/Login", true);
+  xhr.open("GET", "https://localhost:44303/api/User/GetUserInfo", true);
 
+  // Check for errors and handle response
   xhr.onreadystatechange = function () {
     if (xhr.readyState === XMLHttpRequest.DONE) {
       if (xhr.status === 200) {
-        // Request was successful, handle the response
-        console.log(xhr.responseText);
+        handleSuccess(xhr.responseText);
       } else {
-        // There was an error with the request
-        console.error("Request failed:", xhr.status);
+        handleFailure(xhr.status);
       }
     }
   };
 
-  xhr.send(formData);
+  // Set authorization header with a valid ASCII token
+  var token =
+    "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJVc2VybmFtZSI6Ik1haG1vdWQiLCJleHAiOjE3MTU3OTI4NTEsImlzcyI6Imh0dHBzOi8vbG9jYWxob3N0OjQ0MzAzLyIsImF1ZCI6Imh0dHBzOi8vbG9jYWxob3N0OjQyMDAvIn0.XGJHBqZIe9zj2iFAkiI3N33_TGfWG5LXdVefs9e6PSg";
+  xhr.setRequestHeader("Authorization", token);
+
+  // Send the request
+  xhr.send();
 }
+
+// Function to handle successful response
+function handleSuccess(response) {
+  localStorage.setItem("token", response);
+  //window.location.href = "./courses.html";
+  console.log(response);
+}
+
+// Function to handle request failure
+function handleFailure(status) {
+  console.error("Request failed:", status);
+}
+
+submitForm();

@@ -168,6 +168,7 @@ function submitForm() {
     if (xhr.readyState === XMLHttpRequest.DONE) {
       if (xhr.status === 200) {
         // Request was successful, handle the response
+  
         console.log(xhr.responseText);
       } else {
         // There was an error with the request
