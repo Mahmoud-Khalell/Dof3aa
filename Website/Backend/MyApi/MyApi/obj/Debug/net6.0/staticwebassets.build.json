@@ -1,6 +1,10 @@
 {
   "Version": 1,
+<<<<<<< HEAD
   "Hash": "BSU6os1Rm3fIFFDzyrX2iGDS8WGPY5Nmy/rpxxrvqgA=",
+=======
+  "Hash": "/ZXFCrYY6QW7grXTeSbj14GJnKOfw+qFUo2jYKCwfcs=",
+>>>>>>> d8e93ef2432ba79a689b4bff696dba90a8e3c338
   "Source": "MyApi",
   "BasePath": "_content/MyApi",
   "Mode": "Default",
@@ -10,11 +14,12 @@
     {
       "Name": "MyApi\\wwwroot",
       "Source": "MyApi",
-      "ContentRoot": "F:\\FCI\\Dof3aa\\Dof3aa\\Website\\Backend\\MyApi\\MyApi\\wwwroot\\",
+      "ContentRoot": "E:\\Computer science\\Level 3 - second term\\Software development\\Dof3aa\\Website\\Backend\\MyApi\\MyApi\\wwwroot\\",
       "BasePath": "_content/MyApi",
       "Pattern": "**"
     }
   ],
+<<<<<<< HEAD
   "Assets": [
     {
       "Identity": "F:\\FCI\\Dof3aa\\Dof3aa\\Website\\Backend\\MyApi\\MyApi\\wwwroot\\dcb4d14a-956d-404d-8386-c790708b1207440969527_7393307810781782_7642599652464116630_n.jpg-image@jpeg",
@@ -36,4 +41,7 @@
       "OriginalItemSpec": "wwwroot\\dcb4d14a-956d-404d-8386-c790708b1207440969527_7393307810781782_7642599652464116630_n.jpg-image@jpeg"
     }
   ]
+=======
+  "Assets": []
+>>>>>>> d8e93ef2432ba79a689b4bff696dba90a8e3c338
 }
