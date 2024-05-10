@@ -5,49 +5,18 @@ var courseIdforcrearte = urlParams.get("id");
 //test varables
 var userRole = "admin";
 
-// alert(id);
-var taskApitest = [
-  {
-    taskName: "Lab Sheet #1",
-    description:
-      "1. Write a C# program that prints the data of an array in reverse order.",
-    deadline: new Date("2024-11-10T12:00:00"),
-    matrialLink:
-      "https://drive.google.com/file/d/1hQeIBh4E9DRi6T_-uRiUvT34uka19md-/view?usp=sharing",
-  },
-  {
-    taskName: "Lab Sheet #2",
-    description:
-      "2. Write a program that takes (mxn) 2 metrices from user and print.",
-    deadline: new Date("2024-11-10T12:00:00"),
-    matrialLink:
-      "https://drive.google.com/file/d/1hQeIBh4E9DRi6T_-uRiUvT34uka19md-/view?usp=sharing",
-  },
-  {
-    taskName: "Lab Sheet #3",
-    description:
-      "3. Write a program that takes a string from usint the number of vowels in it.",
-    deadline: new Date("2026-11-10T12:00:00"),
-    matrialLink:
-      "https://drive.google.com/file/d/1hQeIBh4E9DRi6T_-uRiUvT34uka19md-/view?usp=sharing",
-  },
-  {
-    taskName: "Lab Sheet #4",
-    description:
-      "4. Write a program that takes a number from user and print the sum of digits.",
-    deadline: new Date("2022-11-10T12:00:00"),
-    matrialLink:
-      "https://drive.google.com/file/d/1hQeIBh4E9DRi6T_-uRiUvT34uka19md-/view?usp=sharing",
-  },
-  {
-    taskName: "Lab Sheet #5",
-    description:
-      "5. Write a program that takes a number from user and print the sum of digits.",
-    deadline: new Date("2022-11-10T12:00:00"),
-    matrialLink:
-      "https://drive.google.com/file/d/1hQeIBh4E9DRi6T_-uRiUvT34uka19md-/view?usp=sharing",
-  },
-];
+// -------------------------------------------------------------------- user info ---------------------------------------------------
+
+
+
+
+
+
+
+
+
+
+
 
 function createWeeksCard(imgSrc, weekName, doctorName, lastUpdate, weekid) {
   const cardDiv = document.createElement("div");
@@ -213,8 +182,6 @@ function createTaskCard(taskName, description, datetimedeadline, matrialLink) {
   parentDiv.appendChild(cardDiv);
 }
 
-// createAddTaskCard("taskName", "description", "datetimedeadline", "matrialLink");
-
 function createAddTaskCard() {
   const cardDiv = document.createElement("div");
   cardDiv.classList.add("col-sm-6", "mb-3", "mb-sm-0");
@@ -292,15 +259,6 @@ function createAddTaskCard() {
 
 var datetimedeadline = new Date("2024-11-10T12:00:00");
 
-taskApitest.forEach((task) => {
-  createTaskCard(
-    task.taskName,
-    task.description,
-    task.deadline,
-    task.matrialLink
-  );
-});
-
 function addWeekButton() {
   const addButtonIcon = document.createElement("button");
   addButtonIcon.classList.add("btn", "btn-primary", "searchButton");
@@ -313,29 +271,6 @@ function addWeekButton() {
   addButtonContainer.appendChild(addButtonIcon);
 }
 
-// function to search in subjects array by courseId and return the index of the object
-id++;
-console.log("id: " + id);
-function search(subjects, id) {
-  console.log("id 2: " + id);
-
-  for (var i = 0; i < subjects.length; i++) {
-    console.log(">--->>" + subjects[i].courseId);
-    console.log("id - " + id);
-    if (subjects[i].courseId === id) {
-      console.log(">>>" + subjects[i].courseId);
-      return i;
-    }
-  }
-  console.log(-1);
-  return -1;
-}
-
-if (userRole == "admin") {
-  addWeekButton();
-  createAddWeeksCard();
-  createAddTaskCard();
-}
 
 //------------------------------------------------------------------------------------------------------------------------------
 //-------------------------------------------------------------------- Tasks ---------------------------------------------------
@@ -350,13 +285,25 @@ function CreateTask() {
   var Saurce = document.getElementById("Saurce-file");
 
   var formData = new FormData();
+
   formData.append("Title", title);
   formData.append("Description", description);
   formData.append("DeadLine", deadline);
   formData.append("Saurce", Saurce.files[0]);
-  // formData.append("CourceId", courseIdforcrearte);
-  formData.append("CourceId", "123456711");
+  formData.append("CourceId", courseIdforcrearte);
 
+  console.log("formData");
+  console.log(
+    title +
+      " " +
+      description +
+      " " +
+      deadline +
+      " " +
+      Saurce.files[0] +
+      " " +
+      courseIdforcrearte
+  );
   var xhr = new XMLHttpRequest();
   xhr.open("POST", "https://localhost:44303/api/Task/Create");
   var token = "Bearer " + localStorage.getItem("token");
@@ -379,15 +326,18 @@ function CreateTask() {
   };
 }
 
-//----------------------------------------------------- fetching data of Tasks from the server ---------------------------------
 function FeatchTask() {
   console.log("Featch Task");
-
   var formData = new FormData();
-  formData.append("CourceId", "123456711");
+  formData.append("CourceId", courseIdforcrearte);
 
   var xhr = new XMLHttpRequest();
-  xhr.open("GET", "https://localhost:44303/api/Task/GetAll");
+  xhr.open(
+    "GET",
+    "https://localhost:44303/api/Task/GetAll?CourceId=" +
+      courseIdforcrearte +
+      ""
+  );
   var token = "Bearer " + localStorage.getItem("token");
   xhr.setRequestHeader("Authorization", token);
 
@@ -404,22 +354,30 @@ function FeatchTask() {
   xhr.onload = function () {
     console.log(xhr.responseText);
     var obj = JSON.parse(xhr.responseText);
-    console.log("obj");
-    console.log(obj);
+
+    PrintTask(obj);
   };
 }
 
-// CreateTask();
-function DisplayTask(obj) {
+function PrintTask(obj) {
+  console.log("Featch  == Task");
+  console.log(obj);
   obj.forEach((task) => {
+    // console.log(task.title + " " + task.description + " " + task.deadLine);
+    var datetimedeadline1 = new Date(task.deadLine);
     createTaskCard(
-      task.taskName,
+      task.title,
       task.description,
-      task.deadline,
-      task.matrialLink
+      datetimedeadline1,
+      task.saurceUrl
     );
   });
 }
+
+FeatchTask();
+
+
+
 
 // // change the text in page in id=page-h1-text
 // var pageH1Text = document.getElementById("page-h1-text-fullPage");
@@ -447,3 +405,9 @@ function DisplayTask(obj) {
 //     week.weekid
 //   );
 // });
+
+if (userRole == "admin") {
+  addWeekButton();
+  createAddWeeksCard();
+  createAddTaskCard();
+}
