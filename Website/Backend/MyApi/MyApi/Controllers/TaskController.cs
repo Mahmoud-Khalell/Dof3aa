@@ -26,7 +26,7 @@ namespace MyApi.Controllers
         #region Create Task
         [HttpPost("Create")]
         [Authorize(AuthenticationSchemes =JwtBearerDefaults.AuthenticationScheme)]
-        public IActionResult Create([FromBody] TaskDTO taskDTO)
+        public IActionResult Create([FromForm] TaskDTO taskDTO)
         {
             
             var userName = User.Claims.FirstOrDefault(e => e.Type == "Username").Value;
@@ -43,6 +43,10 @@ namespace MyApi.Controllers
             {
                 return Unauthorized();
             }
+            if(taskDTO.DeadLine.Date< System.DateTime.Now.Date)
+            {
+                return BadRequest("DeadLine Must Be In The Future");
+            }
 
             var MyTask = new task()
             {
@@ -50,7 +54,8 @@ namespace MyApi.Controllers
                 Description = taskDTO.Description,
                 DeadLine = taskDTO.DeadLine,
                 CourceId = taskDTO.CourceId,
-                SaurceUrl = DocumentServices.Uploadfile(taskDTO.Saurce),
+                
+                SaurceUrl =(taskDTO.Saurce!=null)? DocumentServices.Uploadfile(taskDTO.Saurce):null,
                 PublisherUserName = userName
 
             };
@@ -71,7 +76,7 @@ namespace MyApi.Controllers
         #region Edit Task
         [HttpPost("Edit")]
         [Authorize(AuthenticationSchemes = JwtBearerDefaults.AuthenticationScheme)]
-        public IActionResult Edit([FromBody] TaskUpdateDTO taskDTO)
+        public IActionResult Edit([FromForm] TaskUpdateDTO taskDTO)
         {
             var userName = User.Claims.FirstOrDefault(e => e.Type == "Username").Value;
             if (userName == null)
@@ -110,17 +115,14 @@ namespace MyApi.Controllers
         #region Delete Task
         [HttpDelete("Delete")]
         [Authorize(AuthenticationSchemes = JwtBearerDefaults.AuthenticationScheme)]
-        public IActionResult Delete(int? id)
+        public IActionResult Delete(int id)
         {
             var userName = User.Claims.FirstOrDefault(e => e.Type == "Username").Value;
             if (userName == null)
             {
                 return Unauthorized();
             }
-            if (id == null)
-            {
-                return BadRequest();
-            }
+            
             var task = unitOfCode.Task.GetById(id);
             if (task == null)
             {
@@ -135,12 +137,30 @@ namespace MyApi.Controllers
             {
                 return Unauthorized();
             }
+            if(task.SaurceUrl != null)
             DocumentServices.DeleteFile(task.SaurceUrl);
             unitOfCode.Task.remove(task);
             return Ok();
         }
         #endregion
 
+        #region Get All Tasks
+
+        [HttpGet("GetAll")]
+        [Authorize(AuthenticationSchemes = JwtBearerDefaults.AuthenticationScheme)]
+        public IActionResult GetAll(int CourceId)
+        {
+            var username = User.Claims.FirstOrDefault(e => e.Type == "Username").Value;
+            if (username == null)
+                return Unauthorized();
+            var US = unitOfCode.UserGroup.GetByUserAndCource(username, CourceId);
+            if (US == null)
+                return Unauthorized();
+
+            var tasks = unitOfCode.Task.GetAll().Where(x => x.CourceId == CourceId).Select(x => Mapper.Task2TaskInfo(x));
+            return Ok(tasks);
+        }
+        #endregion
 
 
 

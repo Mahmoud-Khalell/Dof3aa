@@ -1,5 +1,8 @@
 ﻿using Core.entities;
 using MyApi.DTO;
+using MyApi.DTO.Announcment;
+using MyApi.DTO.Task;
+using System.Data;
 
 namespace MyApi.Services
 {
@@ -57,7 +60,6 @@ namespace MyApi.Services
         #endregion
 
         
-        
         #region user2UserDTO
         public static UserDTO User2UserDTO(AppUser user)
         {
@@ -67,12 +69,47 @@ namespace MyApi.Services
             userDTO.firstName = user.FirstName;
             userDTO.lastName = user.LastName;
 
-            userDTO.Groups = user.UserGroups.Select(e => Cource2CourceInfoDTO(e.Cource)).ToList();
+
+            userDTO.Groups = user.UserGroups.Select(e => new
+            {
+                Rule = e.rule,
+                Cource = Cource2CourceInfoDTO(e.Cource)
+            }).ToList();
+
 
             
             
             return userDTO;
         }
         #endregion
+
+        #region Ann2AnnInfoDTO
+        public static Announcement_Info_DTO Ann2AnnInfoDTO(Announcement ann)
+        {
+            var annInfo = new Announcement_Info_DTO();
+            annInfo.Id = ann.Id;
+            annInfo.Title = ann.Title;
+            annInfo.Description = ann.Description;
+            annInfo.CourceId = ann.CourceId;
+            annInfo.CreationDate = ann.CreateDate;
+            annInfo.PublisherUserName = ann.PublisherUserName;
+            
+            return annInfo;
+        }
+        #endregion
+        
+        public static TaskInfo Task2TaskInfo(task task)
+        {
+            var taskInfo = new TaskInfo();
+            taskInfo.Id = task.Id;
+            taskInfo.Title = task.Title;
+            taskInfo.Description = task.Description;
+            taskInfo.DeadLine = task.DeadLine;
+            taskInfo.CourceId = task.CourceId;
+            taskInfo.PublisherUserName = task.PublisherUserName;
+            taskInfo.SaurceUrl = task.SaurceUrl;
+            taskInfo.PublishDate = task.CreateDate;
+            return taskInfo;
+        }
     }
 }
