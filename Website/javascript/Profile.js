@@ -1,4 +1,5 @@
 // --------------------------------- get user data form DB ---------------------------------
+
 var domain = "https://localhost:44303/";
 function FeatchData() {
   var formData = new FormData();
@@ -11,9 +12,9 @@ function FeatchData() {
   xhr.onreadystatechange = function () {
     if (xhr.readyState === 4) {
       if (xhr.status === 200) {
-        alert("Course created successfully");
+        console.log("Course created successfully");
       } else {
-        alert("Error creating course");
+        console.log("Error creating course");
       }
     }
   };
@@ -30,7 +31,8 @@ function FeatchData() {
 }
 FeatchData();
 
-// "groups":[{"id":122233331,"title":"dsdffd","subTitle":"dffdf","description":"dfdf","image":"d7467e2c-9716-4aae-a719-baa6313f9cbe96737157.png"
+
+
 
 function LoadProfileData(obj) {
   document.getElementById("ProfileUserName").textContent = obj.userName;
@@ -40,6 +42,7 @@ function LoadProfileData(obj) {
   document.getElementById("ProfileName").textContent =
     "( " + obj.firstName + " " + obj.lastName + " )";
   document.getElementById("ProfileEmail").textContent = obj.email;
+  document.getElementById("NumberOfGroups").textContent = obj.groups.length;
 }
 
 function LoadCoursesData(obj) {
@@ -93,36 +96,6 @@ function createCard(imgSrc, cardTitle, cardDescription, courseId) {
   });
 }
 
-createCard(
-  "../assets/images/banner (1).png",
-  "Compu33ter Graphic",
-  "Dr. Abed el hamed",
-  3012
-);
-createCard(
-  "../assets/images/banner (2).png",
-  "DataBase",
-  "Dr. Mohamed Fouad",
-  3012
-);
-createCard(
-  "../assets/images/banner (4).png",
-  "Machine Learning",
-  "Dr. Ahmed Ali",
-  3012
-);
-createCard(
-  "../assets/images/banner (1).png",
-  "Data structure",
-  "Dr. Abed el hamed",
-  3012
-);
-createCard(
-  "../assets/images/banner (3).png",
-  "DataBase",
-  "Dr. Mohamed Fouad",
-  3012
-);
 
 var checkCourseID = document.getElementById("courseIDinput");
 var validfeedback = document.getElementById("valid-id-feedback");
