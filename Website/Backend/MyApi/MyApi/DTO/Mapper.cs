@@ -68,7 +68,7 @@ namespace MyApi.Services
             userDTO.Email = user.Email;
             userDTO.firstName = user.FirstName;
             userDTO.lastName = user.LastName;
-
+            userDTO.ImageUrl = user.ImageUrl;
 
             userDTO.Groups = user.UserGroups.Select(e => new
             {
@@ -97,7 +97,9 @@ namespace MyApi.Services
             return annInfo;
         }
         #endregion
-        
+
+
+        #region Task2TaskInfo
         public static TaskInfo Task2TaskInfo(task task)
         {
             var taskInfo = new TaskInfo();
@@ -111,5 +113,6 @@ namespace MyApi.Services
             taskInfo.PublishDate = task.CreateDate;
             return taskInfo;
         }
+        #endregion
     }
 }
