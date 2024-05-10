@@ -10,5 +10,6 @@ namespace MyApi.Model.Interfaces
         public int update(T entity);
         public T GetById(int? id);
         public IEnumerable<T> GetAll();
+        
     }
 }

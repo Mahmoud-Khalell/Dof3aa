@@ -1,6 +1,10 @@
 {
   "Version": 1,
+<<<<<<< HEAD
+  "Hash": "7Mi2H4DCE3+cfUR11QGdUdviFn6AV9FN/gej7jvOhbg=",
+=======
   "Hash": "pzHA7aJ4hSHzbVxefawWnmQCTaeJ1Gfqi0uT2+Y3fzA=",
+>>>>>>> f5b0233294e77d387542e9344ea3e54317c888dc
   "Source": "MyApi",
   "BasePath": "_content/MyApi",
   "Mode": "Default",
@@ -10,14 +14,18 @@
     {
       "Name": "MyApi\\wwwroot",
       "Source": "MyApi",
-      "ContentRoot": "E:\\Computer science\\Level 3 - second term\\Software development\\Dof3aa\\Website\\Backend\\MyApi\\MyApi\\wwwroot\\",
+      "ContentRoot": "F:\\FCI\\Dof3aa\\Dof3aa\\Website\\Backend\\MyApi\\MyApi\\wwwroot\\",
       "BasePath": "_content/MyApi",
       "Pattern": "**"
     }
   ],
   "Assets": [
     {
+<<<<<<< HEAD
+      "Identity": "F:\\FCI\\Dof3aa\\Dof3aa\\Website\\Backend\\MyApi\\MyApi\\wwwroot\\6c931d06-0cc4-4469-afca-2c970281b593425277574_786106996877881_876881718081450860_n.jpg-image@jpeg",
+=======
       "Identity": "E:\\Computer science\\Level 3 - second term\\Software development\\Dof3aa\\Website\\Backend\\MyApi\\MyApi\\wwwroot\\24844289-4440-4c3d-8ccb-52bb6aea9a8796737157.png-image@png",
+>>>>>>> f5b0233294e77d387542e9344ea3e54317c888dc
       "SourceId": "MyApi",
       "SourceType": "Discovered",
       "ContentRoot": "E:\\Computer science\\Level 3 - second term\\Software development\\Dof3aa\\Website\\Backend\\MyApi\\MyApi\\wwwroot\\",
@@ -73,7 +81,7 @@
       "SourceType": "Discovered",
       "ContentRoot": "E:\\Computer science\\Level 3 - second term\\Software development\\Dof3aa\\Website\\Backend\\MyApi\\MyApi\\wwwroot\\",
       "BasePath": "_content/MyApi",
-      "RelativePath": "dcb4d14a-956d-404d-8386-c790708b1207440969527_7393307810781782_7642599652464116630_n.jpg-image@jpeg",
+      "RelativePath": "6c931d06-0cc4-4469-afca-2c970281b593425277574_786106996877881_876881718081450860_n.jpg-image@jpeg",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
@@ -82,6 +90,22 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
+<<<<<<< HEAD
+      "OriginalItemSpec": "wwwroot\\6c931d06-0cc4-4469-afca-2c970281b593425277574_786106996877881_876881718081450860_n.jpg-image@jpeg"
+    },
+    {
+      "Identity": "F:\\FCI\\Dof3aa\\Dof3aa\\Website\\Backend\\MyApi\\MyApi\\wwwroot\\70d8543e-8e37-4ade-a4ea-ab053d745f4adownload (1).jfif",
+      "SourceId": "MyApi",
+      "SourceType": "Discovered",
+      "ContentRoot": "F:\\FCI\\Dof3aa\\Dof3aa\\Website\\Backend\\MyApi\\MyApi\\wwwroot\\",
+      "BasePath": "_content/MyApi",
+      "RelativePath": "70d8543e-8e37-4ade-a4ea-ab053d745f4adownload (1).jfif",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+=======
       "OriginalItemSpec": "wwwroot\\dcb4d14a-956d-404d-8386-c790708b1207440969527_7393307810781782_7642599652464116630_n.jpg-image@jpeg"
     },
     {
@@ -94,11 +118,28 @@
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
+>>>>>>> f5b0233294e77d387542e9344ea3e54317c888dc
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
+<<<<<<< HEAD
+      "OriginalItemSpec": "wwwroot\\70d8543e-8e37-4ade-a4ea-ab053d745f4adownload (1).jfif"
+    },
+    {
+      "Identity": "F:\\FCI\\Dof3aa\\Dof3aa\\Website\\Backend\\MyApi\\MyApi\\wwwroot\\b95e949a-7aa2-461e-9cec-87bb408e2909424779409_233556606493559_7124514289159205726_n.jpg-image@jpeg",
+      "SourceId": "MyApi",
+      "SourceType": "Discovered",
+      "ContentRoot": "F:\\FCI\\Dof3aa\\Dof3aa\\Website\\Backend\\MyApi\\MyApi\\wwwroot\\",
+      "BasePath": "_content/MyApi",
+      "RelativePath": "b95e949a-7aa2-461e-9cec-87bb408e2909424779409_233556606493559_7124514289159205726_n.jpg-image@jpeg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+=======
       "OriginalItemSpec": "wwwroot\\f1ed63ea-a368-4ceb-923f-f9e74a4518f796737157.png-image@png"
     },
     {
@@ -111,12 +152,55 @@
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
+>>>>>>> f5b0233294e77d387542e9344ea3e54317c888dc
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
+<<<<<<< HEAD
+      "OriginalItemSpec": "wwwroot\\b95e949a-7aa2-461e-9cec-87bb408e2909424779409_233556606493559_7124514289159205726_n.jpg-image@jpeg"
+    },
+    {
+      "Identity": "F:\\FCI\\Dof3aa\\Dof3aa\\Website\\Backend\\MyApi\\MyApi\\wwwroot\\f232f133-d959-445d-a14e-9705879354b0download (1).jfif",
+      "SourceId": "MyApi",
+      "SourceType": "Discovered",
+      "ContentRoot": "F:\\FCI\\Dof3aa\\Dof3aa\\Website\\Backend\\MyApi\\MyApi\\wwwroot\\",
+      "BasePath": "_content/MyApi",
+      "RelativePath": "f232f133-d959-445d-a14e-9705879354b0download (1).jfif",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\f232f133-d959-445d-a14e-9705879354b0download (1).jfif"
+    },
+    {
+      "Identity": "F:\\FCI\\Dof3aa\\Dof3aa\\Website\\Backend\\MyApi\\MyApi\\wwwroot\\image.jfif",
+      "SourceId": "MyApi",
+      "SourceType": "Discovered",
+      "ContentRoot": "F:\\FCI\\Dof3aa\\Dof3aa\\Website\\Backend\\MyApi\\MyApi\\wwwroot\\",
+      "BasePath": "_content/MyApi",
+      "RelativePath": "image.jfif",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\image.jfif"
+=======
       "OriginalItemSpec": "wwwroot\\fd27dd28-82f9-4bd7-a520-4e3cbbfec9f4GitHub  Profile.png-image@png"
+>>>>>>> f5b0233294e77d387542e9344ea3e54317c888dc
     }
   ]
 }

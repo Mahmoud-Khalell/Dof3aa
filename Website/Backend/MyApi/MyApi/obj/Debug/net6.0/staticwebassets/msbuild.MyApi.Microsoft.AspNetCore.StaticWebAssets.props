@@ -1,5 +1,8 @@
 ﻿<Project>
   <ItemGroup>
+<<<<<<< HEAD
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\6c931d06-0cc4-4469-afca-2c970281b593425277574_786106996877881_876881718081450860_n.jpg-image@jpeg))">
+=======
     <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\24844289-4440-4c3d-8ccb-52bb6aea9a8796737157.png-image@png))">
       <SourceType>Package</SourceType>
       <SourceId>MyApi</SourceId>
@@ -49,11 +52,12 @@
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\ab29089a-5ecf-4357-b056-900d76e0f15796737157.png-image@png))</OriginalItemSpec>
     </StaticWebAsset>
     <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\dcb4d14a-956d-404d-8386-c790708b1207440969527_7393307810781782_7642599652464116630_n.jpg-image@jpeg))">
+>>>>>>> f5b0233294e77d387542e9344ea3e54317c888dc
       <SourceType>Package</SourceType>
       <SourceId>MyApi</SourceId>
       <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
       <BasePath>_content/MyApi</BasePath>
-      <RelativePath>dcb4d14a-956d-404d-8386-c790708b1207440969527_7393307810781782_7642599652464116630_n.jpg-image@jpeg</RelativePath>
+      <RelativePath>6c931d06-0cc4-4469-afca-2c970281b593425277574_786106996877881_876881718081450860_n.jpg-image@jpeg</RelativePath>
       <AssetKind>All</AssetKind>
       <AssetMode>All</AssetMode>
       <AssetRole>Primary</AssetRole>
@@ -62,7 +66,71 @@
       <AssetTraitValue></AssetTraitValue>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
-      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\dcb4d14a-956d-404d-8386-c790708b1207440969527_7393307810781782_7642599652464116630_n.jpg-image@jpeg))</OriginalItemSpec>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\6c931d06-0cc4-4469-afca-2c970281b593425277574_786106996877881_876881718081450860_n.jpg-image@jpeg))</OriginalItemSpec>
+    </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\70d8543e-8e37-4ade-a4ea-ab053d745f4adownload (1).jfif))">
+      <SourceType>Package</SourceType>
+      <SourceId>MyApi</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/MyApi</BasePath>
+      <RelativePath>70d8543e-8e37-4ade-a4ea-ab053d745f4adownload (1).jfif</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\70d8543e-8e37-4ade-a4ea-ab053d745f4adownload (1).jfif))</OriginalItemSpec>
+    </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\b95e949a-7aa2-461e-9cec-87bb408e2909424779409_233556606493559_7124514289159205726_n.jpg-image@jpeg))">
+      <SourceType>Package</SourceType>
+      <SourceId>MyApi</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/MyApi</BasePath>
+      <RelativePath>b95e949a-7aa2-461e-9cec-87bb408e2909424779409_233556606493559_7124514289159205726_n.jpg-image@jpeg</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\b95e949a-7aa2-461e-9cec-87bb408e2909424779409_233556606493559_7124514289159205726_n.jpg-image@jpeg))</OriginalItemSpec>
+    </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\f232f133-d959-445d-a14e-9705879354b0download (1).jfif))">
+      <SourceType>Package</SourceType>
+      <SourceId>MyApi</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/MyApi</BasePath>
+      <RelativePath>f232f133-d959-445d-a14e-9705879354b0download (1).jfif</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\f232f133-d959-445d-a14e-9705879354b0download (1).jfif))</OriginalItemSpec>
+    </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\image.jfif))">
+      <SourceType>Package</SourceType>
+      <SourceId>MyApi</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/MyApi</BasePath>
+      <RelativePath>image.jfif</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\image.jfif))</OriginalItemSpec>
     </StaticWebAsset>
     <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\f1ed63ea-a368-4ceb-923f-f9e74a4518f796737157.png-image@png))">
       <SourceType>Package</SourceType>

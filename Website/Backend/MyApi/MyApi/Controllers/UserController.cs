@@ -11,6 +11,7 @@ using System.Security.Claims;
 using System.Text;
 using MyApi.Services;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.AspNetCore.Cors;
 namespace MyApi.Controllers
 {
     [Route("api/[controller]")]
@@ -24,6 +25,7 @@ namespace MyApi.Controllers
             this.unit = unit;
         }
 
+        
         #region Confirm Email
         [HttpGet("ConfirmEmail")]
         public async Task<IActionResult> ConfirmEmail(string email, string token)
@@ -89,6 +91,7 @@ namespace MyApi.Controllers
 
         #region Login
         [HttpPost("Login")]
+        [EnableCors]
         public async Task<IActionResult>Login([FromForm]LoginDTO loginDTO)
         {
             if (ModelState.IsValid == false)

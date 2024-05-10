@@ -9,6 +9,11 @@ namespace MyApi.Model.Interfaces
         public IConfiguration config { get; set; }
         public ICource Cource { get; set; }
         public IUserGroup UserGroup { get; set; }
+        public ITask Task { get; set; }
+        public INotification Notification { get; set; }
+        public IUserNotification UserNotification { get; set; }
+        public IAnnouncement Announcement { get; set; }
+
 
     }
 }

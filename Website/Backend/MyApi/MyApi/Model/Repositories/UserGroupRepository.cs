@@ -36,6 +36,16 @@ namespace MyApi.Model.Repositories
         {
             return connector.UserGroups.Include(e => e.User).Include(e => e.Cource).Where(e => e.Cource.Id == CourceId).ToList();
         }
-        
+
+        public int GetRole(string userName, int groupId)
+        {
+            var usergroub=GetByUserAndCource(userName, groupId);
+            if (usergroub == null)
+            {
+                return 0;
+            }
+            return usergroub.rule;
+
+        }
     }
 }

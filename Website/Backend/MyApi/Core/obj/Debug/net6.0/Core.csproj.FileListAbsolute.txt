@@ -1,3 +1,18 @@
+<<<<<<< HEAD
+F:\FCI\Dof3aa\Dof3aa\Website\Backend\MyApi\Core\bin\Debug\net6.0\Core.deps.json
+F:\FCI\Dof3aa\Dof3aa\Website\Backend\MyApi\Core\bin\Debug\net6.0\Core.dll
+F:\FCI\Dof3aa\Dof3aa\Website\Backend\MyApi\Core\bin\Debug\net6.0\Core.pdb
+F:\FCI\Dof3aa\Dof3aa\Website\Backend\MyApi\Core\obj\Debug\net6.0\Core.csproj.AssemblyReference.cache
+F:\FCI\Dof3aa\Dof3aa\Website\Backend\MyApi\Core\obj\Debug\net6.0\Core.GeneratedMSBuildEditorConfig.editorconfig
+F:\FCI\Dof3aa\Dof3aa\Website\Backend\MyApi\Core\obj\Debug\net6.0\Core.AssemblyInfoInputs.cache
+F:\FCI\Dof3aa\Dof3aa\Website\Backend\MyApi\Core\obj\Debug\net6.0\Core.AssemblyInfo.cs
+F:\FCI\Dof3aa\Dof3aa\Website\Backend\MyApi\Core\obj\Debug\net6.0\Core.csproj.CoreCompileInputs.cache
+F:\FCI\Dof3aa\Dof3aa\Website\Backend\MyApi\Core\obj\Debug\net6.0\Core.sourcelink.json
+F:\FCI\Dof3aa\Dof3aa\Website\Backend\MyApi\Core\obj\Debug\net6.0\Core.dll
+F:\FCI\Dof3aa\Dof3aa\Website\Backend\MyApi\Core\obj\Debug\net6.0\refint\Core.dll
+F:\FCI\Dof3aa\Dof3aa\Website\Backend\MyApi\Core\obj\Debug\net6.0\Core.pdb
+F:\FCI\Dof3aa\Dof3aa\Website\Backend\MyApi\Core\obj\Debug\net6.0\ref\Core.dll
+=======
 E:\Computer science\Level 3 - second term\Software development\Dof3aa\Website\Backend\MyApi\Core\bin\Debug\net6.0\Core.deps.json
 E:\Computer science\Level 3 - second term\Software development\Dof3aa\Website\Backend\MyApi\Core\bin\Debug\net6.0\Core.dll
 E:\Computer science\Level 3 - second term\Software development\Dof3aa\Website\Backend\MyApi\Core\bin\Debug\net6.0\Core.pdb
@@ -10,3 +25,4 @@ E:\Computer science\Level 3 - second term\Software development\Dof3aa\Website\Ba
 E:\Computer science\Level 3 - second term\Software development\Dof3aa\Website\Backend\MyApi\Core\obj\Debug\net6.0\refint\Core.dll
 E:\Computer science\Level 3 - second term\Software development\Dof3aa\Website\Backend\MyApi\Core\obj\Debug\net6.0\Core.pdb
 E:\Computer science\Level 3 - second term\Software development\Dof3aa\Website\Backend\MyApi\Core\obj\Debug\net6.0\ref\Core.dll
+>>>>>>> f5b0233294e77d387542e9344ea3e54317c888dc
