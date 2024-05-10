@@ -6,6 +6,6 @@
         public string Email { get; set; }
         public string firstName { get; set; }
         public string lastName { get; set; }
-        public dynamic Groups { get; set; }
+        public List<CourceInfoDTO> Groups { get; set; }
     }
 }
