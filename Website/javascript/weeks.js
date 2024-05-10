@@ -337,53 +337,28 @@ if (userRole == "admin") {
   createAddTaskCard();
 }
 
-// change the text in page in id=page-h1-text
-var pageH1Text = document.getElementById("page-h1-text-fullPage");
-pageH1Text.textContent = subjects[search(subjects, id - 1)].subjectName;
+//------------------------------------------------------------------------------------------------------------------------------
+//-------------------------------------------------------------------- Tasks ---------------------------------------------------
+//------------------------------------------------------------------------------------------------------------------------------
 
-var pageH1Text = document.getElementById("page-h5-text-fullPage");
-pageH1Text.textContent =
-  subjects[search(subjects, id - 1)].courseDepartment +
-  " ( " +
-  subjects[search(subjects, id - 1)].subjectCode +
-  " )";
-
-var pageH1Text = document.getElementById("page-h6-text-fullPage");
-pageH1Text.textContent = subjects[search(subjects, id - 1)].username;
-
-var Weeks = subjects[search(subjects, id - 1)].weeks;
-console.log("Weeks: " + search(subjects, id - 1));
-
-Weeks.forEach((week) => {
-  createWeeksCard(
-    week.imgSrc,
-    week.weekName,
-    week.doctorName,
-    week.lastUpdate,
-    week.weekid
-  );
-});
-
-//----------------------------------------------------------------------------------------------------------
-// ---------------------------------fetching data of Tasks from the server ---------------------------------
-//----------------------------------------------------------------------------------------------------------
-
-var domain = "https://localhost:44303/";
-function FeatchTaskData() {
+//--------------------------------------------------------------------- create Tasks -------------------------------------------
+function CreateTask() {
+  console.log("Create Task");
   var title = document.getElementById("Task-Title").value;
   var description = document.getElementById("Task-Description").value;
-  var deadline = document.getElementById("Task-Deadline").value;
-  var Saurce = document.getElementById("Saurce-file").value;
+  var deadline = document.getElementById("Task-DeadLine").value;
+  var Saurce = document.getElementById("Saurce-file");
 
   var formData = new FormData();
   formData.append("Title", title);
   formData.append("Description", description);
   formData.append("DeadLine", deadline);
   formData.append("Saurce", Saurce.files[0]);
-  formData.append("CourceId", courseIdforcrearte);
+  // formData.append("CourceId", courseIdforcrearte);
+  formData.append("CourceId", "123456711");
 
   var xhr = new XMLHttpRequest();
-  xhr.open("GET", "https://localhost:44303/api/User/GetUserInfo");
+  xhr.open("POST", "https://localhost:44303/api/Task/Create");
   var token = "Bearer " + localStorage.getItem("token");
   xhr.setRequestHeader("Authorization", token);
 
@@ -396,16 +371,79 @@ function FeatchTaskData() {
       }
     }
   };
-
   xhr.send(formData);
   xhr.onload = function () {
     console.log(xhr.responseText);
-    // xhr.responseText to object
     var obj = JSON.parse(xhr.responseText);
     console.log(obj);
-    console.log(obj.groups);
-    LoadProfileData(obj);
-    LoadCoursesData(obj.groups);
   };
 }
-FeatchData();
+
+//----------------------------------------------------- fetching data of Tasks from the server ---------------------------------
+function FeatchTask() {
+  console.log("Featch Task");
+
+  var formData = new FormData();
+  formData.append("CourceId", "123456711");
+
+  var xhr = new XMLHttpRequest();
+  xhr.open("GET", "https://localhost:44303/api/Task/GetAll");
+  var token = "Bearer " + localStorage.getItem("token");
+  xhr.setRequestHeader("Authorization", token);
+
+  xhr.onreadystatechange = function () {
+    if (xhr.readyState === 4) {
+      if (xhr.status === 200) {
+        console.log("Featch Task successfully");
+      } else {
+        console.log("Featch Task filed creating course");
+      }
+    }
+  };
+  xhr.send(formData);
+  xhr.onload = function () {
+    console.log(xhr.responseText);
+    var obj = JSON.parse(xhr.responseText);
+    console.log("obj");
+    console.log(obj);
+  };
+}
+
+// CreateTask();
+function DisplayTask(obj) {
+  obj.forEach((task) => {
+    createTaskCard(
+      task.taskName,
+      task.description,
+      task.deadline,
+      task.matrialLink
+    );
+  });
+}
+
+// // change the text in page in id=page-h1-text
+// var pageH1Text = document.getElementById("page-h1-text-fullPage");
+// pageH1Text.textContent = subjects[search(subjects, id - 1)].subjectName;
+
+// var pageH1Text = document.getElementById("page-h5-text-fullPage");
+// pageH1Text.textContent =
+//   subjects[search(subjects, id - 1)].courseDepartment +
+//   " ( " +
+//   subjects[search(subjects, id - 1)].subjectCode +
+//   " )";
+
+// var pageH1Text = document.getElementById("page-h6-text-fullPage");
+// pageH1Text.textContent = subjects[search(subjects, id - 1)].username;
+
+// var Weeks = subjects[search(subjects, id - 1)].weeks;
+// console.log("Weeks: " + search(subjects, id - 1));
+
+// Weeks.forEach((week) => {
+//   createWeeksCard(
+//     week.imgSrc,
+//     week.weekName,
+//     week.doctorName,
+//     week.lastUpdate,
+//     week.weekid
+//   );
+// });
