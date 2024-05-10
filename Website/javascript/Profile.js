@@ -25,18 +25,16 @@ function FeatchData() {
     // xhr.responseText to object
     var obj = JSON.parse(xhr.responseText);
     console.log(obj);
+    console.log(obj.groups);
     LoadProfileData(obj);
     LoadCoursesData(obj.groups);
   };
 }
 FeatchData();
 
-
-
-
 function LoadProfileData(obj) {
   document.getElementById("ProfileUserName").textContent = obj.userName;
- // document.getElementById("ProfilePicNavBar").textContent = obj.userName;
+  // document.getElementById("ProfilePicNavBar").textContent = obj.userName;
   document.getElementById("ProfileImage").src =
     "https://localhost:44303/2b169a46-6ca8-4e61-85db-39fdb0e3025096737157.png";
   document.getElementById("ProfileName").textContent =
@@ -47,13 +45,15 @@ function LoadProfileData(obj) {
 
 function LoadCoursesData(obj) {
   obj.forEach((element) => {
-    createCard(
-      domain + element.image,
-      element.title,
-      element.subTitle,
-      element.id
-    );
-    console.log(element.image);
+    if (element.rule == 1) {
+      createCard(
+        domain + element.course.image,
+        element.course.title,
+        element.course.subTitle,
+        element.course.id
+      );
+    }
+
   });
 }
 
@@ -95,7 +95,6 @@ function createCard(imgSrc, cardTitle, cardDescription, courseId) {
     window.location.href = `weeks.html?id=${courseId}`;
   });
 }
-
 
 var checkCourseID = document.getElementById("courseIDinput");
 var validfeedback = document.getElementById("valid-id-feedback");
