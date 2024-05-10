@@ -15,7 +15,7 @@
     </head>
     <body>
 
-        <nav class="navbar navbar-expand-lg navbar-light   "
+        <nav class="navbar navbar-expand-lg navbar-light"
             style="direction: ltr;">
             <div class="container">
                 <a class="navbar-brand fw-bold" href="#">
@@ -87,13 +87,13 @@
                             <h3>DoF3aa</h3>
                             <p>student platform to organize all materials </p>
                         </div>
-                        <form class="row g-12"
-                            id="loginForm" method="post">
+                        <form class="row g-12" enctype="multipart/form-data"
+                           method="post">
                             <div class="col-md-12">
                                 <br>
                                 <input type="text" class="form-control"
                                     placeholder=" User Name"
-                                    id="username" name="UserName">
+                                    id="username" name="username">
 
                                 <span style="color: #c50a0a; display: none;"
                                     id="span-user">
@@ -124,13 +124,13 @@
                                 </div> -->
                             </div>
                             <div class="d-grid gap-2">
-                                <button onclick="login()"
-                                    class="btn btn-primary loginButton">log
-                                    in</button>
+                               
+                                <button class="btn btn-primary loginButton" type="button" onclick="submitForm()">Submit</button>
+
                             </div>
                             <div class="d-grid ">
                                 <br>
-                                <div id="g_id_onload"
+                                <!-- <div id="g_id_onload"
                                     data-client_id="313703183397-mr7v9disd8h71ih9iqm7ts6ia8j9p3a9.apps.googleusercontent.com"
                                     data-context="signin"
                                     data-ux_mode="popup"
@@ -146,7 +146,7 @@
                                     data-size="large"
                                     data-locale="en"
                                     data-logo_alignment="left">
-                                </div>
+                                </div> -->
                             </div>
                             <div class="d-grid ">
                                 <br>
@@ -161,15 +161,13 @@
             </div>
         </div>
 
-        <button onclick="Logout()"> Logout</button>
+        <!-- <button onclick="Logout()"> Logout</button> -->
 
         <!------------------------------------- scripts -------------------------------------->
         <!------------------------------------- bootstrap scripts -------------------------------------->
-        <script src="https://accounts.google.com/gsi/client"
-            async></script>
-        <!-- <script src="https://cdn.jsdelivr.net/npm/jwt-decode@3.1.2/dist/jwt-decode.min.js"></script> -->
-        <script
-            src="https://cdn.jsdelivr.net/npm/jwt-decode@3.1.2/build/jwt-decode.min.js"></script>
+        <!-- <script src="https://accounts.google.com/gsi/client" async></script>
+            <script src="https://cdn.jsdelivr.net/npm/jwt-decode@3.1.2/dist/jwt-decode.min.js"></script>
+            <script src="https://cdn.jsdelivr.net/npm/jwt-decode@3.1.2/build/jwt-decode.min.js"></script> -->
 
         <!-- Load JWT Decode first -->
         <script src="../javascript/bootstrap/all.min.js"></script>
@@ -179,7 +177,7 @@
             src="../javascript/bootstrap/bootstrap.bundle.min.js.map"></script>
         <!-- <script src="../javascript/login.js"></script> -->
 
-        <script>
+        <!-- <script>
             function CallBack(response) {
                 console.log("google login");
                 console.log(jwt_decode(response.credential)); // Use jwt_decode
@@ -187,13 +185,14 @@
 
             function Logout(){
                 console.log("logout");
-                google.accounts.id.revoke("rally.luxoruniversity@gmail.com", () => {
+                google.accounts.id.revoke("mohamedbadawysayed02@gmail.com", () => {
                     console.log("logout success");
                     location.reload();
                 });
 
             }
-        </script>
+        </script> -->
+        <script src="../javascript/login.js"></script>
 
     </body>
 </html>

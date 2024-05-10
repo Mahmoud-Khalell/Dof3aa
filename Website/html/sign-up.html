@@ -202,7 +202,7 @@
                             <div class="col-3"></div>
                             <div class="col-6">
                                 <br><br>
-                                <button type="submit"
+                                <button onclick="submitForm()"
                                     class="btn btn-primary"
                                     style="width: 100%;">Sign up</button>
                             </div>
@@ -217,7 +217,76 @@
             </div>
         </div>
 
+        <!-- <div id="g_id_onload"
+            data-client_id="313703183397-mr7v9disd8h71ih9iqm7ts6ia8j9p3a9.apps.googleusercontent.com"
+            data-context="signup"
+            data-ux_mode="popup"
+            data-callback="callBackRegistration"
+            data-auto_prompt="false">
+        </div>
+
+        <div class="g_id_signin"
+            data-type="standard"
+            data-shape="pill"
+            data-theme="filled_blue"
+            data-text="signin_with"
+            data-size="large"
+            data-logo_alignment="left">
+
+        </div> -->
+<!--
+        <script src="https://accounts.google.com/gsi/client" async></script>
+        <script
+            src="https://cdn.jsdelivr.net/npm/jwt-decode@3.1.2/dist/jwt-decode.min.js"></script>
+        <script
+            src="https://cdn.jsdelivr.net/npm/jwt-decode@3.1.2/build/jwt-decode.min.js"></script>
+
+        <script>
+
+            
+            // register with google
+            function callBackRegistration(response) {
+                console.log(jwt_decode(response.credential)); // Use jwt_decode
+                console.log("callBackRegistration");
+                var response = google.accounts.id.get();
+                console.log(response);
+                var id_token = response.credential;
+                console.log(id_token);
+                var decoded = jwt_decode(id_token);
+                console.log(decoded);
+                var email = decoded.email;
+                var name = decoded.name;
+                var image = decoded.picture;
+                var google_id = decoded.sub;
+                console.log(email);
+                console.log(name);
+                console.log(image);
+                console.log(google_id);
+                // send data to server
+                var data = {
+                    "email": email,
+                    "name": name,
+                    "image": image,
+                    "google_id": google_id
+                };
+                console.log(data);
+                
+            }
+            
+            
+        </script>
+        
+    -->
         <!------------------------------------- scripts -------------------------------------->
+        
+        <!-- <script src="https://accounts.google.com/gsi/client"
+        async></script> -->
+        
+
+        <!-- <script src="https://cdn.jsdelivr.net/npm/jwt-decode@3.1.2/dist/jwt-decode.min.js"></script> -->
+        <!-- <script
+            src="https://cdn.jsdelivr.net/npm/jwt-decode@3.1.2/build/jwt-decode.min.js"></script> -->
+
         <!------------------------------------- bootstrap scripts -------------------------------------->
         <script src="../javascript/bootstrap/all.min.js"></script>
         <script src="../javascript/bootstrap/bootstrap.bundle.js"></script>

@@ -1,6 +1,7 @@
 {
   "Files": [
     {
+<<<<<<< HEAD
       "Id": "F:\\FCI\\Dof3aa\\Dof3aa\\Website\\Backend\\MyApi\\MyApi\\wwwroot\\6c931d06-0cc4-4469-afca-2c970281b593425277574_786106996877881_876881718081450860_n.jpg-image@jpeg",
       "PackagePath": "staticwebassets\\6c931d06-0cc4-4469-afca-2c970281b593425277574_786106996877881_876881718081450860_n.jpg-image@jpeg"
     },
@@ -19,6 +20,30 @@
     {
       "Id": "F:\\FCI\\Dof3aa\\Dof3aa\\Website\\Backend\\MyApi\\MyApi\\wwwroot\\image.jfif",
       "PackagePath": "staticwebassets\\image.jfif"
+=======
+      "Id": "E:\\Computer science\\Level 3 - second term\\Software development\\Dof3aa\\Website\\Backend\\MyApi\\MyApi\\wwwroot\\24844289-4440-4c3d-8ccb-52bb6aea9a8796737157.png-image@png",
+      "PackagePath": "staticwebassets\\24844289-4440-4c3d-8ccb-52bb6aea9a8796737157.png-image@png"
+    },
+    {
+      "Id": "E:\\Computer science\\Level 3 - second term\\Software development\\Dof3aa\\Website\\Backend\\MyApi\\MyApi\\wwwroot\\4ea5b854-a526-43c0-8d41-2d4616e5165aشاي.jpg-image@jpeg",
+      "PackagePath": "staticwebassets\\4ea5b854-a526-43c0-8d41-2d4616e5165aشاي.jpg-image@jpeg"
+    },
+    {
+      "Id": "E:\\Computer science\\Level 3 - second term\\Software development\\Dof3aa\\Website\\Backend\\MyApi\\MyApi\\wwwroot\\ab29089a-5ecf-4357-b056-900d76e0f15796737157.png-image@png",
+      "PackagePath": "staticwebassets\\ab29089a-5ecf-4357-b056-900d76e0f15796737157.png-image@png"
+    },
+    {
+      "Id": "E:\\Computer science\\Level 3 - second term\\Software development\\Dof3aa\\Website\\Backend\\MyApi\\MyApi\\wwwroot\\dcb4d14a-956d-404d-8386-c790708b1207440969527_7393307810781782_7642599652464116630_n.jpg-image@jpeg",
+      "PackagePath": "staticwebassets\\dcb4d14a-956d-404d-8386-c790708b1207440969527_7393307810781782_7642599652464116630_n.jpg-image@jpeg"
+>>>>>>> f5b0233294e77d387542e9344ea3e54317c888dc
+    },
+    {
+      "Id": "E:\\Computer science\\Level 3 - second term\\Software development\\Dof3aa\\Website\\Backend\\MyApi\\MyApi\\wwwroot\\f1ed63ea-a368-4ceb-923f-f9e74a4518f796737157.png-image@png",
+      "PackagePath": "staticwebassets\\f1ed63ea-a368-4ceb-923f-f9e74a4518f796737157.png-image@png"
+    },
+    {
+      "Id": "E:\\Computer science\\Level 3 - second term\\Software development\\Dof3aa\\Website\\Backend\\MyApi\\MyApi\\wwwroot\\fd27dd28-82f9-4bd7-a520-4e3cbbfec9f4GitHub  Profile.png-image@png",
+      "PackagePath": "staticwebassets\\fd27dd28-82f9-4bd7-a520-4e3cbbfec9f4GitHub  Profile.png-image@png"
     },
     {
       "Id": "obj\\Debug\\net6.0\\staticwebassets\\msbuild.MyApi.Microsoft.AspNetCore.StaticWebAssets.props",

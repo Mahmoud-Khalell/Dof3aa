@@ -9,7 +9,8 @@ namespace MyApi.DTO
         public string? University { get; set; }
         public string? Department { get; set; }
         public string? Faculty { get; set; }
-        public IFormFile  Image { get; set; }
+        
+        public IFormFile?  Image { get; set; }
 
         [EmailAddress]
         public string Email {  get; set; }
