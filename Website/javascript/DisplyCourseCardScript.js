@@ -32,8 +32,7 @@ function submitForm() {
 function handleSuccess(response) {
   localStorage.setItem("token", response);
   //window.location.href = "./courses.html";
-    console.log(JSON.parse(response));
-    
+  console.log(JSON.parse(response));
 }
 
 // Function to handle request failure
@@ -52,7 +51,8 @@ function createCardLecture(
   subjectName,
   moreInfo,
   username,
-  lastUpdated
+  lastUpdated,
+  parant
 ) {
   const cardDiv = document.createElement("div");
   cardDiv.classList.add("col");
@@ -109,7 +109,7 @@ function createCardLecture(
 
   cardDiv.appendChild(card);
 
-  const mainCoursesDiv = document.querySelector("#main-course-div");
+  const mainCoursesDiv = document.getElementById(parant);
   mainCoursesDiv.appendChild(cardDiv);
 
   cardFooter.appendChild(lastUpdatedElement);
@@ -118,14 +118,94 @@ function createCardLecture(
   card.style.backgroundColor = randomColor;
 }
 
-subjects.forEach((subject) => {
-  createCardLecture(
-    subject.courseId,
-    subject.imgSrc,
-    subject.subjectCode,
-    subject.subjectName,
-    subject.moreInfo,
-    subject.username,
-    subject.lastUpdated
-  );
-});
+// ------------------------------ load courses data ------------------------------
+
+var domain = "https://localhost:44303/";
+function FeatchData() {
+  var formData = new FormData();
+  var xhr = new XMLHttpRequest();
+  xhr.open("GET", "https://localhost:44303/api/User/GetUserInfo");
+  var token = "Bearer " + localStorage.getItem("token");
+  xhr.setRequestHeader("Authorization", token);
+
+  xhr.onreadystatechange = function () {
+    if (xhr.readyState === 4) {
+      if (xhr.status === 200) {
+        console.log("Course created successfully");
+      } else {
+        alconsole.log("Error creating course");
+      }
+    }
+  };
+
+  xhr.send(formData);
+  xhr.onload = function () {
+    console.log(xhr.responseText);
+    // xhr.responseText to object
+    var obj = JSON.parse(xhr.responseText);
+    // console.log(obj);
+    LoadNavBarData(obj);
+
+    LoadCoursesData(obj.groups);
+  };
+}
+FeatchData();
+
+function LoadNavBarData(obj) {}
+
+function LoadCoursesData(obj) {
+  var countOfCourses = 0,
+    countOfSections = 0,
+    countOfGeneral = 0;
+  obj.forEach((element) => {
+    if (element.id == 1) {
+      countOfCourses++;
+      createCardLecture(
+        element.id,
+        domain + element.image,
+        element.title,
+        element.subTitle,
+        element.description,
+        "",
+        "Last updated 3 mins ago",
+        "main-course-div"
+      );
+    } else if (element.id == 1) {
+      countOfSections++;
+      createCardLecture(
+        element.id,
+        domain + element.image,
+        element.title,
+        element.subTitle,
+        element.description,
+        "",
+        "Last updated 3 mins ago",
+        "main-section-div"
+      );
+    } else {
+      countOfGeneral++;
+      createCardLecture(
+        element.id,
+        domain + element.image,
+        element.title,
+        element.subTitle,
+        element.description,
+        "",
+        "Last updated 3 mins ago",
+        "main-general-div"
+      );
+    }
+  });
+  displayCoursesDiv(countOfCourses, countOfSections, countOfGeneral);
+}
+
+function displayCoursesDiv(countOfCourses, countOfSections, countOfGeneral) {
+  if (countOfCourses == 0)
+    document.getElementById("main-course-div-parant").style.display = "none";
+
+  if (countOfSections == 0)
+    document.getElementById("main-section-div-parant").style.display = "none";
+
+  if (countOfGeneral == 0)
+    document.getElementById("main-general-div-parant").style.display = "none";
+}

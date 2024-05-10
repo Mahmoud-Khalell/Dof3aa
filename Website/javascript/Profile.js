@@ -1,3 +1,62 @@
+// --------------------------------- get user data form DB ---------------------------------
+
+var domain = "https://localhost:44303/";
+function FeatchData() {
+  var formData = new FormData();
+
+  var xhr = new XMLHttpRequest();
+  xhr.open("GET", "https://localhost:44303/api/User/GetUserInfo");
+  var token = "Bearer " + localStorage.getItem("token");
+  xhr.setRequestHeader("Authorization", token);
+
+  xhr.onreadystatechange = function () {
+    if (xhr.readyState === 4) {
+      if (xhr.status === 200) {
+        console.log("Course created successfully");
+      } else {
+        console.log("Error creating course");
+      }
+    }
+  };
+
+  xhr.send(formData);
+  xhr.onload = function () {
+    console.log(xhr.responseText);
+    // xhr.responseText to object
+    var obj = JSON.parse(xhr.responseText);
+    console.log(obj);
+    LoadProfileData(obj);
+    LoadCoursesData(obj.groups);
+  };
+}
+FeatchData();
+
+
+
+
+function LoadProfileData(obj) {
+  document.getElementById("ProfileUserName").textContent = obj.userName;
+ // document.getElementById("ProfilePicNavBar").textContent = obj.userName;
+  document.getElementById("ProfileImage").src =
+    "https://localhost:44303/2b169a46-6ca8-4e61-85db-39fdb0e3025096737157.png";
+  document.getElementById("ProfileName").textContent =
+    "( " + obj.firstName + " " + obj.lastName + " )";
+  document.getElementById("ProfileEmail").textContent = obj.email;
+  document.getElementById("NumberOfGroups").textContent = obj.groups.length;
+}
+
+function LoadCoursesData(obj) {
+  obj.forEach((element) => {
+    createCard(
+      domain + element.image,
+      element.title,
+      element.subTitle,
+      element.id
+    );
+    console.log(element.image);
+  });
+}
+
 function createCard(imgSrc, cardTitle, cardDescription, courseId) {
   const cardDiv = document.createElement("div");
   cardDiv.classList.add("col");
@@ -37,36 +96,6 @@ function createCard(imgSrc, cardTitle, cardDescription, courseId) {
   });
 }
 
-createCard(
-  "../assets/images/banner (1).png",
-  "Computer Graphic",
-  "Dr. Abed el hamed",
-  3012
-);
-createCard(
-  "../assets/images/banner (2).png",
-  "DataBase",
-  "Dr. Mohamed Fouad",
-  3012
-);
-createCard(
-  "../assets/images/banner (4).png",
-  "Machine Learning",
-  "Dr. Ahmed Ali",
-  3012
-);
-createCard(
-  "../assets/images/banner (1).png",
-  "Data structure",
-  "Dr. Abed el hamed",
-  3012
-);
-createCard(
-  "../assets/images/banner (3).png",
-  "DataBase",
-  "Dr. Mohamed Fouad",
-  3012
-);
 
 var checkCourseID = document.getElementById("courseIDinput");
 var validfeedback = document.getElementById("valid-id-feedback");
@@ -145,3 +174,44 @@ checkCourseSupTitle.oninput = function () {
     checkCourseSupTitle.classList.add("is-valid");
   }
 };
+
+// --------------------------------- create course ---------------------------------
+
+function createCourse() {
+  var id = document.getElementById("courseIDinput").value;
+  var title = document.getElementById("courseTitleinput").value;
+  var sub_title = document.getElementById("courseSupTitleinput").value;
+  var description = document.getElementById("Group-description").value;
+  var type = document.getElementById("Group-type").value;
+  var img = document.getElementById("courseImage");
+  var logo = document.getElementById("courseLogo");
+
+  var formData = new FormData();
+  formData.append("Id", id);
+  formData.append("Title", title);
+  formData.append("SubTitle", sub_title);
+  formData.append("Description", description);
+  formData.append("type", type);
+  formData.append("Image", img.files[0]);
+  formData.append("Logo", logo.files[0]);
+
+  var xhr = new XMLHttpRequest();
+  xhr.open("POST", "https://localhost:44303/api/Cource/CreateCource");
+  var token = "Bearer " + localStorage.getItem("token");
+  xhr.setRequestHeader("Authorization", token);
+
+  xhr.onreadystatechange = function () {
+    if (xhr.readyState === 4) {
+      if (xhr.status === 200) {
+        alert("Course created successfully");
+      } else {
+        alert("Error creating course");
+      }
+    }
+  };
+
+  xhr.send(formData);
+  xhr.onload = function () {
+    console.log(xhr.responseText);
+  };
+}
