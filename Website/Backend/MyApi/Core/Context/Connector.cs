@@ -23,6 +23,8 @@ namespace Core.Context
         public DbSet<Notification> Notifications { get; set; }
         public DbSet<UserNotification> UserNotifications { get; set; }
         public DbSet<Announcement> Announcements { get; set; }
+        public DbSet<Material> Materials { get; set; }
+        public DbSet<Topic> Topics { get; set; }
 
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)

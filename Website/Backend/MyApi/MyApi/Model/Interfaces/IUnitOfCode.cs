@@ -13,6 +13,9 @@ namespace MyApi.Model.Interfaces
         public INotification Notification { get; set; }
         public IUserNotification UserNotification { get; set; }
         public IAnnouncement Announcement { get; set; }
+        public  ITopic Topic { get; set; }
+        public Imaterial Material { get; set; }
+
 
 
     }

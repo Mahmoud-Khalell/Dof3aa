@@ -5,7 +5,7 @@ namespace MyApi.DTO
     public class CourceDTO
     {
         [Required]
-        [Range(1e8,1e9-1, ErrorMessage = "Id must be 9 digits")]
+        [Range(1e5,1e6-1, ErrorMessage = "Id must be 9 digits")]
         public int Id { get; set; }
         public string Title { get; set; }
         public string SubTitle { get; set; }

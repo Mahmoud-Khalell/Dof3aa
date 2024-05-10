@@ -62,7 +62,8 @@ namespace MyApi
             builder.Services.AddScoped<INotification, MyApi.Model.Repositories.Notification>();
             builder.Services.AddScoped<ITask, TaskRepository>();
             builder.Services.AddScoped<IUserNotification, MyApi.Model.Repositories.UserNotification>();
-
+            builder.Services.AddScoped<ITopic, TopicRepository>();
+            builder.Services.AddScoped<Imaterial, MaterialRepository>();
             builder.Services.AddCors(e =>
                 {
                     e.AddPolicy("MyPloicy", policybuilder =>  policybuilder.AllowAnyOrigin().AllowAnyHeader());

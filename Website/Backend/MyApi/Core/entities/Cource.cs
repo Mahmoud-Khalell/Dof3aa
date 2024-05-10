@@ -18,6 +18,8 @@ namespace Core.entities
         public string LogoUrl { get; set; } 
         public int type { get; set; }
         public virtual ICollection<UserGroup> UserGroups { get; set; }  
-
+        public virtual ICollection<Topic> Topics { get; set; }
+        public virtual ICollection<Announcement> Announcements { get; set; }
+        public virtual ICollection<task> Tasks { get; set; }
     }
 }
