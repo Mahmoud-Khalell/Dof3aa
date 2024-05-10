@@ -7,17 +7,6 @@ var userRole = "admin";
 
 // -------------------------------------------------------------------- user info ---------------------------------------------------
 
-
-
-
-
-
-
-
-
-
-
-
 function createWeeksCard(imgSrc, weekName, doctorName, lastUpdate, weekid) {
   const cardDiv = document.createElement("div");
   cardDiv.classList.add("col");
@@ -271,7 +260,6 @@ function addWeekButton() {
   addButtonContainer.appendChild(addButtonIcon);
 }
 
-
 //------------------------------------------------------------------------------------------------------------------------------
 //-------------------------------------------------------------------- Tasks ---------------------------------------------------
 //------------------------------------------------------------------------------------------------------------------------------
@@ -378,7 +366,6 @@ FeatchTask();
 
 
 
-
 // // change the text in page in id=page-h1-text
 // var pageH1Text = document.getElementById("page-h1-text-fullPage");
 // pageH1Text.textContent = subjects[search(subjects, id - 1)].subjectName;
@@ -396,18 +383,137 @@ FeatchTask();
 // var Weeks = subjects[search(subjects, id - 1)].weeks;
 // console.log("Weeks: " + search(subjects, id - 1));
 
-// Weeks.forEach((week) => {
-//   createWeeksCard(
-//     week.imgSrc,
-//     week.weekName,
-//     week.doctorName,
-//     week.lastUpdate,
-//     week.weekid
-//   );
-// });
+
+
+//------------------------------------------------------------------------------------------------------------------------------
+//-------------------------------------------------------------------- Announcement ---------------------------------------------------
+//------------------------------------------------------------------------------------------------------------------------------
+
+function appendNotification(mainTitle, description) {
+  const parentElement = document.getElementById("week-alerts-tab-parant");
+  const aElement = document.createElement("a");
+  aElement.classList.add(
+    "list-group-item",
+    "list-group-item-action",
+    "flex-column",
+    "align-items-start"
+  );
+
+  const divElement = document.createElement("div");
+  divElement.classList.add("d-flex", "w-100", "justify-content-between");
+
+  const h5Element = document.createElement("h5");
+  h5Element.classList.add("mb-1");
+  h5Element.textContent = mainTitle;
+
+  const smallElement = document.createElement("small");
+
+  divElement.appendChild(h5Element);
+
+  const pElement = document.createElement("p");
+  pElement.classList.add("mb-1");
+  pElement.textContent = description;
+
+  aElement.appendChild(divElement);
+  aElement.appendChild(pElement);
+
+  parentElement.appendChild(aElement);
+}
+
+function FeatchAnnouncement() {
+  console.log("Featch Announcement");
+  var formData = new FormData();
+  formData.append("CourceId", courseIdforcrearte);
+
+  var xhr = new XMLHttpRequest();
+  xhr.open(
+    "GET",
+    "https://localhost:44303/api/Announcement/GetAll?CourceId=" +
+      courseIdforcrearte
+  );
+  var token = "Bearer " + localStorage.getItem("token");
+  xhr.setRequestHeader("Authorization", token);
+
+  xhr.onreadystatechange = function () {
+    if (xhr.readyState === 4) {
+      if (xhr.status === 200) {
+        console.log("Featch Task successfully");
+      } else {
+        console.log("Featch Task filed creating course");
+      }
+    }
+  };
+  xhr.send(formData);
+  xhr.onload = function () {
+    console.log(xhr.responseText);
+    var obj = JSON.parse(xhr.responseText);
+
+    PrintAnnouncement(obj);
+  };
+}
+
+function PrintAnnouncement(obj) {
+  console.log("Featch  == Announcement");
+  console.log(obj);
+  obj.forEach((notification) => {
+    appendNotification(notification.title, notification.description);
+  });
+}
+
+function displayAddAnnouncement() {
+  addAnnouncementButton = document.getElementById("add-announcement-btn");
+  addAnnouncementButton.style.display = "block";
+}
+
+FeatchAnnouncement();
+
+function CreateAnnouncement() {
+  console.log("Create Announcement");
+  var title = document.getElementById("Announce-Title").value;
+  var description = document.getElementById("Announce-Description").value;
+
+  var formData = new FormData();
+
+  formData.append("Title", title);
+  formData.append("Description", description);
+  formData.append("CourceId", courseIdforcrearte);
+
+  var xhr = new XMLHttpRequest();
+  xhr.open("POST", "https://localhost:44303/api/Announcement/Create");
+  var token = "Bearer " + localStorage.getItem("token");
+  xhr.setRequestHeader("Authorization", token);
+
+  xhr.onreadystatechange = function () {
+    if (xhr.readyState === 4) {
+      if (xhr.status === 200) {
+        console.log("Course created successfully");
+      } else {
+        console.log("Error creating course");
+      }
+    }
+  };
+  xhr.send(formData);
+  xhr.onload = function () {
+    console.log(xhr.responseText);
+    var obj = JSON.parse(xhr.responseText);
+    console.log(obj);
+  };
+}
+
+
+
+
+
+
+
+
+
+
+
 
 if (userRole == "admin") {
   addWeekButton();
   createAddWeeksCard();
   createAddTaskCard();
+  displayAddAnnouncement();
 }
