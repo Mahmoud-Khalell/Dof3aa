@@ -12,6 +12,7 @@ namespace MyApi.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
+
     public class CourceController : ControllerBase
     {
         private readonly IUnitOfCode unit;
@@ -20,7 +21,9 @@ namespace MyApi.Controllers
         public CourceController(IUnitOfCode unit)
         {
             this.unit = unit;
+            
         }
+
 
         #region Create Cource
         [HttpPost("CreateCource")]
@@ -142,6 +145,8 @@ namespace MyApi.Controllers
         }
         #endregion
 
+        #region Remove all Cources
+
         [HttpDelete("RemoveAll")]
         public IActionResult RemoveAll()
         {
@@ -150,6 +155,66 @@ namespace MyApi.Controllers
                 unit.Cource.remove(c);
             return Ok();
         }
+
+        #endregion
+
+
+        #region Promote User
+        [HttpPost("Promote")]
+        [Authorize(AuthenticationSchemes = JwtBearerDefaults.AuthenticationScheme)]
+        public IActionResult Promote(int CourceId, string UserName)
+        {
+            if (CourceId == null || UserName == null)
+                return BadRequest();
+
+            var CurentUsername = User.Claims.FirstOrDefault(e => e.Type == "Username").Value;
+            if(CurentUsername==null)
+                return Unauthorized();
+            var Us=unit.UserGroup.GetByUserAndCource(CurentUsername, CourceId);
+            if(Us == null || Us.rule!=1)
+                return Unauthorized();
+
+            var US2= unit.UserGroup.GetByUserAndCource(UserName, CourceId);
+            if (US2 == null)
+                return BadRequest("User not found");
+            if (US2.rule == 1)
+                return BadRequest("User is already The creator");
+            US2.rule = 2;
+            unit.UserGroup.update(US2);
+            return Ok();
+
+        }
+
+        #endregion
+
+        #region Demote User
+        [HttpPost("Demote")]
+        [Authorize(AuthenticationSchemes = JwtBearerDefaults.AuthenticationScheme)]
+        public IActionResult Demote(int CourceId, string UserName)
+        {
+            if (CourceId == null || UserName == null)
+                return BadRequest();
+
+            var CurentUsername = User.Claims.FirstOrDefault(e => e.Type == "Username").Value;
+            if (CurentUsername == null)
+                return Unauthorized();
+            var Us = unit.UserGroup.GetByUserAndCource(CurentUsername, CourceId);
+            if (Us == null || Us.rule != 1)
+                return Unauthorized();
+
+            var US2 = unit.UserGroup.GetByUserAndCource(UserName, CourceId);
+            if (US2 == null)
+                return BadRequest("User not found");
+            if (US2.rule == 3)
+                return BadRequest("User is already a member");
+            if(US2.rule == 1)
+                return BadRequest("User is the creator");
+            US2.rule = 3;
+            unit.UserGroup.update(US2);
+            return Ok();
+
+        }
+        #endregion
 
 
     }

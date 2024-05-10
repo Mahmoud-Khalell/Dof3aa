@@ -2,6 +2,7 @@
 using Microsoft.AspNetCore.Hosting;
 
 using Microsoft.AspNetCore.SignalR;
+using System.IO;
 
 namespace MyApi.Services
 {
@@ -11,7 +12,7 @@ namespace MyApi.Services
         {
             var content=file.ContentType;
             content=content.Replace("/", "@");
-            var fileName = $"{Guid.NewGuid()}"+Path.GetFileName(file.FileName)+$"-{content}";
+            var fileName = $"{Guid.NewGuid()}"+Path.GetFileName(file.FileName);
             var filePath = Path.Combine(Directory.GetCurrentDirectory(), "wwwroot", fileName);
             using (var fileStream = new FileStream(filePath, FileMode.Create))
             {
@@ -27,15 +28,8 @@ namespace MyApi.Services
                 File.Delete(filePath);
             }
         }
-        public static IActionResult Getfile(string fileName)
-        {
-            var filePath = Path.Combine(Directory.GetCurrentDirectory(), "wwwroot", fileName);
-            var stream = System.IO.File.OpenRead(filePath);
-            
-            var contentType = fileName.Split('-').Last();
-            contentType = contentType.Replace("@", "/");
-            return new FileStreamResult(stream, contentType);
-        }
+        
+        
 
 
     }

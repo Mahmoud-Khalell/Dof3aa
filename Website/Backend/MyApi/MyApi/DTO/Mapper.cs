@@ -22,7 +22,7 @@ namespace MyApi.Services
         }
         #endregion
 
-        #region Cource2CourceDTO
+        #region courceDTO2Cource
         public static Cource CourceDTO2Cource(CourceDTO courceDTO)
         {
             var cource = new Cource();
@@ -36,6 +36,23 @@ namespace MyApi.Services
         }
         #endregion
 
+        #region cource2CourceDTO
+        public static CourceInfoDTO Cource2CourceInfoDTO(Cource cource)
+        {
+            var CourceInfo = new CourceInfoDTO();
+            CourceInfo.Id = cource.Id;
+            var titles = cource.Title.Split('@');
+            titles.Append("");
+            CourceInfo.Title = titles[0];
+            CourceInfo.SubTitle = titles[1];
+            CourceInfo.Description = cource.Description;
+            CourceInfo.Image = cource.ImageUrl;
+            CourceInfo.Logo = cource.LogoUrl;
+            CourceInfo.type = cource.type;
+            return CourceInfo;
+        }
+        #endregion
+
         #region user2UserDTO
         public static UserDTO User2UserDTO(AppUser user)
         {
@@ -44,7 +61,7 @@ namespace MyApi.Services
             userDTO.Email = user.Email;
             userDTO.firstName = user.FirstName;
             userDTO.lastName = user.LastName;
-            userDTO.Groups = user.UserGroups.Select(e => new { e.CourceId,e.Cource.Title, e.rule });
+            userDTO.Groups = user.UserGroups.Select(e => Cource2CourceInfoDTO(e.Cource));
             return userDTO;
         }
         #endregion

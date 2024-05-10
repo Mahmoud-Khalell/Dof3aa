@@ -36,5 +36,13 @@ namespace MyApi.Model.Repositories
             return user;
 
         }
+
+        public bool isExist(int id)
+        {
+            var group = GetById(id);
+            if (group == null)
+                return false;
+            return true;
+        }
     }
 }

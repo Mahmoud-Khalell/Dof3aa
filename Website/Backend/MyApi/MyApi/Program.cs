@@ -58,6 +58,10 @@ namespace MyApi
             builder.Services.AddScoped<IUnitOfCode,UnitOfCode>();
             builder.Services.AddScoped<ICource,CourceRepositiory>();
             builder.Services.AddScoped<IUserGroup,UserGroupRepository>();
+            builder.Services.AddScoped<IAnnouncement,AnnouncementRepository>();
+            builder.Services.AddScoped<INotification, MyApi.Model.Repositories.Notification>();
+            builder.Services.AddScoped<ITask, TaskRepository>();
+            builder.Services.AddScoped<IUserNotification, MyApi.Model.Repositories.UserNotification>();
 
             builder.Services.AddCors(e =>
                 {
@@ -77,7 +81,7 @@ namespace MyApi
              app.UseCors("MyPloicy");
             app.UseAuthentication();
             app.UseAuthorization();
-            
+            app.UseStaticFiles();
 
             app.MapControllers();
 

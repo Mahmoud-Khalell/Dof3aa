@@ -1,7 +1,20 @@
 {
   "Version": 1,
   "WorkspaceRootPath": "F:\\FCI\\Dof3aa\\Dof3aa\\Website\\Backend\\MyApi\\",
-  "Documents": [],
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{5FF05F6F-0AA1-47BC-8466-DD2319505E44}|MyApi\\MyApi.csproj|f:\\fci\\dof3aa\\dof3aa\\website\\backend\\myapi\\myapi\\controllers\\taskcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5FF05F6F-0AA1-47BC-8466-DD2319505E44}|MyApi\\MyApi.csproj|solutionrelative:myapi\\controllers\\taskcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5FF05F6F-0AA1-47BC-8466-DD2319505E44}|MyApi\\MyApi.csproj|f:\\fci\\dof3aa\\dof3aa\\website\\backend\\myapi\\myapi\\controllers\\courcecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5FF05F6F-0AA1-47BC-8466-DD2319505E44}|MyApi\\MyApi.csproj|solutionrelative:myapi\\controllers\\courcecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5FF05F6F-0AA1-47BC-8466-DD2319505E44}|MyApi\\MyApi.csproj|f:\\fci\\dof3aa\\dof3aa\\website\\backend\\myapi\\myapi\\services\\userservices.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5FF05F6F-0AA1-47BC-8466-DD2319505E44}|MyApi\\MyApi.csproj|solutionrelative:myapi\\services\\userservices.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
   "DocumentGroupContainers": [
     {
       "Orientation": 0,
@@ -9,11 +22,50 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": -1,
+          "SelectedChildIndex": 1,
           "Children": [
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{3ae79031-e1bc-11d0-8f78-00a0c9110057}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "TaskController.cs",
+              "DocumentMoniker": "F:\\FCI\\Dof3aa\\Dof3aa\\Website\\Backend\\MyApi\\MyApi\\Controllers\\TaskController.cs",
+              "RelativeDocumentMoniker": "MyApi\\Controllers\\TaskController.cs",
+              "ToolTip": "F:\\FCI\\Dof3aa\\Dof3aa\\Website\\Backend\\MyApi\\MyApi\\Controllers\\TaskController.cs",
+              "RelativeToolTip": "MyApi\\Controllers\\TaskController.cs",
+              "ViewState": "AQIAABMAAAAAAAAAAAAQwI0AAAASAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-10T10:58:11.831Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "CourceController.cs",
+              "DocumentMoniker": "F:\\FCI\\Dof3aa\\Dof3aa\\Website\\Backend\\MyApi\\MyApi\\Controllers\\CourceController.cs",
+              "RelativeDocumentMoniker": "MyApi\\Controllers\\CourceController.cs",
+              "ToolTip": "F:\\FCI\\Dof3aa\\Dof3aa\\Website\\Backend\\MyApi\\MyApi\\Controllers\\CourceController.cs",
+              "RelativeToolTip": "MyApi\\Controllers\\CourceController.cs",
+              "ViewState": "AQIAAKAAAAAAAAAAAAAAANoAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-10T10:41:12.529Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "UserServices.cs",
+              "DocumentMoniker": "F:\\FCI\\Dof3aa\\Dof3aa\\Website\\Backend\\MyApi\\MyApi\\Services\\UserServices.cs",
+              "RelativeDocumentMoniker": "MyApi\\Services\\UserServices.cs",
+              "ToolTip": "F:\\FCI\\Dof3aa\\Dof3aa\\Website\\Backend\\MyApi\\MyApi\\Services\\UserServices.cs",
+              "RelativeToolTip": "MyApi\\Services\\UserServices.cs",
+              "ViewState": "AQIAAAEAAAAAAAAAAAAiwAoAAAA+AAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-10T09:59:44.05Z",
+              "EditorCaption": ""
             }
           ]
         }
