@@ -9,7 +9,7 @@
         public string Image { get; set; }
         public string Logo { get; set; }
         public int type { get; set; }
-
+        
 
     }
 }

@@ -15,13 +15,14 @@ namespace MyApi.Model.Repositories
         }
         public Cource GetById(int? id)
         {
-            var group=connector.Cources.Include(e=>e.UserGroups).FirstOrDefault(e=>e.Id==id);
+            var group=connector.Cources.Include(e=>e.UserGroups).Include(e=>e.Announcements).Include(e=>e.Tasks).Include(e=>e.Topics).FirstOrDefault(e=>e.Id==id);
             return group;
 
         }
         public List<Cource> GetAll()
         {
-            return connector.Cources.Include(e => e.UserGroups).ToList();
+            return  connector.Cources.Include(e => e.UserGroups).Include(e => e.Announcements).Include(e => e.Tasks).Include(e => e.Topics).ToList();
+
         }
         public AppUser GetCreator(int CourceId)
         {

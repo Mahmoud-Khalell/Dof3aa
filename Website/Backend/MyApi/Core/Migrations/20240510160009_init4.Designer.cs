@@ -4,6 +4,7 @@ using Core.Context;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 #nullable disable
@@ -11,9 +12,10 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace Core.Migrations
 {
     [DbContext(typeof(Connector))]
-    partial class ConnectorModelSnapshot : ModelSnapshot
+    [Migration("20240510160009_init4")]
+    partial class init4
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -190,17 +192,11 @@ namespace Core.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<DateTime?>("PublishDate")
-                        .HasColumnType("datetime2");
-
                     b.Property<string>("Title")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<int>("TopicId")
-                        .HasColumnType("int");
-
-                    b.Property<int?>("Type")
                         .HasColumnType("int");
 
                     b.HasKey("Id");
@@ -287,9 +283,6 @@ namespace Core.Migrations
 
                     b.Property<int>("CourseId")
                         .HasColumnType("int");
-
-                    b.Property<DateTime?>("CretaedAt")
-                        .HasColumnType("datetime2");
 
                     b.Property<string>("Description")
                         .IsRequired()
@@ -488,7 +481,7 @@ namespace Core.Migrations
             modelBuilder.Entity("Core.entities.Announcement", b =>
                 {
                     b.HasOne("Core.entities.Cource", "Cource")
-                        .WithMany("Announcements")
+                        .WithMany()
                         .HasForeignKey("CourceId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
@@ -529,7 +522,7 @@ namespace Core.Migrations
             modelBuilder.Entity("Core.entities.task", b =>
                 {
                     b.HasOne("Core.entities.Cource", "Cource")
-                        .WithMany("Tasks")
+                        .WithMany()
                         .HasForeignKey("CourceId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
@@ -548,7 +541,7 @@ namespace Core.Migrations
             modelBuilder.Entity("Core.entities.Topic", b =>
                 {
                     b.HasOne("Core.entities.Cource", "Cource")
-                        .WithMany("Topics")
+                        .WithMany()
                         .HasForeignKey("CourseId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
@@ -652,12 +645,6 @@ namespace Core.Migrations
 
             modelBuilder.Entity("Core.entities.Cource", b =>
                 {
-                    b.Navigation("Announcements");
-
-                    b.Navigation("Tasks");
-
-                    b.Navigation("Topics");
-
                     b.Navigation("UserGroups");
                 });
 

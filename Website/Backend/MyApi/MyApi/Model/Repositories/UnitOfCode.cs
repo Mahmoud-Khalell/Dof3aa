@@ -14,6 +14,8 @@ namespace MyApi.Model.Repositories
         public INotification Notification { get; set; }
         public IUserNotification UserNotification { get; set; }
         public IAnnouncement Announcement { get; set; }
+        public ITopic Topic { get ; set; }
+        public Imaterial Material { get ; set ; }
 
         public UnitOfCode
             (
@@ -24,8 +26,11 @@ namespace MyApi.Model.Repositories
                 ITask task,
                 INotification notification,
                 IUserNotification userNotification,
-                IAnnouncement announcement
-             
+                IAnnouncement announcement,
+                ITopic topic,
+                Imaterial material
+
+
             )
         {
             UserManager = userManager;
@@ -36,6 +41,9 @@ namespace MyApi.Model.Repositories
             Notification = notification;
             UserNotification = userNotification;
             Announcement = announcement;
+            Topic = topic;
+            Material = material;
+
 
         }
     }

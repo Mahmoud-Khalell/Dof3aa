@@ -145,19 +145,7 @@ namespace MyApi.Controllers
         }
         #endregion
 
-        #region Remove all Cources
-
-        [HttpDelete("RemoveAll")]
-        public IActionResult RemoveAll()
-        {
-            var crs = unit.Cource.GetAll();
-            foreach (var c in crs)
-                unit.Cource.remove(c);
-            return Ok();
-        }
-
-        #endregion
-
+        
 
         #region Promote User
         [HttpPost("Promote")]
@@ -216,6 +204,33 @@ namespace MyApi.Controllers
         }
         #endregion
 
+        [HttpGet("GetInfo")]
+        [Authorize(AuthenticationSchemes = JwtBearerDefaults.AuthenticationScheme)]
+        public IActionResult GetInfo(int CourceId)
+        {
 
+            var CurentUsername = User.Claims.FirstOrDefault(e => e.Type == "Username").Value;
+            if (CurentUsername == null)
+                return Unauthorized();
+            var Us = unit.UserGroup.GetByUserAndCource(CurentUsername, CourceId);
+            if (Us == null)
+                return Unauthorized();
+            var Cource = unit.Cource.GetById(CourceId);
+            if (Cource == null)
+                return BadRequest("Cource not found");
+            var res = new
+            {
+                CourceInfo = Mapper.Cource2CourceInfoDTO(Cource),
+                Users = Cource.UserGroups.Select(x=>new
+                {
+                    username=x.Username,
+                    name=x.User.FirstName + " " + x.User.LastName,
+                    rule = x.rule,
+                    ImageUrl= x.User.ImageUrl
+
+                })
+            };
+            return Ok(res);
+        }
     }
 }

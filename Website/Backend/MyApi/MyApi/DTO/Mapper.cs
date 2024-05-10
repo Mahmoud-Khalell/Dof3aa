@@ -1,13 +1,17 @@
-﻿using Core.entities;
+﻿using Core.Context;
+using Core.entities;
 using MyApi.DTO;
 using MyApi.DTO.Announcment;
+using MyApi.DTO.Material;
 using MyApi.DTO.Task;
+using MyApi.DTO.Topic;
 using System.Data;
 
 namespace MyApi.Services
 {
     public class Mapper
     {
+        
         #region RegisterationDTO2User
         public static AppUser RegisDTO2User(RegisterationDTO registerationDTO)
         {
@@ -114,5 +118,72 @@ namespace MyApi.Services
             return taskInfo;
         }
         #endregion
+
+        #region TaskDTO2Task
+        public static Topic TopicDTO2Topic(NewTopicDTO topicDTO)
+        {
+            var topic = new Topic();
+            topic.Title = topicDTO.Title;
+            topic.Description = topicDTO.Description;
+            topic.ImageUrl = DocumentServices.Uploadfile(topicDTO.Image);
+            topic.CourseId = topicDTO.CourceId;
+            topic.CretaedAt = System.DateTime.Now;
+            
+            return topic;
+        }
+        #endregion
+
+        #region Topic2TopicInfo
+        public static TopicInfo Topic2TopicInfo(Topic topic)
+        {
+            var topicInfo = new TopicInfo();
+            topicInfo.Id = topic.Id;
+            topicInfo.Title = topic.Title;
+            topicInfo.Description = topic.Description;
+            topicInfo.ImageUrl = topic.ImageUrl;
+            topicInfo.CourceId = topic.CourseId;
+            topicInfo.LastUpdate = topic.CretaedAt;
+            var LastUpdate=topic.Materials.Select(e=>e.PublishDate   ).Max();
+            if(LastUpdate != null && LastUpdate >topicInfo.LastUpdate)
+            {
+                topicInfo.LastUpdate = LastUpdate;
+            }
+            topicInfo.Materials = topic.Materials.Select(e => Material2MaterialInfo(e)).ToList();
+            return topicInfo;
+        }
+        #endregion
+
+        #region NewMaterialDTO2Material
+        internal static Material NewMaterialDTO2Material(NewMaterialDTO newMaterialDTO)
+        {
+            var material = new Material();
+            material.Title = newMaterialDTO.Title;
+            material.Description = newMaterialDTO.Description;
+            material.FileUrl = DocumentServices.Uploadfile(newMaterialDTO.Saurce);
+            material.Type = newMaterialDTO.Type;
+            material.TopicId = newMaterialDTO.TopicId;
+            material.PublishDate = System.DateTime.Now;
+
+            return material;
+
+        }
+        #endregion
+
+        #region Material2MaterialInfo
+        public static Material_Info Material2MaterialInfo(Material material)
+        {
+            var materialInfo = new Material_Info();
+            materialInfo.Id = material.Id;
+            materialInfo.Title = material.Title;
+            materialInfo.Description = material.Description;
+            materialInfo.SaurceUrl = material.FileUrl;
+            materialInfo.Type = material.Type;
+            materialInfo.TopicId = material.TopicId;
+            materialInfo.CreatedAt = material.PublishDate;
+            
+            return materialInfo;
+        }
+        #endregion
+
     }
 }

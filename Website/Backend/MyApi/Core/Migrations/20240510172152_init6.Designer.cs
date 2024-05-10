@@ -4,6 +4,7 @@ using Core.Context;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 #nullable disable
@@ -11,9 +12,10 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace Core.Migrations
 {
     [DbContext(typeof(Connector))]
-    partial class ConnectorModelSnapshot : ModelSnapshot
+    [Migration("20240510172152_init6")]
+    partial class init6
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -488,7 +490,7 @@ namespace Core.Migrations
             modelBuilder.Entity("Core.entities.Announcement", b =>
                 {
                     b.HasOne("Core.entities.Cource", "Cource")
-                        .WithMany("Announcements")
+                        .WithMany()
                         .HasForeignKey("CourceId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
@@ -529,7 +531,7 @@ namespace Core.Migrations
             modelBuilder.Entity("Core.entities.task", b =>
                 {
                     b.HasOne("Core.entities.Cource", "Cource")
-                        .WithMany("Tasks")
+                        .WithMany()
                         .HasForeignKey("CourceId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
@@ -548,7 +550,7 @@ namespace Core.Migrations
             modelBuilder.Entity("Core.entities.Topic", b =>
                 {
                     b.HasOne("Core.entities.Cource", "Cource")
-                        .WithMany("Topics")
+                        .WithMany()
                         .HasForeignKey("CourseId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
@@ -652,12 +654,6 @@ namespace Core.Migrations
 
             modelBuilder.Entity("Core.entities.Cource", b =>
                 {
-                    b.Navigation("Announcements");
-
-                    b.Navigation("Tasks");
-
-                    b.Navigation("Topics");
-
                     b.Navigation("UserGroups");
                 });
 

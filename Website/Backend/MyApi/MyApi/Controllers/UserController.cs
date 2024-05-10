@@ -12,6 +12,7 @@ using System.Text;
 using MyApi.Services;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.AspNetCore.Cors;
+using MyApi.Model.Repositories;
 namespace MyApi.Controllers
 {
     [Route("api/[controller]")]
@@ -111,31 +112,7 @@ namespace MyApi.Controllers
             return Ok(token);
         }
         #endregion
-
-        #region Get All Users
-        [HttpGet("GetAll")]
-        [Authorize(AuthenticationSchemes =JwtBearerDefaults.AuthenticationScheme)]
-        public IActionResult GetAll()
-        {
-           var users= unit.UserManager.Users.ToList();
-            return Ok(users);
-        }
-
-        #endregion
-
-        #region Remove All Users
-        [HttpGet("RemoveAll")]
-        public async Task<IActionResult> RemoveAll()
-        {
-            var users= unit.UserManager.Users.ToList();
-            foreach (var user in users)
-            {
-                await unit.UserManager.DeleteAsync(user);
-                DocumentServices.DeleteFile(user.ImageUrl);
-            }
-            return Ok();
-        }
-        #endregion
+        
 
         #region Get User Info
         [HttpGet("GetUserInfo")]
@@ -152,7 +129,21 @@ namespace MyApi.Controllers
         #endregion
 
 
+        [HttpGet("GetRoles")]
+        [Authorize(AuthenticationSchemes = JwtBearerDefaults.AuthenticationScheme)]
+        public IActionResult GetRole(int CourceId)
+        {
+            var userame = UserServices.WhoAmI(User.Claims);
+            if (userame == null)
+                return Unauthorized();
+            
+            var US = unit.UserGroup.GetByUserAndCource(userame, CourceId);
+            if (US == null)
+                return Ok(4);
+            return Ok(US.rule);
 
+        }
+       
 
 
 
