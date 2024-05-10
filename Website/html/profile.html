@@ -44,7 +44,7 @@
                     id="navbarSupportedContent">
                     <a class="navbar-brand fw-bold" href="#">
                         <i class>
-                            <img src="../assets/images/logo.png" alt="logo"
+                            <img id="ProfilePicNavBar" src="../assets/images/logo.png" alt="logo"
                                 style="width: 30px; margin-bottom: 4px;">
                         </i>
                         <span>DoF3aa</span>
@@ -146,12 +146,15 @@
                         </div>
                         <div class="user-info">
                             <div class="user-avatar">
-                                <a class="edit-avatar" href="#"></a><img
+                                <a class="edit-avatar" href="#"></a><img id="ProfileImage"
                                     src="../assets/images/Profile.png"
                                     alt="User"></div>
                             <div class="user-data">
-                                <h4>Mohamed Badawy </h4>
-                                <span>Joined october
+                                <h4 id="ProfileUserName">Mohamed Badawy </h4>
+                                <h4 id="ProfileName"
+                                    style="font-size: medium;">Mohamed Badawy
+                                </h4>
+                                <span id="ProfileEmail">Joined october
                                     15,
                                     2002</span>
                             </div>
@@ -299,7 +302,7 @@
                                     class="form-label">Group
                                     Description *</label>
                                 <textarea class="form-control" required
-                                    id="material-description"
+                                    id="Group-description"
                                     placeholder="Group Description"
                                     rows="3"></textarea>
                             </div>
@@ -310,31 +313,31 @@
                                     type *</label>
 
                                 <select class="form-select"
-                                    id="material-type"
+                                    id="Group-type"
                                     required>
-                                    <option value="General">General</option>
-                                    <option value="Lecture">Lecture</option>
-                                    <option value="Section">Section</option>
+                                    <option value="0">General</option>
+                                    <option value="1">Lecture</option>
+                                    <option value="2">Section</option>
                                 </select>
                             </div>
 
                             <div class="mb-3">
-                                <label for="material-file"
+                                <label for="courseImage"
                                     class="form-label">Group
                                     Image *</label>
                                 <input class="form-control" type="file"
-                                    id="material-file" required>
+                                    id="courseImage" required>
                             </div>
 
                             <div class="mb-3">
-                                <label for="material-file"
+                                <label for="courseLogo"
                                     class="form-label">Group
                                     Logo *</label>
                                 <input class="form-control" type="file"
-                                    id="material-file" required>
+                                    id="courseLogo" required>
                             </div>
 
-                            <button type="submit"
+                            <button type="button" onclick="createCourse()"
                                 class="btn btn-primary">Submit</button>
                         </form>
 
