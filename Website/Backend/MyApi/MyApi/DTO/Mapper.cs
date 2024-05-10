@@ -37,7 +37,7 @@ namespace MyApi.Services
             return cource;
         }
         #endregion
-<<<<<<< HEAD
+
 
         #region cource2CourceDTO
         public static CourceInfoDTO Cource2CourceInfoDTO(Cource cource)
@@ -56,10 +56,8 @@ namespace MyApi.Services
         }
         #endregion
 
-=======
         
         
->>>>>>> f5b0233294e77d387542e9344ea3e54317c888dc
         #region user2UserDTO
         public static UserDTO User2UserDTO(AppUser user)
         {
@@ -68,19 +66,11 @@ namespace MyApi.Services
             userDTO.Email = user.Email;
             userDTO.firstName = user.FirstName;
             userDTO.lastName = user.LastName;
-<<<<<<< HEAD
-            userDTO.Groups = user.UserGroups.Select(e => Cource2CourceInfoDTO(e.Cource));
-=======
-            
-            userDTO.Groups = user.UserGroups.Select(e => new 
-            {
-                e.CourceId,
-                title = e.Cource.Title.Split('@')[0],
-                subtitle = e.Cource.Title.Split('@')[1],
 
-                e.rule 
-            });
->>>>>>> f5b0233294e77d387542e9344ea3e54317c888dc
+            userDTO.Groups = user.UserGroups.Select(e => Cource2CourceInfoDTO(e.Cource)).ToList();
+
+            
+            
             return userDTO;
         }
         #endregion
