@@ -364,8 +364,6 @@ function PrintTask(obj) {
 
 FeatchTask();
 
-
-
 // // change the text in page in id=page-h1-text
 // var pageH1Text = document.getElementById("page-h1-text-fullPage");
 // pageH1Text.textContent = subjects[search(subjects, id - 1)].subjectName;
@@ -382,8 +380,6 @@ FeatchTask();
 
 // var Weeks = subjects[search(subjects, id - 1)].weeks;
 // console.log("Weeks: " + search(subjects, id - 1));
-
-
 
 //------------------------------------------------------------------------------------------------------------------------------
 //-------------------------------------------------------------------- Announcement ---------------------------------------------------
@@ -467,7 +463,7 @@ function displayAddAnnouncement() {
 
 FeatchAnnouncement();
 
-function CreateAnnouncement() {
+function CreateAnnounce() {
   console.log("Create Announcement");
   var title = document.getElementById("Announce-Title").value;
   var description = document.getElementById("Announce-Description").value;
@@ -487,6 +483,7 @@ function CreateAnnouncement() {
     if (xhr.readyState === 4) {
       if (xhr.status === 200) {
         console.log("Course created successfully");
+        location.reload();
       } else {
         console.log("Error creating course");
       }
@@ -499,17 +496,6 @@ function CreateAnnouncement() {
     console.log(obj);
   };
 }
-
-
-
-
-
-
-
-
-
-
-
 
 if (userRole == "admin") {
   addWeekButton();
