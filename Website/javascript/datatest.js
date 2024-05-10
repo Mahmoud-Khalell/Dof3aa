@@ -1,4 +1,46 @@
 
+var taskApitest = [
+  {
+    taskName: "Lab Sheet #1",
+    description:
+      "1. Write a C# program that prints the data of an array in reverse order.",
+    deadline: new Date("2024-11-10T12:00:00"),
+    matrialLink:
+      "https://drive.google.com/file/d/1hQeIBh4E9DRi6T_-uRiUvT34uka19md-/view?usp=sharing",
+  },
+  {
+    taskName: "Lab Sheet #2",
+    description:
+      "2. Write a program that takes (mxn) 2 metrices from user and print.",
+    deadline: new Date("2024-11-10T12:00:00"),
+    matrialLink:
+      "https://drive.google.com/file/d/1hQeIBh4E9DRi6T_-uRiUvT34uka19md-/view?usp=sharing",
+  },
+  {
+    taskName: "Lab Sheet #3",
+    description:
+      "3. Write a program that takes a string from usint the number of vowels in it.",
+    deadline: new Date("2026-11-10T12:00:00"),
+    matrialLink:
+      "https://drive.google.com/file/d/1hQeIBh4E9DRi6T_-uRiUvT34uka19md-/view?usp=sharing",
+  },
+  {
+    taskName: "Lab Sheet #4",
+    description:
+      "4. Write a program that takes a number from user and print the sum of digits.",
+    deadline: new Date("2022-11-10T12:00:00"),
+    matrialLink:
+      "https://drive.google.com/file/d/1hQeIBh4E9DRi6T_-uRiUvT34uka19md-/view?usp=sharing",
+  },
+  {
+    taskName: "Lab Sheet #5",
+    description:
+      "5. Write a program that takes a number from user and print the sum of digits.",
+    deadline: new Date("2022-11-10T12:00:00"),
+    matrialLink:
+      "https://drive.google.com/file/d/1hQeIBh4E9DRi6T_-uRiUvT34uka19md-/view?usp=sharing",
+  },
+];
 
 var subjects = [
 

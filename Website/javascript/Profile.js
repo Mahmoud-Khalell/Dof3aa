@@ -34,9 +34,9 @@ FeatchData();
 
 function LoadProfileData(obj) {
   document.getElementById("ProfileUserName").textContent = obj.userName;
-  // document.getElementById("ProfilePicNavBar").textContent = obj.userName;
-  document.getElementById("ProfileImage").src =
-    "https://localhost:44303/2b169a46-6ca8-4e61-85db-39fdb0e3025096737157.png";
+  document.getElementById("ProfilePicNavBar").src = domain + obj.imageUrl;
+  console.log(domain + obj.imageUrl);
+  document.getElementById("ProfileImage").src = domain + obj.imageUrl;
   document.getElementById("ProfileName").textContent =
     "( " + obj.firstName + " " + obj.lastName + " )";
   document.getElementById("ProfileEmail").textContent = obj.email;
@@ -45,15 +45,15 @@ function LoadProfileData(obj) {
 
 function LoadCoursesData(obj) {
   obj.forEach((element) => {
-    if (element.rule == 1) {
+    if (element.rule === 1) {
+      const course = element.cource; // Access the course
       createCard(
-        domain + element.course.image,
-        element.course.title,
-        element.course.subTitle,
-        element.course.id
+        domain + course.image, // Assume domain as "https://example.com/"
+        course.title,
+        course.subTitle,
+        course.id
       );
     }
-
   });
 }
 

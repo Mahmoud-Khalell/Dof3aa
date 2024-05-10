@@ -157,15 +157,18 @@ function LoadCoursesData(obj) {
   var countOfCourses = 0,
     countOfSections = 0,
     countOfGeneral = 0;
+  // console.log(obj);
+  //  console.log(obj.cource);
   obj.forEach((element) => {
+    const course = element.cource;
     if (element.id == 1) {
       countOfCourses++;
       createCardLecture(
-        element.id,
-        domain + element.image,
-        element.title,
-        element.subTitle,
-        element.description,
+        course.id,
+        domain + course.image,
+        course.title,
+        course.subTitle,
+        course.description,
         "",
         "Last updated 3 mins ago",
         "main-course-div"
@@ -173,11 +176,11 @@ function LoadCoursesData(obj) {
     } else if (element.id == 1) {
       countOfSections++;
       createCardLecture(
-        element.id,
-        domain + element.image,
-        element.title,
-        element.subTitle,
-        element.description,
+        course.id,
+        domain + course.image,
+        course.title,
+        course.subTitle,
+        course.description,
         "",
         "Last updated 3 mins ago",
         "main-section-div"
@@ -185,11 +188,11 @@ function LoadCoursesData(obj) {
     } else {
       countOfGeneral++;
       createCardLecture(
-        element.id,
-        domain + element.image,
-        element.title,
-        element.subTitle,
-        element.description,
+        course.id,
+        domain + course.image,
+        course.title,
+        course.subTitle,
+        course.description,
         "",
         "Last updated 3 mins ago",
         "main-general-div"
