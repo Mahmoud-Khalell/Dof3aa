@@ -3,6 +3,14 @@
   "WorkspaceRootPath": "F:\\FCI\\Dof3aa\\Dof3aa\\Website\\Backend\\MyApi\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{5FF05F6F-0AA1-47BC-8466-DD2319505E44}|MyApi\\MyApi.csproj|f:\\fci\\dof3aa\\dof3aa\\website\\backend\\myapi\\myapi\\dto\\mapper.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5FF05F6F-0AA1-47BC-8466-DD2319505E44}|MyApi\\MyApi.csproj|solutionrelative:myapi\\dto\\mapper.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5FF05F6F-0AA1-47BC-8466-DD2319505E44}|MyApi\\MyApi.csproj|f:\\fci\\dof3aa\\dof3aa\\website\\backend\\myapi\\myapi\\dto\\user\\userdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5FF05F6F-0AA1-47BC-8466-DD2319505E44}|MyApi\\MyApi.csproj|solutionrelative:myapi\\dto\\user\\userdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{5FF05F6F-0AA1-47BC-8466-DD2319505E44}|MyApi\\MyApi.csproj|f:\\fci\\dof3aa\\dof3aa\\website\\backend\\myapi\\myapi\\controllers\\taskcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{5FF05F6F-0AA1-47BC-8466-DD2319505E44}|MyApi\\MyApi.csproj|solutionrelative:myapi\\controllers\\taskcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
@@ -23,12 +31,38 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
+              "Title": "Mapper.cs",
+              "DocumentMoniker": "F:\\FCI\\Dof3aa\\Dof3aa\\Website\\Backend\\MyApi\\MyApi\\DTO\\Mapper.cs",
+              "RelativeDocumentMoniker": "MyApi\\DTO\\Mapper.cs",
+              "ToolTip": "F:\\FCI\\Dof3aa\\Dof3aa\\Website\\Backend\\MyApi\\MyApi\\DTO\\Mapper.cs",
+              "RelativeToolTip": "MyApi\\DTO\\Mapper.cs",
+              "ViewState": "AQIAAD8AAAAAAAAAAAAzwEMAAAAnAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-10T15:00:54.999Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "UserDTO.cs",
+              "DocumentMoniker": "F:\\FCI\\Dof3aa\\Dof3aa\\Website\\Backend\\MyApi\\MyApi\\DTO\\User\\UserDTO.cs",
+              "RelativeDocumentMoniker": "MyApi\\DTO\\User\\UserDTO.cs",
+              "ToolTip": "F:\\FCI\\Dof3aa\\Dof3aa\\Website\\Backend\\MyApi\\MyApi\\DTO\\User\\UserDTO.cs",
+              "RelativeToolTip": "MyApi\\DTO\\User\\UserDTO.cs",
+              "ViewState": "AQIAAAIAAAAAAAAAAAAxwAkAAAAsAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-10T14:53:45.303Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
               "Title": "TaskController.cs",
               "DocumentMoniker": "F:\\FCI\\Dof3aa\\Dof3aa\\Website\\Backend\\MyApi\\MyApi\\Controllers\\TaskController.cs",
               "RelativeDocumentMoniker": "MyApi\\Controllers\\TaskController.cs",
               "ToolTip": "F:\\FCI\\Dof3aa\\Dof3aa\\Website\\Backend\\MyApi\\MyApi\\Controllers\\TaskController.cs",
               "RelativeToolTip": "MyApi\\Controllers\\TaskController.cs",
-              "ViewState": "AQIAACUAAAAAAAAAAAAuwDQAAAAmAAAA",
+              "ViewState": "AQIAACUAAAAAAAAAAAAuwC8AAABEAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-05-10T13:47:22.495Z",
               "EditorCaption": ""
