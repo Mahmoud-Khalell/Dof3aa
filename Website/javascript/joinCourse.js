@@ -61,45 +61,52 @@ document.addEventListener("keyup", function (event) {
     input_4.value +
     input_5.value +
     input_6.value;
-  console.log(allInputs);
+  // console.log(allInputs);
 });
 
 // convert to string to integer allInputs = parseInt(allInputs);
-
-var courseIntID = parseInt(allInputs);
 
 function sendtodatabasse() {
   //   showloading();
   //   setTimeout(() => {
   //     hideloading();
   //   }, 1000);
-    var formData = new FormData();
-    formData.append("courseId", courseIntID);
-    
+  var courseIntID = parseInt(allInputs);
+
+  var formData = new FormData();
+  formData.append("CourceId", courseIntID);
+
+  console.log("All input: " + allInputs);
+  console.log("parse: " + (courseIntID + 2));
+
   var xhr = new XMLHttpRequest();
-  xhr.open("GET", "https://localhost:44303/api/User/GetUserInfo");
+  xhr.open(
+    "GET",
+    "https://localhost:44303/api/Cource/Join?CourceId=" + allInputs,
+    true
+  );
   var token = "Bearer " + localStorage.getItem("token");
   xhr.setRequestHeader("Authorization", token);
 
   xhr.onreadystatechange = function () {
     if (xhr.readyState === 4) {
       if (xhr.status === 200) {
-        console.log("Course created successfully");
+        console.log("Course join successfully");
       } else {
-        console.log("Error creating course");
+        console.log("Error join course");
       }
+      console.log("xhr.status: " + xhr.status);
+      console.log("xhr.responseText: " + xhr.responseText);
+      // print Response body
     }
   };
 
   xhr.send(formData);
+
   xhr.onload = function () {
+    console.log("xhr.status");
     console.log(xhr.responseText);
-    // xhr.responseText to object
-    var obj = JSON.parse(xhr.responseText);
-    console.log(obj);
-    console.log(obj.groups);
-    LoadProfileData(obj);
-    LoadCoursesData(obj.groups);
-    };
-    
+  };
+
+  
 }
