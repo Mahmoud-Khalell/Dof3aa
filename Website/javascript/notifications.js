@@ -18,7 +18,7 @@ GETrequest();
 
 //postrequest();
 
-function appendNotification(parentId, mainTitle, date, imgSrc) {
+function appendNotification(parentId, mainTitle, date, user, imgSrc) {
   const parentElement = document.getElementById(parentId);
   const notificationDiv = document.createElement("div");
   notificationDiv.classList.add(
@@ -43,7 +43,8 @@ function appendNotification(parentId, mainTitle, date, imgSrc) {
   titleDiv.textContent = mainTitle;
   const descriptionDiv = document.createElement("div");
   descriptionDiv.classList.add("small");
-  descriptionDiv.textContent = "description";
+  descriptionDiv.textContent =
+    "By : " + user + " in : " + date.split("T")[0];
   contentDiv.appendChild(titleDiv);
   contentDiv.appendChild(descriptionDiv);
 
@@ -82,9 +83,8 @@ function appendNotification(parentId, mainTitle, date, imgSrc) {
   btnGroupDiv.appendChild(dropdownMenuDiv);
 
   const dateDiv = document.createElement("div");
-    dateDiv.classList.add("text-right", "text-muted", "pt-1");
-    // 
-
+  dateDiv.classList.add("text-right", "text-muted", "pt-1");
+  //
 
   dateDiv.textContent = convertDateToTimeAgo(date);
 
@@ -99,36 +99,35 @@ function appendNotification(parentId, mainTitle, date, imgSrc) {
   parentElement.appendChild(notificationDiv);
 }
 
-
 function convertDateToTimeAgo(date) {
-    const currentDate = new Date();
-    const timestamp = Date.parse(date);
-    const timeDifference = currentDate - timestamp;
+  const currentDate = new Date();
+  const timestamp = Date.parse(date);
+  const timeDifference = currentDate - timestamp;
 
-    const minuteInMilliseconds = 60 * 1000;
-    const hourInMilliseconds = 60 * minuteInMilliseconds;
-    const dayInMilliseconds = 24 * hourInMilliseconds;
-    const monthInMilliseconds = 30 * dayInMilliseconds;
-    const yearInMilliseconds = 365 * dayInMilliseconds;
+  const minuteInMilliseconds = 60 * 1000;
+  const hourInMilliseconds = 60 * minuteInMilliseconds;
+  const dayInMilliseconds = 24 * hourInMilliseconds;
+  const monthInMilliseconds = 30 * dayInMilliseconds;
+  const yearInMilliseconds = 365 * dayInMilliseconds;
 
-    if (timeDifference < minuteInMilliseconds) {
-        return "Just now";
-    } else if (timeDifference < hourInMilliseconds) {
-        const minutes = Math.floor(timeDifference / minuteInMilliseconds);
-        return `${minutes} m${minutes > 1 ? "s" : ""} ago`;
-    } else if (timeDifference < dayInMilliseconds) {
-        const hours = Math.floor(timeDifference / hourInMilliseconds);
-        return `${hours} h${hours > 1 ? "s" : ""} ago`;
-    } else if (timeDifference < monthInMilliseconds) {
-        const days = Math.floor(timeDifference / dayInMilliseconds);
-        return `${days} d${days > 1 ? "s" : ""} ago`;
-    } else if (timeDifference < yearInMilliseconds) {
-        const months = Math.floor(timeDifference / monthInMilliseconds);
-        return `${months} M${months > 1 ? "s" : ""} ago`;
-    } else {
-        const years = Math.floor(timeDifference / yearInMilliseconds);
-        return `${years} y${years > 1 ? "s" : ""} ago`;
-    }
+  if (timeDifference < minuteInMilliseconds) {
+    return "Just now";
+  } else if (timeDifference < hourInMilliseconds) {
+    const minutes = Math.floor(timeDifference / minuteInMilliseconds);
+    return `${minutes} m${minutes > 1 ? "s" : ""} ago`;
+  } else if (timeDifference < dayInMilliseconds) {
+    const hours = Math.floor(timeDifference / hourInMilliseconds);
+    return `${hours} h${hours > 1 ? "s" : ""} ago`;
+  } else if (timeDifference < monthInMilliseconds) {
+    const days = Math.floor(timeDifference / dayInMilliseconds);
+    return `${days} d${days > 1 ? "s" : ""} ago`;
+  } else if (timeDifference < yearInMilliseconds) {
+    const months = Math.floor(timeDifference / monthInMilliseconds);
+    return `${months} M${months > 1 ? "s" : ""} ago`;
+  } else {
+    const years = Math.floor(timeDifference / yearInMilliseconds);
+    return `${years} y${years > 1 ? "s" : ""} ago`;
+  }
 }
 
 function FeatchNotifcation() {

@@ -4,7 +4,7 @@ var weekid = urlParams.get("id");
 //test varables
 var userRole = "admin";
 
-function createCard(cardTitle, description, type, imgSrc, link) {
+function createCard(cardTitle, description, type, link) {
   const parentDiv = document.getElementById("main-material-div");
 
   const colDiv = document.createElement("div");
@@ -33,28 +33,28 @@ function createCard(cardTitle, description, type, imgSrc, link) {
   cardDiv.appendChild(cardImageDiv);
   cardDiv.appendChild(cardDescriptionDiv);
 
-  if (type === "video") {
+  if (type === 5) {
     cardImageDiv.style.backgroundImage =
       "url(../../assets/images/courseImg/youtube.png)";
 
     cardImageDiv.style.backgroundSize = "cover";
     cardImageDiv.style.backgroundPosition = "center";
-  } else if (type === "pdf") {
+  } else if (type === 1) {
     cardImageDiv.style.backgroundImage =
       "url(../../assets/images/courseImg/pdf.png)";
-    cardImageDiv.style.backgroundSize = "cover";
+    cardImageDiv.style.backgroundSize = "2";
     cardImageDiv.style.backgroundPosition = "center";
-  } else if (type === "slide") {
+  } else if (type === 2) {
     cardImageDiv.style.backgroundImage =
       "url(../../assets/images/courseImg/slide.png)";
     cardImageDiv.style.backgroundSize = "cover";
     cardImageDiv.style.backgroundPosition = "center";
-  } else if (type === "audio") {
+  } else if (type === 3) {
     cardImageDiv.style.backgroundImage =
       "url(../../assets/images/courseImg/rec.png)";
     cardImageDiv.style.backgroundSize = "cover";
     cardImageDiv.style.backgroundPosition = "center";
-  } else if (type === "code") {
+  } else if (type === 4) {
     cardImageDiv.style.backgroundImage =
       "url(../../assets/images/courseImg/code.png)";
     cardImageDiv.style.backgroundSize = "cover";
@@ -114,74 +114,8 @@ function createAddMatirialCard() {
   cardDiv.setAttribute("data-bs-target", "#staticBackdrop");
 }
 
-var materials = [
-  {
-    cardTitle: "Lecture 1",
-    description: "This is the first lecture of the course",
-    type: "slide",
-    link: "https://docs.google.com/presentation/d/10eFf_oeeImHGBrEZldpU9ZHzorrvu2Hc/edit?usp=drive_link&ouid=101088009110307536264&rtpof=true&sd=true",
-    imgSrc: "https://www.youtube.com/watch?v=9bZkp7q19f0",
-  },
-  {
-    cardTitle: "Lecture 2",
-    description: "This is the first lecture of the course",
-    type: "slide",
-    link: "https://docs.google.com/presentation/d/10eFf_oeeImHGBrEZldpU9ZHzorrvu2Hc/edit?usp=drive_link&ouid=101088009110307536264&rtpof=true&sd=true",
-    imgSrc: "https://www.youtube.com/watch?v=9bZkp7q19f0",
-  },
-  {
-    cardTitle: "Encapsulation",
-    description: "This is the video by Dr. ibrahim shawky",
-    type: "video",
-    link: "https://www.youtube.com/watch?v=9bZkp7q19f0",
-
-    imgSrc: "https://www.youtube.com/watch?v=9bZkp7q19f0",
-  },
-  {
-    cardTitle: "inheritance",
-    description: "This is the video by Dr. ibrahim shawky",
-    type: "video",
-    link: "https://www.youtube.com/watch?v=9bZkp7q19f0",
-
-    imgSrc: "https://www.youtube.com/watch?v=9bZkp7q19f0",
-  },
-  {
-    cardTitle: "polymorphism",
-    description: "This is the video by Dr. ibrahim shawky",
-    type: "video",
-    link: "https://www.youtube.com/watch?v=9bZkp7q19f0",
-
-    imgSrc: "https://www.youtube.com/watch?v=9bZkp7q19f0",
-  },
-  {
-    cardTitle: "Code",
-    description: "This is the third lecture of the course",
-    type: "code",
-    link: "https://ideone.com/CT2oup",
-    imgSrc: "https://www.youtube.com/watch?v=9bZkp7q19f0",
-  },
-  {
-    cardTitle: "slide pdf",
-    description: "This is the fourth lecture of the course",
-    type: "pdf",
-    link: "https://drive.google.com/file/d/1hQeIBh4E9DRi6T_-uRiUvT34uka19md-/view?usp=sharing",
-    imgSrc: "https://www.youtube.com/watch?v=9bZkp7q19f0",
-  },
-];
 
 // console.log("martial s  " + martials);
-
-materials.forEach((material) => {
-  createCard(
-    material.cardTitle,
-    material.description,
-    material.type,
-    material.imgSrc,
-    material.link
-  );
-  console.log(material);
-  console.log("=============");
-});
 
 if (userRole === "admin") {
   createAddMatirialCard();
@@ -192,15 +126,16 @@ function SaveMaterial() {
   var description = document.getElementById("material-description").value;
   var link = document.getElementById("material-link").value;
   var type = document.getElementById("material-type").value;
+  var image = document.getElementById("material-file");
+  var intType = parseInt(type);
 
   var formData = new FormData();
 
   formData.append("Title", title);
   formData.append("Description", description);
-  formData.append("Saurce", link);
-  formData.append("Type", type);
-    formData.append("TopicId", weekid);
-    
+  formData.append("Saurce", image.files[0]);
+  formData.append("Type", intType);
+  formData.append("TopicId", weekid);
 
   var xhr = new XMLHttpRequest();
   xhr.open("POST", "https://localhost:44303/api/Topic/AddMaterial");
@@ -224,8 +159,53 @@ function SaveMaterial() {
     console.log(obj);
   };
 }
+// FeatchWeeks();
 
-FeatchWeeks();
+function FeatchData() {
+  var formData = new FormData();
+  formData.append("Id", weekid);
+
+  var xhr = new XMLHttpRequest();
+  xhr.open("GET", "https://localhost:44303/api/Topic/GetInfo?id=" + weekid);
+  var token = "Bearer " + localStorage.getItem("token");
+  xhr.setRequestHeader("Authorization", token);
+
+  xhr.onreadystatechange = function () {
+    if (xhr.readyState === 4) {
+      if (xhr.status === 200) {
+        console.log("Course created successfully");
+      } else {
+        console.log("Error creati ng course");
+      }
+    }
+  };
+
+  xhr.send(formData);
+  xhr.onload = function () {
+    console.log(xhr.responseText);
+    // xhr.responseText to object
+    var obj = JSON.parse(xhr.responseText);
+    console.log(obj);
+    console.log(obj.groups);
+    LoadData(obj.materials);
+  };
+}
+FeatchData();
+
+function LoadData(obj) {
+  obj.forEach((material) => {
+    createCard(
+      material.title,
+      material.description,
+      material.type,
+        material.saurce,
+        material.id
+    );
+    console.log(" pp >> " + typeof material.type);
+    //   console.log(material);
+    //   console.log("=============");
+  });
+}
 
 var pageH1Text = document.getElementById("page-h1-text-fullPage");
 pageH1Text.textContent = subjects[0].weeks[0].weekName;

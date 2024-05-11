@@ -240,17 +240,24 @@
                                 <select class="form-select" id="material-type"
                                     required>
                                     <option selected>Choose file</option>
-                                    <option value="PDF">PDF File</option>
-                                    <option value="Video">Video File</option>
-                                    <option value="Image">Image File</option>
-                                    <option value="Text">Text File</option>
-                                    <option value="Code">Code File</option>
-                                    <option value="Audio">Audio File</option>
-                                    <option value="Other">Other</option>
+                                    <option value="1">PDF File</option>
+                                    <option value="2">Video File</option>
+                                    <option value="3">Image File</option>
+                                    <option value="4">Text File</option>
+                                    <option value="5">Code File</option>
+                                    <option value="6">Audio File</option>
+                                    <option value="7">Other</option>
                                 </select>
                             </div>
 
-                           
+                            <div class="mb-3">
+                                <label for="material-file"
+                                    class="form-label">Material
+                                    Image</label>
+                                <input class="form-control" type="file"
+                                    id="material-file">
+                            </div>
+
                             <button type="button" onclick="SaveMaterial()"
                                 class="btn btn-primary">Submit</button>
                         </form>

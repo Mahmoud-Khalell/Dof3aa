@@ -57,10 +57,10 @@ namespace MyApi.Controllers
             {
                 return Unauthorized();
             }
-            var topic = unit.Topic.GetById(id);
+            var topic = unit.Topic.GetAll().FirstOrDefault(x=>x.Id==id);
             if(topic == null)
             {
-                return NotFound();
+                return NotFound("not found");
             }
 
             var US= unit.UserGroup.GetByUserAndCource(username, topic.CourseId);
