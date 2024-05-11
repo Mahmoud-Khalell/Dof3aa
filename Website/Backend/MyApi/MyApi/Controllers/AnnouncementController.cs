@@ -43,6 +43,20 @@ namespace MyApi.Controllers
 
             };
             unit.Announcement.add(announcement);
+            
+            var notification = new Notification()
+            {
+                CreationDate = DateTime.Now,
+                publiserUsername = username,
+                description=$"{US.User.FirstName} has added a new announcement in {US.Cource.Title} cource",
+            };
+            unit.Notification.add(notification);
+            var UN=unit.UserGroup.GetAll().Where(x=>x.CourceId==US.CourceId && x.Username != username).Select(x => new UserNotification()
+            {
+                Notification=notification,
+                ReceiverUserName = x.Username
+            }).ToList();
+            unit.UserNotification.Add(UN);
 
             return Ok();
         }

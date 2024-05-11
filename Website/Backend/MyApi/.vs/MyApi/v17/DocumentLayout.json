@@ -1,22 +1,22 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\mahmoud\\Documents\\web\\MyApi\\",
+  "WorkspaceRootPath": "F:\\FCI\\Dof3aa\\Dof3aa\\Website\\Backend\\MyApi\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{5FF05F6F-0AA1-47BC-8466-DD2319505E44}|MyApi\\MyApi.csproj|c:\\users\\mahmoud\\documents\\web\\myapi\\myapi\\controllers\\usercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{5FF05F6F-0AA1-47BC-8466-DD2319505E44}|MyApi\\MyApi.csproj|f:\\fci\\dof3aa\\dof3aa\\website\\backend\\myapi\\myapi\\controllers\\notificationcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5FF05F6F-0AA1-47BC-8466-DD2319505E44}|MyApi\\MyApi.csproj|solutionrelative:myapi\\controllers\\notificationcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5FF05F6F-0AA1-47BC-8466-DD2319505E44}|MyApi\\MyApi.csproj|f:\\fci\\dof3aa\\dof3aa\\website\\backend\\myapi\\myapi\\controllers\\usercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{5FF05F6F-0AA1-47BC-8466-DD2319505E44}|MyApi\\MyApi.csproj|solutionrelative:myapi\\controllers\\usercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{5FF05F6F-0AA1-47BC-8466-DD2319505E44}|MyApi\\MyApi.csproj|C:\\Users\\mahmoud\\Documents\\web\\MyApi\\myapi\\controllers\\courcecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{5FF05F6F-0AA1-47BC-8466-DD2319505E44}|MyApi\\MyApi.csproj|solutionrelative:myapi\\controllers\\courcecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{5FF05F6F-0AA1-47BC-8466-DD2319505E44}|MyApi\\MyApi.csproj|F:\\FCI\\Dof3aa\\Dof3aa\\Website\\Backend\\MyApi\\myapi\\services\\documentservices.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5FF05F6F-0AA1-47BC-8466-DD2319505E44}|MyApi\\MyApi.csproj|solutionrelative:myapi\\services\\documentservices.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{5FF05F6F-0AA1-47BC-8466-DD2319505E44}|MyApi\\MyApi.csproj|C:\\Users\\mahmoud\\Documents\\web\\MyApi\\myapi\\controllers\\announcementcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{5FF05F6F-0AA1-47BC-8466-DD2319505E44}|MyApi\\MyApi.csproj|solutionrelative:myapi\\controllers\\announcementcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{5FF05F6F-0AA1-47BC-8466-DD2319505E44}|MyApi\\MyApi.csproj|C:\\Users\\mahmoud\\Documents\\web\\MyApi\\myapi\\controllers\\topiccontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{5FF05F6F-0AA1-47BC-8466-DD2319505E44}|MyApi\\MyApi.csproj|solutionrelative:myapi\\controllers\\topiccontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{5FF05F6F-0AA1-47BC-8466-DD2319505E44}|MyApi\\MyApi.csproj|F:\\FCI\\Dof3aa\\Dof3aa\\Website\\Backend\\MyApi\\myapi\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5FF05F6F-0AA1-47BC-8466-DD2319505E44}|MyApi\\MyApi.csproj|solutionrelative:myapi\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -26,7 +26,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 4,
+          "SelectedChildIndex": 1,
           "Children": [
             {
               "$type": "Bookmark",
@@ -34,52 +34,53 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "CourceController.cs",
-              "DocumentMoniker": "C:\\Users\\mahmoud\\Documents\\web\\MyApi\\MyApi\\Controllers\\CourceController.cs",
-              "RelativeDocumentMoniker": "MyApi\\Controllers\\CourceController.cs",
-              "ToolTip": "C:\\Users\\mahmoud\\Documents\\web\\MyApi\\MyApi\\Controllers\\CourceController.cs",
-              "RelativeToolTip": "MyApi\\Controllers\\CourceController.cs",
-              "ViewState": "AQIAADQAAAAAAAAAAAAQwJMAAAAIAAAA",
+              "DocumentIndex": 0,
+              "Title": "NotificationController.cs",
+              "DocumentMoniker": "F:\\FCI\\Dof3aa\\Dof3aa\\Website\\Backend\\MyApi\\MyApi\\Controllers\\NotificationController.cs",
+              "RelativeDocumentMoniker": "MyApi\\Controllers\\NotificationController.cs",
+              "ToolTip": "F:\\FCI\\Dof3aa\\Dof3aa\\Website\\Backend\\MyApi\\MyApi\\Controllers\\NotificationController.cs",
+              "RelativeToolTip": "MyApi\\Controllers\\NotificationController.cs",
+              "ViewState": "AQIAACYAAAAAAAAAAAAuwDEAAAAMAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-10T22:24:00.595Z"
+              "WhenOpened": "2024-05-11T09:28:21.63Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "AnnouncementController.cs",
-              "DocumentMoniker": "C:\\Users\\mahmoud\\Documents\\web\\MyApi\\MyApi\\Controllers\\AnnouncementController.cs",
-              "RelativeDocumentMoniker": "MyApi\\Controllers\\AnnouncementController.cs",
-              "ToolTip": "C:\\Users\\mahmoud\\Documents\\web\\MyApi\\MyApi\\Controllers\\AnnouncementController.cs",
-              "RelativeToolTip": "MyApi\\Controllers\\AnnouncementController.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "DocumentIndex": 1,
+              "Title": "UserController.cs",
+              "DocumentMoniker": "F:\\FCI\\Dof3aa\\Dof3aa\\Website\\Backend\\MyApi\\MyApi\\Controllers\\UserController.cs",
+              "RelativeDocumentMoniker": "MyApi\\Controllers\\UserController.cs",
+              "ToolTip": "F:\\FCI\\Dof3aa\\Dof3aa\\Website\\Backend\\MyApi\\MyApi\\Controllers\\UserController.cs",
+              "RelativeToolTip": "MyApi\\Controllers\\UserController.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAuwJMAAAAIAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-10T22:23:48.774Z"
+              "WhenOpened": "2024-05-11T08:57:29.269Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 3,
-              "Title": "TopicController.cs",
-              "DocumentMoniker": "C:\\Users\\mahmoud\\Documents\\web\\MyApi\\MyApi\\Controllers\\TopicController.cs",
-              "RelativeDocumentMoniker": "MyApi\\Controllers\\TopicController.cs",
-              "ToolTip": "C:\\Users\\mahmoud\\Documents\\web\\MyApi\\MyApi\\Controllers\\TopicController.cs",
-              "RelativeToolTip": "MyApi\\Controllers\\TopicController.cs",
-              "ViewState": "AQIAAA0AAAAAAAAAAAA+wGwAAAAIAAAA",
+              "Title": "Program.cs",
+              "DocumentMoniker": "F:\\FCI\\Dof3aa\\Dof3aa\\Website\\Backend\\MyApi\\MyApi\\Program.cs",
+              "RelativeDocumentMoniker": "MyApi\\Program.cs",
+              "ToolTip": "F:\\FCI\\Dof3aa\\Dof3aa\\Website\\Backend\\MyApi\\MyApi\\Program.cs",
+              "RelativeToolTip": "MyApi\\Program.cs",
+              "ViewState": "AQIAACIAAAAAAAAAAAAQwAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-10T21:05:26.224Z"
+              "WhenOpened": "2024-05-11T08:48:58.527Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "UserController.cs",
-              "DocumentMoniker": "C:\\Users\\mahmoud\\Documents\\web\\MyApi\\MyApi\\Controllers\\UserController.cs",
-              "RelativeDocumentMoniker": "MyApi\\Controllers\\UserController.cs",
-              "ToolTip": "C:\\Users\\mahmoud\\Documents\\web\\MyApi\\MyApi\\Controllers\\UserController.cs",
-              "RelativeToolTip": "MyApi\\Controllers\\UserController.cs",
-              "ViewState": "AQIAAIIAAAAAAAAAAAAuwJEAAAAHAAAA",
+              "DocumentIndex": 2,
+              "Title": "DocumentServices.cs",
+              "DocumentMoniker": "F:\\FCI\\Dof3aa\\Dof3aa\\Website\\Backend\\MyApi\\MyApi\\Services\\DocumentServices.cs",
+              "RelativeDocumentMoniker": "MyApi\\Services\\DocumentServices.cs",
+              "ToolTip": "F:\\FCI\\Dof3aa\\Dof3aa\\Website\\Backend\\MyApi\\MyApi\\Services\\DocumentServices.cs",
+              "RelativeToolTip": "MyApi\\Services\\DocumentServices.cs",
+              "ViewState": "AQIAAAoAAAAAAAAAAAAzwAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-10T20:59:49.566Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-05-11T08:38:22.131Z"
             }
           ]
         }

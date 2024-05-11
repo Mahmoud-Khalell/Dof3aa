@@ -12,5 +12,11 @@ namespace MyApi.Model.Repositories
             this.connector = connector;
         }
 
+        public int Add(List<Core.entities.UserNotification> userNotifications)
+        {
+            connector.UserNotifications.AddRange(userNotifications);
+            return connector.SaveChanges();
+
+        }
     }
 }

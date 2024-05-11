@@ -26,7 +26,7 @@ namespace MyApi.Controllers
             this.unit = unit;
         }
 
-        
+
         #region Confirm Email
         [HttpGet("ConfirmEmail")]
         public async Task<IActionResult> ConfirmEmail(string email, string token)
@@ -66,14 +66,14 @@ namespace MyApi.Controllers
 
         #region Register
         [HttpPost("Register")]
-        
-        public async Task<IActionResult> Register([FromForm]RegisterationDTO registerationDTO)
+
+        public async Task<IActionResult> Register([FromForm] RegisterationDTO registerationDTO)
         {
-            if(ModelState.IsValid)
+            if (ModelState.IsValid)
             {
-                var user=Mapper.RegisDTO2User(registerationDTO);
-                
-                var result=await unit.UserManager.CreateAsync(user,registerationDTO.Password);
+                var user = Mapper.RegisDTO2User(registerationDTO);
+
+                var result = await unit.UserManager.CreateAsync(user, registerationDTO.Password);
                 if (result.Succeeded)
                 {
                     //confirm email
@@ -93,26 +93,26 @@ namespace MyApi.Controllers
         #region Login
         [HttpPost("Login")]
         [EnableCors]
-        public async Task<IActionResult>Login([FromForm]LoginDTO loginDTO)
+        public async Task<IActionResult> Login([FromForm] LoginDTO loginDTO)
         {
             if (ModelState.IsValid == false)
                 return Unauthorized(ModelState);
             var user = await unit.UserManager.FindByNameAsync(loginDTO.UserName);
-            
-            if(user==null)
+
+            if (user == null)
                 return NotFound("Username not found");
             if (user.EmailConfirmed == false)
                 return NotFound("Email not confirmed");
 
             bool check = await unit.UserManager.CheckPasswordAsync(user, loginDTO.Password);
-            if(check==false)
+            if (check == false)
                 return NotFound("Password is wrong");
 
             var token = Tokenizer.GenerateToken(loginDTO, unit);
             return Ok(token);
         }
         #endregion
-        
+
 
         #region Get User Info
         [HttpGet("GetUserInfo")]
@@ -120,7 +120,7 @@ namespace MyApi.Controllers
         public IActionResult GetUserInfo()
         {
             var userName = User.Claims.FirstOrDefault(e => e.Type == "Username").Value;
-            var user = unit.UserManager.Users.Include(e => e.UserGroups).ThenInclude(e=>e.Cource).FirstOrDefault(e => e.UserName == userName);
+            var user = unit.UserManager.Users.Include(e => e.UserGroups).ThenInclude(e => e.Cource).FirstOrDefault(e => e.UserName == userName);
             if (user == null)
                 return NotFound();
             var userDTO = Mapper.User2UserDTO(user);
@@ -128,7 +128,7 @@ namespace MyApi.Controllers
         }
         #endregion
 
-
+        #region update user info
         [HttpGet("GetRoles")]
         [Authorize(AuthenticationSchemes = JwtBearerDefaults.AuthenticationScheme)]
         public IActionResult GetRole(int CourceId)
@@ -136,15 +136,16 @@ namespace MyApi.Controllers
             var userame = UserServices.WhoAmI(User.Claims);
             if (userame == null)
                 return Unauthorized();
-            
+
             var US = unit.UserGroup.GetByUserAndCource(userame, CourceId);
             if (US == null)
                 return Ok(4);
             return Ok(US.rule);
 
         }
-       
+        #endregion
 
+        
 
 
     }
