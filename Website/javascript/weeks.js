@@ -4,9 +4,43 @@ var courseIdforcrearte = urlParams.get("id");
 var domain = "https://localhost:44303/";
 
 //test varables
-var userRole = "admin";
 
+function changee(inp) {
+  userRole=inp;
+}
 // -------------------------------------------------------------------- user info ---------------------------------------------------
+InfoUserOfAdmin();
+function InfoUserOfAdmin() {
+  var formData = new FormData();
+  formData.append("id", courseIdforcrearte);
+
+  var xhr = new XMLHttpRequest();
+  xhr.open(
+    "GET",
+    "https://localhost:44303/api/User/GetRoles?CourceId=" + courseIdforcrearte
+  );
+
+  var token = "Bearer " + localStorage.getItem("token");
+  xhr.setRequestHeader("Authorization", token);
+
+  xhr.onreadystatechange = function () {
+    if (xhr.readyState === 4) {
+      if (xhr.status === 200) {
+        console.log("Featch Week successfully");
+      } else {
+        console.log("Featch Week filed creating course");
+      }
+    }
+  };
+  xhr.send(formData);
+  xhr.onload = function () {
+    // convert to object
+    var obj = JSON.parse(xhr.responseText);
+    let Data = obj;
+    userRole(Data);
+   
+  };
+}
 
 
 function createWeeksCard(imgSrc, weekName, doctorName, lastUpdate, weekid) {
@@ -652,11 +686,12 @@ function PrintWeeks(obj) {
   });
 }
 
-// createWeeksCard("imgSrc", "weekName", "doctorName", "lastUpdate", "weekid");
 
-if (userRole == "admin") {
-  addWeekButton();
-  createAddWeeksCard();
-  createAddTaskCard();
-  displayAddAnnouncement();
+function userRole(userRole) {
+  if (userRole == 1 || userRole == 2) {
+    addWeekButton();
+    createAddWeeksCard();
+    createAddTaskCard();
+    displayAddAnnouncement();
+  }
 }

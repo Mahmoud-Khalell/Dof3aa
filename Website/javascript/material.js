@@ -84,9 +84,6 @@ function createCard(cardTitle, description ,type, imgSrc, link) {
 }
 
 
-
-
-
 function createAddMatirialCard() {
     const parentDiv = document.getElementById('main-material-div');
 
@@ -138,14 +135,6 @@ function createAddMatirialCard() {
 
     
 }
-
-
-    
-  
-
-
-
-
 
 
 
