@@ -143,7 +143,7 @@ namespace MyApi.Controllers
             return Ok(US.rule);
 
         }
-       
+        
 
 
 
