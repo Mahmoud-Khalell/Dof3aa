@@ -3,20 +3,16 @@
   "WorkspaceRootPath": "F:\\FCI\\Dof3aa\\Dof3aa\\Website\\Backend\\MyApi\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{5FF05F6F-0AA1-47BC-8466-DD2319505E44}|MyApi\\MyApi.csproj|f:\\fci\\dof3aa\\dof3aa\\website\\backend\\myapi\\myapi\\controllers\\notificationcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{5FF05F6F-0AA1-47BC-8466-DD2319505E44}|MyApi\\MyApi.csproj|solutionrelative:myapi\\controllers\\notificationcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{5FF05F6F-0AA1-47BC-8466-DD2319505E44}|MyApi\\MyApi.csproj|f:\\fci\\dof3aa\\dof3aa\\website\\backend\\myapi\\myapi\\services\\emailservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5FF05F6F-0AA1-47BC-8466-DD2319505E44}|MyApi\\MyApi.csproj|solutionrelative:myapi\\services\\emailservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{5FF05F6F-0AA1-47BC-8466-DD2319505E44}|MyApi\\MyApi.csproj|f:\\fci\\dof3aa\\dof3aa\\website\\backend\\myapi\\myapi\\controllers\\usercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{5FF05F6F-0AA1-47BC-8466-DD2319505E44}|MyApi\\MyApi.csproj|solutionrelative:myapi\\controllers\\usercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{5FF05F6F-0AA1-47BC-8466-DD2319505E44}|MyApi\\MyApi.csproj|F:\\FCI\\Dof3aa\\Dof3aa\\Website\\Backend\\MyApi\\myapi\\services\\documentservices.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{5FF05F6F-0AA1-47BC-8466-DD2319505E44}|MyApi\\MyApi.csproj|solutionrelative:myapi\\services\\documentservices.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{5FF05F6F-0AA1-47BC-8466-DD2319505E44}|MyApi\\MyApi.csproj|F:\\FCI\\Dof3aa\\Dof3aa\\Website\\Backend\\MyApi\\myapi\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{5FF05F6F-0AA1-47BC-8466-DD2319505E44}|MyApi\\MyApi.csproj|solutionrelative:myapi\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{5FF05F6F-0AA1-47BC-8466-DD2319505E44}|MyApi\\MyApi.csproj|f:\\fci\\dof3aa\\dof3aa\\website\\backend\\myapi\\myapi\\dto\\email\\email.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5FF05F6F-0AA1-47BC-8466-DD2319505E44}|MyApi\\MyApi.csproj|solutionrelative:myapi\\dto\\email\\email.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -26,24 +22,37 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": 0,
           "Children": [
-            {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{3ae79031-e1bc-11d0-8f78-00a0c9110057}"
-            },
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "NotificationController.cs",
-              "DocumentMoniker": "F:\\FCI\\Dof3aa\\Dof3aa\\Website\\Backend\\MyApi\\MyApi\\Controllers\\NotificationController.cs",
-              "RelativeDocumentMoniker": "MyApi\\Controllers\\NotificationController.cs",
-              "ToolTip": "F:\\FCI\\Dof3aa\\Dof3aa\\Website\\Backend\\MyApi\\MyApi\\Controllers\\NotificationController.cs",
-              "RelativeToolTip": "MyApi\\Controllers\\NotificationController.cs",
-              "ViewState": "AQIAACYAAAAAAAAAAAAuwDEAAAAMAAAA",
+              "Title": "EmailService.cs",
+              "DocumentMoniker": "F:\\FCI\\Dof3aa\\Dof3aa\\Website\\Backend\\MyApi\\MyApi\\Services\\EmailService.cs",
+              "RelativeDocumentMoniker": "MyApi\\Services\\EmailService.cs",
+              "ToolTip": "F:\\FCI\\Dof3aa\\Dof3aa\\Website\\Backend\\MyApi\\MyApi\\Services\\EmailService.cs",
+              "RelativeToolTip": "MyApi\\Services\\EmailService.cs",
+              "ViewState": "AQIAABwAAAAAAAAAAAAowCQAAACvBAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-11T09:28:21.63Z",
+              "WhenOpened": "2024-05-11T12:09:39.605Z",
               "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Email.cs",
+              "DocumentMoniker": "F:\\FCI\\Dof3aa\\Dof3aa\\Website\\Backend\\MyApi\\MyApi\\DTO\\Email\\Email.cs",
+              "RelativeDocumentMoniker": "MyApi\\DTO\\Email\\Email.cs",
+              "ToolTip": "F:\\FCI\\Dof3aa\\Dof3aa\\Website\\Backend\\MyApi\\MyApi\\DTO\\Email\\Email.cs",
+              "RelativeToolTip": "MyApi\\DTO\\Email\\Email.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAgAAAA0AAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-11T12:07:16.162Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{3ae79031-e1bc-11d0-8f78-00a0c9110057}"
             },
             {
               "$type": "Document",
@@ -53,34 +62,10 @@
               "RelativeDocumentMoniker": "MyApi\\Controllers\\UserController.cs",
               "ToolTip": "F:\\FCI\\Dof3aa\\Dof3aa\\Website\\Backend\\MyApi\\MyApi\\Controllers\\UserController.cs",
               "RelativeToolTip": "MyApi\\Controllers\\UserController.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAuwJMAAAAIAAAA",
+              "ViewState": "AQIAAE4AAAAAAAAAAAAswE8AAAAiAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-11T08:57:29.269Z",
+              "WhenOpened": "2024-05-11T10:10:45.385Z",
               "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "Program.cs",
-              "DocumentMoniker": "F:\\FCI\\Dof3aa\\Dof3aa\\Website\\Backend\\MyApi\\MyApi\\Program.cs",
-              "RelativeDocumentMoniker": "MyApi\\Program.cs",
-              "ToolTip": "F:\\FCI\\Dof3aa\\Dof3aa\\Website\\Backend\\MyApi\\MyApi\\Program.cs",
-              "RelativeToolTip": "MyApi\\Program.cs",
-              "ViewState": "AQIAACIAAAAAAAAAAAAQwAAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-11T08:48:58.527Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "DocumentServices.cs",
-              "DocumentMoniker": "F:\\FCI\\Dof3aa\\Dof3aa\\Website\\Backend\\MyApi\\MyApi\\Services\\DocumentServices.cs",
-              "RelativeDocumentMoniker": "MyApi\\Services\\DocumentServices.cs",
-              "ToolTip": "F:\\FCI\\Dof3aa\\Dof3aa\\Website\\Backend\\MyApi\\MyApi\\Services\\DocumentServices.cs",
-              "RelativeToolTip": "MyApi\\Services\\DocumentServices.cs",
-              "ViewState": "AQIAAAoAAAAAAAAAAAAzwAAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-11T08:38:22.131Z"
             }
           ]
         }
