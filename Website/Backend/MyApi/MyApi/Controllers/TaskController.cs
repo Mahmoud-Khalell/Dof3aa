@@ -62,6 +62,19 @@ namespace MyApi.Controllers
             try
             {
                 unitOfCode.Task.add(MyTask);
+                var notification = new Notification()
+                {
+                    publiserUsername = userName,
+                    CreationDate = System.DateTime.Now,
+                    description = $"{US.User.FirstName} has added a new Task in Group {US.Cource.Title}",
+                };
+                unitOfCode.Notification.add(notification);
+                var UserNotifications=unitOfCode.UserGroup.GetAll().Where(x => x.CourceId == taskDTO.CourceId && x.Username!=userName).Select(x => new UserNotification()
+                {
+                    Notification = notification,
+                    ReceiverUserName = x.User.UserName
+                }).ToList();
+                unitOfCode.UserNotification.Add(UserNotifications);
                 return Ok();
 
             }

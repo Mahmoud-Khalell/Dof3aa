@@ -13,6 +13,8 @@ using MyApi.Services;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.AspNetCore.Cors;
 using MyApi.Model.Repositories;
+using MimeKit;
+using MailKit;
 namespace MyApi.Controllers
 {
     [Route("api/[controller]")]
@@ -20,13 +22,15 @@ namespace MyApi.Controllers
     public class UserController : ControllerBase
     {
         private readonly IUnitOfCode unit;
+        private readonly IWebHostEnvironment webHost;
 
-        public UserController(IUnitOfCode unit)
+        public UserController(IUnitOfCode unit,IWebHostEnvironment webHost)
         {
             this.unit = unit;
+            this.webHost = webHost;
         }
 
-        
+
         #region Confirm Email
         [HttpGet("ConfirmEmail")]
         public async Task<IActionResult> ConfirmEmail(string email, string token)
@@ -51,29 +55,71 @@ namespace MyApi.Controllers
             var token = await unit.UserManager.GenerateEmailConfirmationTokenAsync(user);
             // crete link that lead to endpoint ConfirmEmail 
             var link = Url.Action("ConfirmEmail", "User", new { email = email, token = token }, Request.Scheme, Request.Host.ToString());
-            Email Reciever = new Email()
-            {
-                To = email,
-                Title = "Confirm Email",
-                Body = link
-            };
-            EmailService.SendEmail(Reciever);
+            
+            var message = new MimeMessage();
+            message.From.Add(new MailboxAddress("Dof3aa","icpcfinalist@gmail.com"));
+            message.To.Add(new MailboxAddress("",email));
+            message.Subject = "Confirm Email";
+
+            var builder = new BodyBuilder();
+            builder.HtmlBody = EmailService.GetEmailBodyForEmailConfirm(link); 
+            message.Body = builder.ToMessageBody();
+            EmailService.SendEmail(message);
             return Ok();
 
 
         }
         #endregion
 
+        #region Update Password
+        [HttpGet("UpdatePassword")]
+        public async Task<IActionResult> ForgetPassword(string email)
+        {
+            var user = unit.UserManager.Users.FirstOrDefault(e => e.Email == email);
+            if (user == null)
+                return NotFound();
+            var token = await unit.UserManager.GeneratePasswordResetTokenAsync(user);
+            // crete link that lead to endpoint ConfirmEmail 
+            
+            var message = new MimeMessage();
+            message.From.Add(new MailboxAddress("Dof3aa", "icpcfinalist@gmail.com"));
+            message.To.Add(new MailboxAddress("", email));
+            message.Subject = "Token for updateing Password";
+
+            var builder = new BodyBuilder();
+            builder.HtmlBody = EmailService.GetEmailBodyForPasswordReset(token);
+            message.Body = builder.ToMessageBody();
+            EmailService.SendEmail(message);
+            return Ok();
+        }
+
+        #endregion
+
+        #region Update Password Confirm
+        [HttpGet("UpdatePasswordConfirm")]
+        public async Task<IActionResult> UpdatePasswordConfirm(string email, string token, string newPassword)
+        {
+            var user = unit.UserManager.Users.FirstOrDefault(e => e.Email == email);
+            if (user == null)
+                return NotFound();
+            var result = await unit.UserManager.ResetPasswordAsync(user, token, newPassword);
+            if (result.Succeeded)
+                return Ok();
+            return BadRequest(result.Errors.FirstOrDefault());
+        }
+
+        #endregion
+
         #region Register
         [HttpPost("Register")]
-        
-        public async Task<IActionResult> Register([FromForm]RegisterationDTO registerationDTO)
+
+        public async Task<IActionResult> Register([FromForm] RegisterationDTO registerationDTO)
         {
-            if(ModelState.IsValid)
+            if (ModelState.IsValid)
             {
-                var user=Mapper.RegisDTO2User(registerationDTO);
-                
-                var result=await unit.UserManager.CreateAsync(user,registerationDTO.Password);
+                var user = Mapper.RegisDTO2User(registerationDTO);
+
+                var result = await unit.UserManager.CreateAsync(user, registerationDTO.Password);
                 if (result.Succeeded)
                 {
                     //confirm email
@@ -93,26 +139,26 @@ namespace MyApi.Controllers
         #region Login
         [HttpPost("Login")]
         [EnableCors]
-        public async Task<IActionResult>Login([FromForm]LoginDTO loginDTO)
+        public async Task<IActionResult> Login([FromForm] LoginDTO loginDTO)
         {
             if (ModelState.IsValid == false)
                 return Unauthorized(ModelState);
             var user = await unit.UserManager.FindByNameAsync(loginDTO.UserName);
-            
-            if(user==null)
+
+            if (user == null)
                 return NotFound("Username not found");
             if (user.EmailConfirmed == false)
                 return NotFound("Email not confirmed");
 
             bool check = await unit.UserManager.CheckPasswordAsync(user, loginDTO.Password);
-            if(check==false)
+            if (check == false)
                 return NotFound("Password is wrong");
 
             var token = Tokenizer.GenerateToken(loginDTO, unit);
             return Ok(token);
         }
         #endregion
-        
+
 
         #region Get User Info
         [HttpGet("GetUserInfo")]
@@ -120,7 +166,7 @@ namespace MyApi.Controllers
         public IActionResult GetUserInfo()
         {
             var userName = User.Claims.FirstOrDefault(e => e.Type == "Username").Value;
-            var user = unit.UserManager.Users.Include(e => e.UserGroups).ThenInclude(e=>e.Cource).FirstOrDefault(e => e.UserName == userName);
+            var user = unit.UserManager.Users.Include(e => e.UserGroups).ThenInclude(e => e.Cource).FirstOrDefault(e => e.UserName == userName);
             if (user == null)
                 return NotFound();
             var userDTO = Mapper.User2UserDTO(user);
@@ -128,7 +174,7 @@ namespace MyApi.Controllers
         }
         #endregion
 
-
+        #region update user info
         [HttpGet("GetRoles")]
         [Authorize(AuthenticationSchemes = JwtBearerDefaults.AuthenticationScheme)]
         public IActionResult GetRole(int CourceId)
@@ -136,14 +182,18 @@ namespace MyApi.Controllers
             var userame = UserServices.WhoAmI(User.Claims);
             if (userame == null)
                 return Unauthorized();
-            
+
             var US = unit.UserGroup.GetByUserAndCource(userame, CourceId);
             if (US == null)
                 return Ok(4);
             return Ok(US.rule);
 
         }
+        #endregion
+
         
+
+
 
 
 

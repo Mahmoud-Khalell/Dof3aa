@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Authentication.JwtBearer;
+﻿using Core.entities;
+using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
@@ -163,8 +164,30 @@ namespace MyApi.Controllers
             }
 
             var material = Mapper.NewMaterialDTO2Material(newMaterialDTO);
-            unit.Material.add(material);
-            return Ok();
+            try
+            {
+                unit.Material.add(material);
+                var notification = new Notification()
+                {
+                    CreationDate = DateTime.Now,
+                    publiserUsername = username,
+                    description=$"{US.User.FirstName} has added a new material in {topic.Title} in {topic.Cource.Title}"
+                };
+                unit.Notification.add(notification);
+                var UN = unit.UserGroup.GetAll().Where(x => x.CourceId == US.CourceId && x.Username != username).Select(x => new UserNotification()
+                {
+                    Notification = notification,
+                    ReceiverUserName = x.Username
+                }).ToList();
+                unit.UserNotification.Add(UN);
+                return Ok();
+            }
+            catch (Exception e)
+            {
+                return BadRequest(e.Message);
+            }
+
+
         }
 
         #endregion

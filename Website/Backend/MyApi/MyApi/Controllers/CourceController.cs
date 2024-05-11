@@ -204,6 +204,7 @@ namespace MyApi.Controllers
         }
         #endregion
 
+        #region Get Cource Info
         [HttpGet("GetInfo")]
         [Authorize(AuthenticationSchemes = JwtBearerDefaults.AuthenticationScheme)]
         public IActionResult GetInfo(int CourceId)
@@ -232,5 +233,6 @@ namespace MyApi.Controllers
             };
             return Ok(res);
         }
+        #endregion
     }
 }
