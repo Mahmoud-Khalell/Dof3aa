@@ -44,12 +44,7 @@ document.addEventListener("keydown", function (event) {
 
   console.log(allInputs);
   if (event.key === "Enter") {
-    // check if all inputs are filled
-    if (inputsValue.every((value) => value.length === 1)) {
-      console.log("All inputs are filled");
-    } else {
-      console.log("All inputs are not filled");
-    }
+    sendtodatabasse();
   }
 });
 
@@ -105,8 +100,11 @@ function sendtodatabasse() {
 
   xhr.onload = function () {
     console.log("xhr.status");
-    console.log(xhr.responseText);
+    showFeedBack(xhr.responseText);
   };
+}
 
-  
+function showFeedBack(res) {
+  var el = document.getElementById("FeedBack");
+  if (res.length < 60) el.innerText = res;
 }

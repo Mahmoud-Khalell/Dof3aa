@@ -209,9 +209,9 @@
                     <li class="nav-item" role="presentation">
                         <button class="nav-link" id="info-tab"
                             data-bs-toggle="pill"
-                            data-bs-target="#info"
+                            data-bs-target="#infoParant"
                             type="button" role="tab"
-                            aria-controls="info"
+                            aria-controls="infoParant"
                             aria-selected="false">info</button>
                     </li>
 
@@ -284,12 +284,14 @@
                         </div>
                     </div>
 
-                    <div class="tab-pane fade" id="info"
+                    <div class="tab-pane fade" id="infoParant"
                         role="tabpanel"
                         aria-labelledby="info-tab"
                         tabindex="0">
-                        <!-- the content inside alerts tab -------------------------------------------->
-                        info
+                        <!-- the content inside info tab -------------------------------------------->
+
+                        
+
                     </div>
 
                 </div>
@@ -319,7 +321,7 @@
                                 <label for="material-name"
                                     class="form-label">Topic Name</label>
                                 <input type="text" class="form-control" required
-                                    id="material-name"
+                                    id="week-name"
                                     aria-describedby="material-name"
                                     value="Week ">
                             </div>
@@ -328,7 +330,7 @@
                                     class="form-label">Week
                                     Description</label>
                                 <textarea class="form-control" required
-                                    id="material-description"
+                                    id="week-description"
                                     rows="3"></textarea>
                             </div>
 
@@ -337,10 +339,10 @@
                                     class="form-label">week
                                     Image</label>
                                 <input class="form-control" type="file"
-                                    id="material-file" required>
+                                    id="week-file" required>
                             </div>
 
-                            <button type="submit"
+                            <button type="button" onclick="SaveWeekInDB()"
                                 class="btn btn-primary">Submit</button>
                         </form>
 

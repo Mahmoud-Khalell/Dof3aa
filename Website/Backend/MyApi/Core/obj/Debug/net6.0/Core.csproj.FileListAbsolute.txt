@@ -1,13 +1,24 @@
-F:\FCI\Dof3aa\Dof3aa\Website\Backend\MyApi\Core\bin\Debug\net6.0\Core.deps.json
-F:\FCI\Dof3aa\Dof3aa\Website\Backend\MyApi\Core\bin\Debug\net6.0\Core.dll
-F:\FCI\Dof3aa\Dof3aa\Website\Backend\MyApi\Core\bin\Debug\net6.0\Core.pdb
-F:\FCI\Dof3aa\Dof3aa\Website\Backend\MyApi\Core\obj\Debug\net6.0\Core.csproj.AssemblyReference.cache
-F:\FCI\Dof3aa\Dof3aa\Website\Backend\MyApi\Core\obj\Debug\net6.0\Core.GeneratedMSBuildEditorConfig.editorconfig
-F:\FCI\Dof3aa\Dof3aa\Website\Backend\MyApi\Core\obj\Debug\net6.0\Core.AssemblyInfoInputs.cache
-F:\FCI\Dof3aa\Dof3aa\Website\Backend\MyApi\Core\obj\Debug\net6.0\Core.AssemblyInfo.cs
-F:\FCI\Dof3aa\Dof3aa\Website\Backend\MyApi\Core\obj\Debug\net6.0\Core.csproj.CoreCompileInputs.cache
-F:\FCI\Dof3aa\Dof3aa\Website\Backend\MyApi\Core\obj\Debug\net6.0\Core.sourcelink.json
-F:\FCI\Dof3aa\Dof3aa\Website\Backend\MyApi\Core\obj\Debug\net6.0\Core.dll
-F:\FCI\Dof3aa\Dof3aa\Website\Backend\MyApi\Core\obj\Debug\net6.0\refint\Core.dll
-F:\FCI\Dof3aa\Dof3aa\Website\Backend\MyApi\Core\obj\Debug\net6.0\Core.pdb
-F:\FCI\Dof3aa\Dof3aa\Website\Backend\MyApi\Core\obj\Debug\net6.0\ref\Core.dll
+H:\MyApi\Core\bin\Debug\net6.0\Core.deps.json
+H:\MyApi\Core\bin\Debug\net6.0\Core.dll
+H:\MyApi\Core\bin\Debug\net6.0\Core.pdb
+H:\MyApi\Core\obj\Debug\net6.0\Core.csproj.AssemblyReference.cache
+H:\MyApi\Core\obj\Debug\net6.0\Core.GeneratedMSBuildEditorConfig.editorconfig
+H:\MyApi\Core\obj\Debug\net6.0\Core.AssemblyInfoInputs.cache
+H:\MyApi\Core\obj\Debug\net6.0\Core.AssemblyInfo.cs
+H:\MyApi\Core\obj\Debug\net6.0\Core.csproj.CoreCompileInputs.cache
+H:\MyApi\Core\obj\Debug\net6.0\Core.dll
+H:\MyApi\Core\obj\Debug\net6.0\refint\Core.dll
+H:\MyApi\Core\obj\Debug\net6.0\Core.pdb
+H:\MyApi\Core\obj\Debug\net6.0\ref\Core.dll
+E:\Computer science\Level 3 - second term\Software development\Dof3aa\Website\Backend\MyApi\Core\bin\Debug\net6.0\Core.deps.json
+E:\Computer science\Level 3 - second term\Software development\Dof3aa\Website\Backend\MyApi\Core\bin\Debug\net6.0\Core.dll
+E:\Computer science\Level 3 - second term\Software development\Dof3aa\Website\Backend\MyApi\Core\bin\Debug\net6.0\Core.pdb
+E:\Computer science\Level 3 - second term\Software development\Dof3aa\Website\Backend\MyApi\Core\obj\Debug\net6.0\Core.csproj.AssemblyReference.cache
+E:\Computer science\Level 3 - second term\Software development\Dof3aa\Website\Backend\MyApi\Core\obj\Debug\net6.0\Core.GeneratedMSBuildEditorConfig.editorconfig
+E:\Computer science\Level 3 - second term\Software development\Dof3aa\Website\Backend\MyApi\Core\obj\Debug\net6.0\Core.AssemblyInfoInputs.cache
+E:\Computer science\Level 3 - second term\Software development\Dof3aa\Website\Backend\MyApi\Core\obj\Debug\net6.0\Core.AssemblyInfo.cs
+E:\Computer science\Level 3 - second term\Software development\Dof3aa\Website\Backend\MyApi\Core\obj\Debug\net6.0\Core.csproj.CoreCompileInputs.cache
+E:\Computer science\Level 3 - second term\Software development\Dof3aa\Website\Backend\MyApi\Core\obj\Debug\net6.0\Core.dll
+E:\Computer science\Level 3 - second term\Software development\Dof3aa\Website\Backend\MyApi\Core\obj\Debug\net6.0\refint\Core.dll
+E:\Computer science\Level 3 - second term\Software development\Dof3aa\Website\Backend\MyApi\Core\obj\Debug\net6.0\Core.pdb
+E:\Computer science\Level 3 - second term\Software development\Dof3aa\Website\Backend\MyApi\Core\obj\Debug\net6.0\ref\Core.dll
