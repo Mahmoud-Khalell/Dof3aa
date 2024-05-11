@@ -36,7 +36,8 @@ namespace MyApi.Services
         {
             var cource = new Cource();
             cource.Id = courceDTO.Id;
-            cource.Title = courceDTO.Title +'@'+courceDTO.SubTitle;
+            cource.Title = courceDTO.Title ;
+            cource.SubTitle = courceDTO.SubTitle;
             cource.Description = courceDTO.Description;
             cource.ImageUrl = DocumentServices.Uploadfile(courceDTO.Image);
             cource.LogoUrl = DocumentServices.Uploadfile(courceDTO.Logo);
@@ -51,10 +52,9 @@ namespace MyApi.Services
         {
             var CourceInfo = new CourceInfoDTO();
             CourceInfo.Id = cource.Id;
-            var titles = cource.Title.Split('@');
-            titles.Append("");
-            CourceInfo.Title = titles[0];
-            CourceInfo.SubTitle = titles[1];
+            
+            CourceInfo.Title = cource.Title;
+            CourceInfo.SubTitle = cource.SubTitle;
             CourceInfo.Description = cource.Description;
             CourceInfo.Image = cource.ImageUrl;
             CourceInfo.Logo = cource.LogoUrl;

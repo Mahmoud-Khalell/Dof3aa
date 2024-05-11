@@ -14,7 +14,7 @@ function FeatchData() {
       if (xhr.status === 200) {
         console.log("Course created successfully");
       } else {
-        console.log("Error creating course");
+        console.log("Error creati ng course");
       }
     }
   };
@@ -45,19 +45,30 @@ function LoadProfileData(obj) {
 
 function LoadCoursesData(obj) {
   obj.forEach((element) => {
-    if (element.rule === 1) {
+    if (element.rule === 1 || element.rule === 2) {
       const course = element.cource; // Access the course
       createCard(
         domain + course.image, // Assume domain as "https://example.com/"
         course.title,
         course.subTitle,
-        course.id
+        course.id,
+        "ProfilePageMangeCourses"
+      );
+    }else if (element.rule === 3) {
+      const course = element.cource; // Access the course
+      createCard(
+        domain + course.image, // Assume domain as "https://example.com/"
+        course.title,
+        course.subTitle,
+        course.id,
+        "ProfilePageSupscribedCourses"
       );
     }
+
   });
 }
 
-function createCard(imgSrc, cardTitle, cardDescription, courseId) {
+function createCard(imgSrc, cardTitle, cardDescription, courseId,parant) {
   const cardDiv = document.createElement("div");
   cardDiv.classList.add("col");
 
@@ -88,7 +99,7 @@ function createCard(imgSrc, cardTitle, cardDescription, courseId) {
 
   cardDiv.appendChild(card);
 
-  const profilePage = document.getElementById("ProfilePageSupscribedCourses");
+  const profilePage = document.getElementById(parant);
   profilePage.appendChild(cardDiv);
 
   cardDiv.addEventListener("click", () => {

@@ -28,7 +28,16 @@ namespace MyApi.Controllers
             if (user == null)
                 return Unauthorized();
 
-            var notifications = unit.UserNotification.GetAll().Where(e => e.ReceiverUserName == userName);
+            var notifications = unit.Notification.GetByUserName(userName).
+                Select(x => new
+                {
+                    NotificationId = x.Id,
+                    NotificationDescription = x.Notification.description,
+                    NotificationCreationDate = x.Notification.CreationDate,
+                    IsRead = x.IsRead,
+                    NotificationPublisher = x.ReceiverUserName
+
+                }) ;
             return Ok(notifications);
 
         }

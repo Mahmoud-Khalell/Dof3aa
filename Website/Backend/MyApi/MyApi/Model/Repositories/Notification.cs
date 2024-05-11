@@ -1,4 +1,5 @@
 ﻿using Core.Context;
+using Microsoft.EntityFrameworkCore;
 using MyApi.Model.Interfaces;
 
 namespace MyApi.Model.Repositories
@@ -12,6 +13,10 @@ namespace MyApi.Model.Repositories
             this.context = context;
         }
 
-        
+        public List<Core.entities.UserNotification> GetByUserName(string username)
+        {
+            var notes = context.UserNotifications.Where(e => e.ReceiverUserName==username).Include(e => e.ReceiverUser).Include(e => e.Notification).ToList();
+            return notes;
+        }
     }
 }

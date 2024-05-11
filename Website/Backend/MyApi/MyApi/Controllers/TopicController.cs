@@ -171,7 +171,7 @@ namespace MyApi.Controllers
                 {
                     CreationDate = DateTime.Now,
                     publiserUsername = username,
-                    description=$"{US.User.FirstName} has added a new material in {topic.Title} in {topic.Cource.Title}"
+                    description = $"{US.User.FirstName} has added a new announcement in {US.Cource.Title} cource"
                 };
                 unit.Notification.add(notification);
                 var UN = unit.UserGroup.GetAll().Where(x => x.CourceId == US.CourceId && x.Username != username).Select(x => new UserNotification()
