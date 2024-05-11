@@ -168,8 +168,13 @@ function submitForm() {
     if (xhr.readyState === XMLHttpRequest.DONE) {
       if (xhr.status === 200) {
         // Request was successful, handle the response
-  
-        console.log(xhr.responseText);
+       
+        // redirect to check-mail.html
+        window.location.href = "./check-mail.html";
+        
+
+          console.log(xhr.responseText);
+
       } else {
         // There was an error with the request
         console.error("Request failed:", xhr.status);
@@ -250,17 +255,13 @@ function sendDatatoServer(data) {
     })
     .then((data) => {
       hideloading();
-      console.log("Data is : ");
-      console.log(data);
-      console.log("=== > " + data.expired);
-      localStorage.setItem("token", data.token);
-      localStorage.setItem("expired", data.expired);
-      window.location.href = "./courses.html";
+      console.log("Registration Done");
+      window.location.href = "./check-mail.html";
     })
     .catch((error) => {
       hideloading();
 
-      console.error("There was a problem with the fetch operation:", error);
+      console.error("There was a problem with the post operation:", error);
     });
 }
 
