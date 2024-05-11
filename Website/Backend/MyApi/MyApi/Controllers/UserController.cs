@@ -143,7 +143,11 @@ namespace MyApi.Controllers
             return Ok(US.rule);
 
         }
+<<<<<<< HEAD
         #endregion
+=======
+        
+>>>>>>> 00cf06d7ae8e5687ae9aaf56081cae36b7a9d54f
 
         
 
