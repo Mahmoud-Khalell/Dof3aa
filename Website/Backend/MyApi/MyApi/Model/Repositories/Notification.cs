@@ -18,5 +18,6 @@ namespace MyApi.Model.Repositories
             var notes = context.UserNotifications.Where(e => e.ReceiverUserName==username).Include(e => e.ReceiverUser).Include(e => e.Notification).ToList();
             return notes;
         }
+        
     }
 }
