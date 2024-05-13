@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "D:\\FCI\\Software Development\\Dof3aa\\Website\\Backend\\MyApi\\MyApi\\MyApi.csproj": {}
+    "F:\\FCI\\Dof3aa\\Dof3aa\\Website\\Backend\\MyApi\\MyApi\\MyApi.csproj": {}
   },
   "projects": {
-    "D:\\FCI\\Software Development\\Dof3aa\\Website\\Backend\\MyApi\\Core\\Core.csproj": {
+    "F:\\FCI\\Dof3aa\\Dof3aa\\Website\\Backend\\MyApi\\Core\\Core.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\FCI\\Software Development\\Dof3aa\\Website\\Backend\\MyApi\\Core\\Core.csproj",
+        "projectUniqueName": "F:\\FCI\\Dof3aa\\Dof3aa\\Website\\Backend\\MyApi\\Core\\Core.csproj",
         "projectName": "Core",
-        "projectPath": "D:\\FCI\\Software Development\\Dof3aa\\Website\\Backend\\MyApi\\Core\\Core.csproj",
-        "packagesPath": "C:\\Users\\Admin\\.nuget\\packages\\",
-        "outputPath": "D:\\FCI\\Software Development\\Dof3aa\\Website\\Backend\\MyApi\\Core\\obj\\",
+        "projectPath": "F:\\FCI\\Dof3aa\\Dof3aa\\Website\\Backend\\MyApi\\Core\\Core.csproj",
+        "packagesPath": "C:\\Users\\mahmoud\\.nuget\\packages\\",
+        "outputPath": "F:\\FCI\\Dof3aa\\Dof3aa\\Website\\Backend\\MyApi\\Core\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\Admin\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\mahmoud\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -78,17 +78,17 @@
         }
       }
     },
-    "D:\\FCI\\Software Development\\Dof3aa\\Website\\Backend\\MyApi\\MyApi\\MyApi.csproj": {
+    "F:\\FCI\\Dof3aa\\Dof3aa\\Website\\Backend\\MyApi\\MyApi\\MyApi.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\FCI\\Software Development\\Dof3aa\\Website\\Backend\\MyApi\\MyApi\\MyApi.csproj",
+        "projectUniqueName": "F:\\FCI\\Dof3aa\\Dof3aa\\Website\\Backend\\MyApi\\MyApi\\MyApi.csproj",
         "projectName": "MyApi",
-        "projectPath": "D:\\FCI\\Software Development\\Dof3aa\\Website\\Backend\\MyApi\\MyApi\\MyApi.csproj",
-        "packagesPath": "C:\\Users\\Admin\\.nuget\\packages\\",
-        "outputPath": "D:\\FCI\\Software Development\\Dof3aa\\Website\\Backend\\MyApi\\MyApi\\obj\\",
+        "projectPath": "F:\\FCI\\Dof3aa\\Dof3aa\\Website\\Backend\\MyApi\\MyApi\\MyApi.csproj",
+        "packagesPath": "C:\\Users\\mahmoud\\.nuget\\packages\\",
+        "outputPath": "F:\\FCI\\Dof3aa\\Dof3aa\\Website\\Backend\\MyApi\\MyApi\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\Admin\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\mahmoud\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -102,8 +102,8 @@
           "net6.0": {
             "targetAlias": "net6.0",
             "projectReferences": {
-              "D:\\FCI\\Software Development\\Dof3aa\\Website\\Backend\\MyApi\\Core\\Core.csproj": {
-                "projectPath": "D:\\FCI\\Software Development\\Dof3aa\\Website\\Backend\\MyApi\\Core\\Core.csproj"
+              "F:\\FCI\\Dof3aa\\Dof3aa\\Website\\Backend\\MyApi\\Core\\Core.csproj": {
+                "projectPath": "F:\\FCI\\Dof3aa\\Dof3aa\\Website\\Backend\\MyApi\\Core\\Core.csproj"
               }
             }
           }

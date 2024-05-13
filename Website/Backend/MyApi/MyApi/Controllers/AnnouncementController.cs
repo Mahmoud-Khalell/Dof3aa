@@ -13,9 +13,9 @@ namespace MyApi.Controllers
     [ApiController]
     public class AnnouncementController : ControllerBase
     {
-        private readonly IUnitOfCode unit;
+        private readonly IUnitOfWork unit;
 
-        public AnnouncementController(IUnitOfCode unit)
+        public AnnouncementController(IUnitOfWork unit)
         {
             this.unit = unit;
         }

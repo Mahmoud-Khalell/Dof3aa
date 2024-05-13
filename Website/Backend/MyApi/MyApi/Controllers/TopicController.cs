@@ -14,9 +14,9 @@ namespace MyApi.Controllers
     [ApiController]
     public class TopicController : ControllerBase
     {
-        private readonly IUnitOfCode unit;
+        private readonly IUnitOfWork unit;
 
-        public TopicController(IUnitOfCode unit)
+        public TopicController(IUnitOfWork unit)
         {
             this.unit = unit;
         }
@@ -106,6 +106,48 @@ namespace MyApi.Controllers
             return Ok();
         }
         #endregion
+
+        #region Edit Topic
+        [HttpPut("Edit")]
+        [Authorize(AuthenticationSchemes = JwtBearerDefaults.AuthenticationScheme)]
+        public IActionResult Edit([FromForm] TopicEditDTO topicEditDTO)
+        {
+            var username = UserServices.WhoAmI(User.Claims);
+            if (username == null)
+            {
+                return Unauthorized();
+            }
+            if (!ModelState.IsValid)
+            {
+                return BadRequest();
+            }
+            var topic = unit.Topic.GetById(topicEditDTO.Id);
+            if (topic == null)
+            {
+                return NotFound();
+            }
+            var US = unit.UserGroup.GetByUserAndCource(username, topic.CourseId);
+            if (US == null || US.Id > 2)
+            {
+                return StatusCode(403);
+            }
+
+            if (topicEditDTO.Image != null)
+            {
+                if (topic.ImageUrl != null)
+                {
+                    DocumentServices.DeleteFile(topic.ImageUrl);
+                }
+                topic.ImageUrl = DocumentServices.Uploadfile(topicEditDTO.Image);
+            }
+            topic.Title = topicEditDTO.Title;
+            topic.Description = topicEditDTO.Description;
+            unit.Topic.update(topic);
+            return Ok();
+        }
+
+        #endregion
+
 
         #region Get All Topics
         [HttpPost("GetAll")]
@@ -225,6 +267,49 @@ namespace MyApi.Controllers
         }
 
         #endregion
+
+        #region Edit Material
+        [HttpPut("EditMaterial")]
+        [Authorize(AuthenticationSchemes = JwtBearerDefaults.AuthenticationScheme)]
+        public IActionResult EditMaterial([FromForm] EditMaterialDTO materialEditDTO)
+        {
+            var username = UserServices.WhoAmI(User.Claims);
+            if (username == null)
+            {
+                return Unauthorized();
+            }
+            if (!ModelState.IsValid)
+            {
+                return BadRequest();
+            }
+            var material = unit.Material.GetById(materialEditDTO.Id);
+            if (material == null)
+            {
+                return NotFound();
+            }
+            var topic = unit.Topic.GetById(material.TopicId);
+            
+
+            var US = unit.UserGroup.GetByUserAndCource(username, topic.CourseId);
+            if (US == null || US.Id > 2)
+            {
+                return StatusCode(403);
+            }
+
+            if (materialEditDTO.Saurce != null)
+            {
+                DocumentServices.DeleteFile(material.FileUrl);
+                material.FileUrl = DocumentServices.Uploadfile(materialEditDTO.Saurce);
+            }
+            if(materialEditDTO.Title != null)
+            material.Title = materialEditDTO.Title;
+            if (materialEditDTO.Description != null)
+                material.Description = materialEditDTO.Description;
+            unit.Material.update(material);
+            return Ok();
+        }
+        #endregion
+
 
     }
 }

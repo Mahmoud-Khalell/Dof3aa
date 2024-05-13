@@ -14,9 +14,9 @@ namespace MyApi.Controllers
     [ApiController]
     public class TaskController : ControllerBase
     {
-        private readonly IUnitOfCode unitOfCode;
+        private readonly IUnitOfWork unitOfCode;
 
-        public TaskController(IUnitOfCode unitOfCode)
+        public TaskController(IUnitOfWork unitOfCode)
         {
             this.unitOfCode = unitOfCode;
         }

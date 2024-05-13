@@ -5,8 +5,10 @@ using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using MyApi.DTO;
+using MyApi.DTO.Cource;
 using MyApi.Model.Interfaces;
 using MyApi.Services;
+using System.Reflection.Metadata;
 
 namespace MyApi.Controllers
 {
@@ -15,10 +17,10 @@ namespace MyApi.Controllers
 
     public class CourceController : ControllerBase
     {
-        private readonly IUnitOfCode unit;
+        private readonly IUnitOfWork unit;
 
 
-        public CourceController(IUnitOfCode unit)
+        public CourceController(IUnitOfWork unit)
         {
             this.unit = unit;
             
@@ -234,5 +236,61 @@ namespace MyApi.Controllers
             return Ok(res);
         }
         #endregion
+
+        #region Edit Cource
+        [HttpPost("EditCource")]
+        [Authorize(AuthenticationSchemes = JwtBearerDefaults.AuthenticationScheme)]
+        public IActionResult EditCource([FromForm] CourceUpdateDTO cource)
+        {
+            var userName = User.Claims.FirstOrDefault(e => e.Type == "Username").Value;
+            var user = unit.UserManager.Users.FirstOrDefault(e => e.UserName == userName);
+            if (user == null)
+                return Unauthorized();
+
+            if (ModelState.IsValid == false)
+                return BadRequest(ModelState);
+
+            var crs = unit.Cource.GetById(cource.Id);
+            if (crs == null)
+                return BadRequest("Group Id does not exist");
+
+            var creator = unit.UserGroup.GetByUserAndCource(userName, cource.Id);
+            if (creator == null || creator.rule != 1)
+                return StatusCode(403);
+
+            if(cource.Title != null)
+                crs.Title = cource.Title;
+            if (cource.SubTitle != null)
+                crs.SubTitle = cource.SubTitle;
+            if (cource.Description != null)
+                crs.Description = cource.Description;
+            if (cource.Image != null)
+            {
+                DocumentServices.DeleteFile(crs.ImageUrl);
+                crs.ImageUrl = DocumentServices.Uploadfile(cource.Image);
+
+            }
+            if (cource.Logo != null)
+            {
+                DocumentServices.DeleteFile(crs.LogoUrl);
+                crs.LogoUrl = DocumentServices.Uploadfile(cource.Logo);
+            }
+            if (cource.type != null)
+                crs.type = cource.type.Value;
+
+            try
+            {
+                unit.Cource.update(crs);
+
+                 return Ok();
+            }
+            catch (Exception e)
+            {
+                return BadRequest(e.Message);
+            }
+        }
+        #endregion
+
+
     }
 }

@@ -3,7 +3,7 @@ using Microsoft.AspNetCore.Identity;
 
 namespace MyApi.Model.Interfaces
 {
-    public interface IUnitOfCode
+    public interface IUnitOfWork
     {
         public UserManager<AppUser> UserManager { get; set; }
         public IConfiguration config { get; set; }

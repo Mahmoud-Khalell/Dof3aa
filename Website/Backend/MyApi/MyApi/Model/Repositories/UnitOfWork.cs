@@ -4,7 +4,7 @@ using MyApi.Model.Interfaces;
 
 namespace MyApi.Model.Repositories
 {
-    public class UnitOfCode : IUnitOfCode
+    public class UnitOfWork : IUnitOfWork
     {
         public UserManager<AppUser> UserManager { get; set; }
         public IConfiguration config { get ; set; }
@@ -17,7 +17,7 @@ namespace MyApi.Model.Repositories
         public ITopic Topic { get ; set; }
         public Imaterial Material { get ; set ; }
 
-        public UnitOfCode
+        public UnitOfWork
             (
                 UserManager<AppUser> userManager,
                 IConfiguration config,

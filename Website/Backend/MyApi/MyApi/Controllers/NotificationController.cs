@@ -10,9 +10,9 @@ namespace MyApi.Controllers
     [ApiController]
     public class NotificationController : ControllerBase
     {
-        private readonly IUnitOfCode unit;
+        private readonly IUnitOfWork unit;
 
-        public NotificationController(IUnitOfCode unit)
+        public NotificationController(IUnitOfWork unit)
         {
             this.unit = unit;
         }

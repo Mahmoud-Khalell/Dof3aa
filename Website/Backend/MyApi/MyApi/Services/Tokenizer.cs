@@ -11,12 +11,12 @@ namespace MyApi.Services
     public static class Tokenizer
     {
 
-        public static string GenerateToken(LoginDTO loginDTO,IUnitOfCode unit)
+        public static string GenerateToken(LoginDTO loginDTO,IUnitOfWork unit)
         {
 
             var claim = new List<Claim>();
             claim.Add(new Claim("Username", loginDTO.UserName));
-
+            claim.Add(new Claim(JwtRegisteredClaimNames.Jti, Guid.NewGuid().ToString()));
 
             SecurityKey securityKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(unit.config["JWT:Secret"]));
             SigningCredentials signingCreden = new SigningCredentials(securityKey, SecurityAlgorithms.HmacSha256);
@@ -25,7 +25,6 @@ namespace MyApi.Services
                 issuer: unit.config["JWT:issuer"],
                 audience: unit.config["JWT:audience"],
                 claims: claim,
-                expires: DateTime.Now.AddDays(7),
                 signingCredentials: signingCreden
 
 

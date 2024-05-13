@@ -55,7 +55,7 @@ namespace MyApi
                 options.Tokens.EmailConfirmationTokenProvider= "Default";
             }).AddEntityFrameworkStores<Connector>().AddDefaultTokenProviders();
             
-            builder.Services.AddScoped<IUnitOfCode,UnitOfCode>();
+            builder.Services.AddScoped<IUnitOfWork,UnitOfWork>();
             builder.Services.AddScoped<ICource,CourceRepositiory>();
             builder.Services.AddScoped<IUserGroup,UserGroupRepository>();
             builder.Services.AddScoped<IAnnouncement,AnnouncementRepository>();

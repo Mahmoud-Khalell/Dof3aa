@@ -21,10 +21,10 @@ namespace MyApi.Controllers
     [ApiController]
     public class UserController : ControllerBase
     {
-        private readonly IUnitOfCode unit;
+        private readonly IUnitOfWork unit;
         private readonly IWebHostEnvironment webHost;
 
-        public UserController(IUnitOfCode unit,IWebHostEnvironment webHost)
+        public UserController(IUnitOfWork unit,IWebHostEnvironment webHost)
         {
             this.unit = unit;
             this.webHost = webHost;
