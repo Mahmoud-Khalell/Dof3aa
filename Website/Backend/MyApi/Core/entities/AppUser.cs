@@ -17,7 +17,8 @@ namespace Core.entities
         public string? faculty {  get; set; }
         public DateTime DateOfCreation { get; set; }
         public string ImageUrl { get; set; }
-        public virtual ICollection<UserGroup> UserGroups { get; set; }  
+        public virtual ICollection<UserGroup> UserGroups { get; set; }
+        public virtual ICollection<UserNotification> UserNotifications { get; set; }
         public AppUser()
         {
             DateOfCreation = DateTime.Now;

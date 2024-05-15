@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "0fmTSIpYhg+cRcp76KMS9LKtHrRmqQoLaOqrE0K/PJPPj/uade35EE566vW0yg3bwWXsylUIKb1Xq0wXQM8OEw==",
+  "dgSpecHash": "cyEOo+8kRLimvNK6JkOj4/f9ziQchcVirUOaJNF9dc1qPZ9Y85I/3P7S09SlZ0yLL2hyjWu9oOGLyBa3Dt/6/A==",
   "success": true,
-  "projectFilePath": "F:\\FCI\\Dof3aa\\Dof3aa\\Website\\Backend\\MyApi\\MyApi\\MyApi.csproj",
+  "projectFilePath": "C:\\Users\\mahmoud\\Documents\\My Web Sites\\Dof3aa\\Website\\Backend\\MyApi\\MyApi\\MyApi.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\mahmoud\\.nuget\\packages\\bouncycastle.cryptography\\2.3.0\\bouncycastle.cryptography.2.3.0.nupkg.sha512",
     "C:\\Users\\mahmoud\\.nuget\\packages\\humanizer.core\\2.8.26\\humanizer.core.2.8.26.nupkg.sha512",

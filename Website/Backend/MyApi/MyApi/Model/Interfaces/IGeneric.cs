@@ -1,5 +1,6 @@
 ﻿using Core.Context;
 using Core.entities;
+using MyApi.specification;
 
 namespace MyApi.Model.Interfaces
 {
@@ -10,6 +11,9 @@ namespace MyApi.Model.Interfaces
         public int update(T entity);
         public T GetById(int? id);
         public IEnumerable<T> GetAll();
-        
+        public T GetBySpecifiation(ISpecification<T> spec);
+        public IEnumerable<T> GetAllBySpecifiation(ISpecification<T> spec);
+
+
     }
 }

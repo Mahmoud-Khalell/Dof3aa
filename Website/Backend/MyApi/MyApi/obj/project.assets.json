@@ -2943,11 +2943,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "F:\\FCI\\Dof3aa\\Dof3aa\\Website\\Backend\\MyApi\\MyApi\\MyApi.csproj",
+      "projectUniqueName": "C:\\Users\\mahmoud\\Documents\\My Web Sites\\Dof3aa\\Website\\Backend\\MyApi\\MyApi\\MyApi.csproj",
       "projectName": "MyApi",
-      "projectPath": "F:\\FCI\\Dof3aa\\Dof3aa\\Website\\Backend\\MyApi\\MyApi\\MyApi.csproj",
+      "projectPath": "C:\\Users\\mahmoud\\Documents\\My Web Sites\\Dof3aa\\Website\\Backend\\MyApi\\MyApi\\MyApi.csproj",
       "packagesPath": "C:\\Users\\mahmoud\\.nuget\\packages\\",
-      "outputPath": "F:\\FCI\\Dof3aa\\Dof3aa\\Website\\Backend\\MyApi\\MyApi\\obj\\",
+      "outputPath": "C:\\Users\\mahmoud\\Documents\\My Web Sites\\Dof3aa\\Website\\Backend\\MyApi\\MyApi\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\mahmoud\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -2964,8 +2964,8 @@
         "net6.0": {
           "targetAlias": "net6.0",
           "projectReferences": {
-            "F:\\FCI\\Dof3aa\\Dof3aa\\Website\\Backend\\MyApi\\Core\\Core.csproj": {
-              "projectPath": "F:\\FCI\\Dof3aa\\Dof3aa\\Website\\Backend\\MyApi\\Core\\Core.csproj"
+            "C:\\Users\\mahmoud\\Documents\\My Web Sites\\Dof3aa\\Website\\Backend\\MyApi\\Core\\Core.csproj": {
+              "projectPath": "C:\\Users\\mahmoud\\Documents\\My Web Sites\\Dof3aa\\Website\\Backend\\MyApi\\Core\\Core.csproj"
             }
           }
         }

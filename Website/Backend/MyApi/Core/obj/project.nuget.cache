@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "HiLq5rTl91MTJrYFpda9E+H/7zyHSrbydI+nIHmJngDFDRTD/k70uT8nbumNgd5dagDc4yO2CIcAgzr28DKTAg==",
+  "dgSpecHash": "WtSiCWir9lrEKmnG3099RLmeAO0YGzBDGgLAKzJ68gVKWqd6Ibp+G+sWACEqeJo1E2T6xYfWatYjBwycB8UFeA==",
   "success": true,
-  "projectFilePath": "F:\\FCI\\Dof3aa\\Dof3aa\\Website\\Backend\\MyApi\\Core\\Core.csproj",
+  "projectFilePath": "C:\\Users\\mahmoud\\Documents\\My Web Sites\\Dof3aa\\Website\\Backend\\MyApi\\Core\\Core.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\mahmoud\\.nuget\\packages\\microsoft.aspnetcore.authentication.jwtbearer\\6.0.23\\microsoft.aspnetcore.authentication.jwtbearer.6.0.23.nupkg.sha512",
     "C:\\Users\\mahmoud\\.nuget\\packages\\microsoft.aspnetcore.cryptography.internal\\6.0.23\\microsoft.aspnetcore.cryptography.internal.6.0.23.nupkg.sha512",

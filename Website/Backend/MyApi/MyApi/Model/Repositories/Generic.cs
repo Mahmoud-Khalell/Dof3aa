@@ -1,6 +1,8 @@
 ﻿using Core.Context;
 using Core.entities;
+using MyApi.ISpecification;
 using MyApi.Model.Interfaces;
+using MyApi.specification;
 
 namespace MyApi.Model.Repositories
 {
@@ -23,10 +25,18 @@ namespace MyApi.Model.Repositories
            return connector.Set<T>().ToList();
         }
 
+        public IEnumerable<T> GetAllBySpecifiation(ISpecification<T> spec)=>SpecificationEvaluator.GetQuery(connector.Set<T>().AsQueryable(), spec).ToList();
+        
+
         public T GetById(int? id)
         {
             return connector.Set<T>().FirstOrDefault(x => x.Id == id);
         }
+
+        public T GetBySpecifiation(ISpecification<T> spec)=>SpecificationEvaluator.GetQuery(connector.Set<T>().AsQueryable(), spec).FirstOrDefault();
+
+
+        
 
         public int remove(T entity)
         {
@@ -39,5 +49,6 @@ namespace MyApi.Model.Repositories
             connector.Set<T>().Update(entity);
             return connector.SaveChanges();
         }
+        
     }
 }

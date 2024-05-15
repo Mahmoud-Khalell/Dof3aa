@@ -43,7 +43,7 @@ namespace MyApi
                  options.TokenValidationParameters = new TokenValidationParameters
                  {
                      ValidateIssuerSigningKey = true,
-                     
+                     ValidateLifetime=false,
                      IssuerSigningKey = new SymmetricSecurityKey(System.Text.Encoding.UTF8.GetBytes(builder.Configuration["JWT:Secret"])),
                      ValidateIssuer = false,
                      ValidateAudience = false
